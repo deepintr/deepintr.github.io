@@ -1,11 +1,13 @@
 #particles-js {
   /* background-image: linear-gradient(140deg, #ccc 20%, rgb(0, 0, 0)) */
-  background: #0f0c29; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #24243e,
-    #302b63,
-    #0f0c29
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eeeeee+0,cccccc+100;Gren+3D */
+  background: #eeeeee; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, #eeeeee 0%, #cccccc 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, #eeeeee 0%, #cccccc 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(
+    ellipse at center,
+    #eeeeee 0%,
+    #cccccc 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }

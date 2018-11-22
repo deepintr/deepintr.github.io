@@ -2206,6 +2206,27 @@ input[type='tel']:-ms-input-placeholder {
   }
 }
 
+/* Customization for deepintr */
+.panel-title {
+  color: #ff3333;
+  font-weight: 500;
+}
+.panel-inverted {
+  color: #333;
+}
+.navigation-wrapper a {
+  border-color: #333;
+  color: #333;
+}
+.navigation-wrapper a:hover {
+  border-color: #ff3333;
+  color: #ff3333;
+}
+.user-image {
+  border-radius: 50%;
+  box-shadow: 0 0 10px gray;
+}
+
 @media all and (max-width: 410px) {
   /*.navigation--social {
 		display: none; }*/
