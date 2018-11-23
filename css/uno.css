@@ -2229,6 +2229,30 @@ input[type='tel']:-ms-input-placeholder {
   border-radius: 50%;
   box-shadow: 0 0 10px gray;
 }
+.about-popup {
+  padding: 0 30px 30px 30px;
+  max-width: 600px;
+}
+.about-popup h2,
+.about-popup h3,
+.about-popup h4,
+.about-popup p {
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+}
+.about-popup h2,
+.about-popup h3,
+.about-popup h4, {
+  font-weight: 600;
+}
+.about-popup ul {
+  list-style: none;
+}
+.about-popup a {
+  color: #333;
+  text-decoration: none;
+  border-bottom: dashed 1px #ff3333;
+}
 
 @media all and (max-width: 410px) {
   /*.navigation--social {
