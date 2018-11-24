@@ -108,7 +108,7 @@
 
               <nav class="cover-navigation navigation--social">
                 <ul class="navigation">
-                  
+
                   <li class="navigation__item">
                     <a href="mailto:deepintr@gmail.com" title="İletişim" target="_blank">
                       <i class="far fa-envelope"></i> <span class="label">E-posta</span>
@@ -139,6 +139,12 @@
     <script>
       // Redirect if connection is not secure.
       if (location.protocol !== 'https:') location.protocol = 'https:';
+
+      // Redirect all subpage requests to homepage.
+      var path = window.location.pathname;
+      if (!(path === "/" || path === "")) {
+        return window.location = "https://deepintr.org/notfound.html"
+      }
     </script>
     <script src="//code.jquery.com/jquery-latest.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
