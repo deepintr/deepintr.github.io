@@ -157,6 +157,10 @@
       </div>
     </header>
 
+    <script>
+      // Redirect if connection is not secure.
+      if (location.protocol !== 'https:') location.protocol = 'https:';
+    </script>
     <script src="//code.jquery.com/jquery-latest.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/particles.js"></script>
