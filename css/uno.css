@@ -2212,7 +2212,9 @@ input[type='tel']:-ms-input-placeholder {
   color: #ff3333;
   font-weight: 500;
   background: url('../images/deepintr-typo-logo-small.png') no-repeat center;
-  min-height: 45px;
+  background-size: contain;
+  min-height: 35px;
+  margin-top: 10px;
 }
 .panel-inverted {
   color: #333;
