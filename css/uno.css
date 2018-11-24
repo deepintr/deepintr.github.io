@@ -1812,19 +1812,18 @@ hr {
 .btn,
 .navigation__item a {
   padding: 10px 18px;
-  border: 1px solid #e25440;
+  border: 1px solid #333;
   border-radius: 20px;
   font-size: 0.9em;
   font-weight: bold;
   letter-spacing: 1px;
   text-shadow: none;
-  color: #e25440;
   -webkit-font-smoothing: antialiased;
 }
 .btn:hover,
 .navigation__item a:hover {
-  color: #b9301c;
-  border-color: #b9301c;
+  color: #ff3333;
+  border-color: #ff3333;
 }
 
 .btn-secondary {
@@ -1917,9 +1916,9 @@ nav {
 .navigation--social a .label {
   display: none;
 }
-.navigation--social a .icon {
+.navigation--social a i {
   display: block;
-  font-size: 1.7em;
+  font-size: 1.5em;
 }
 
 .pagination {
@@ -2198,10 +2197,6 @@ input[type='tel']:-ms-input-placeholder {
     display: block;
   }
 
-  /*	.navigation__item {
-		width: 100%;
-		margin: 0 0 .4em 0; } */
-
   .post-title {
     font-size: 2.5em;
   }
@@ -2284,9 +2279,3 @@ input[type='tel']:-ms-input-placeholder {
   .panel-subtitle {
     font-size: 0.9em;
   }
-
-  /*.btn, .navigation__item a {
-		display: block;
-		padding: 5px 12px;
-		margin-bottom: .4em; } */
-}
