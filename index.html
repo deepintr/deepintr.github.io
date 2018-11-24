@@ -104,7 +104,7 @@
               <nav class="cover-navigation navigation--social">
                 <ul class="navigation">
                   <li class="navigation__item">
-                    <a href="mailto:deepintr@gmail.com" title="İletişim" target="_blank">
+                    <a id="email-btn" href="" title="İletişim" target="_self">
                       <i class="far fa-envelope"></i> <span class="label">E-posta</span>
                     </a>
                   </li>
@@ -129,6 +129,27 @@
       </div>
     </header>
 
+    <script>
+      // Mail button click handler.
+      var emailBtn = document.getElementById('email-btn');
+      emailBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        var email_user = 'deepintr';
+        var email_at = '@';
+        var email_host = 'gmail.com';
+
+        var subject = 'deepintr.org';
+        var body_message = 'Merhaba!\n';
+
+        var mailto_link = 
+          'mailto:' + email_user + email_at + email_host + 
+          '?subject=' + subject + '&body=' + body_message;
+
+        emailwin = window.open(mailto_link, 'emailWindow');
+        if (emailwin && emailwin.open && !emailwin.closed) emailwin.close();
+      });
+    </script>
     <script src="//code.jquery.com/jquery-latest.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/particles.js"></script>
