@@ -6,7 +6,7 @@ h1 {
 .panel-title {
   color: #ff3333;
   font-weight: 500;
-  background: url('../images/deepintr-typo-logo-small.png') no-repeat center;
+  background: url('https://deepintr.org/images/deepintr-typo-logo-small.png') no-repeat center;
   background-size: contain;
   min-height: 35px;
   margin-top: 10px;
