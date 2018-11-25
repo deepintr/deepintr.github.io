@@ -20,8 +20,10 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" />
     <link rel="stylesheet" href="fonts/academicons.css" />
-    <link rel="stylesheet" href="css/css.min.css">
-    <link rel="stylesheet" href="featherlight/featherlight.min.css">
+    <link rel="stylesheet" href="css/css.min.css" />
+    <!-- Comment before pushing -->
+    <!-- <link rel="stylesheet" href="css/5.deepintr.css" /> -->
+    <link rel="stylesheet" href="featherlight/featherlight.min.css" />
     <!-- Icons -->
     <link rel="apple-touch-icon" sizes="57x57" href="images/icons/deepintr-logo-57.png" />
     <link rel="apple-touch-icon" sizes="60x60" href="images/icons/deepintr-logo-60.png" />
@@ -63,6 +65,12 @@
     <meta name="google-site-verification" content="p4oebLP_Bux5VSf6bVWvSxNFeZvaDK0FLjESKw8XxLk" />
     <link rel="canonical" href="https://deepintr.org" />
     <meta http-equiv="expires" content="1" />
+    <!--
+      <script>
+        // Check if user clicked lang buttons
+        var userPref = localStorage.getItem('deepintr_lang_pref');
+      </script>
+    -->
   </head>
   <body>
     <header class="panel-cover">
@@ -74,9 +82,7 @@
               <div class="panel-cover__title panel-title"></div>
             </a>
             <hr class="panel-cover__divider" />
-            <div class="panel-cover__description">
-              <h1>Türkiye'nin Tek Linux Deepin Kullanıcı Topluluğu</h1>
-            </div>
+            <div class="panel-cover__description"><h1>Türkiye'nin Tek Linux Deepin Kullanıcı Topluluğu</h1></div>
             <hr class="panel-cover__divider panel-cover__divider--secondary" />
 
             <!-- ------------- new nav ----------------- -->
@@ -91,13 +97,24 @@
                       title="Biz Kimiz? Nasıl Kurulduk? Neler Yapıyoruz?"
                       class="blog-button"
                       data-featherlight="about.html .about-popup"
-                      >Hakkımızda</a
                     >
+                      <i class="fas fa-users"></i> Hakkımızda
+                    </a>
                   </li>
                   <li class="navigation__item">
-                    <a href="https://spectrum.chat/deepintr" title="Spectrum" class="blog-button" target="_blank"
-                      >Forum</a
+                    <a href="https://spectrum.chat/deepintr" title="Spectrum" class="blog-button" target="_blank">
+                      <i class="fas fa-comments"></i> Forum
+                    </a>
+                  </li>
+                  <li class="navigation__item">
+                    <a
+                      href="https://distrowatch.com/table.php?distribution=deepin"
+                      title="DistroWatch"
+                      class="blog-button"
+                      target="_blank"
                     >
+                      <i class="fab fa-linux"></i> DistroWatch
+                    </a>
                   </li>
                 </ul>
               </nav>
