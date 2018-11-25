@@ -4,6 +4,15 @@
     <script>
       // Redirect if connection is not secure.
       if (location.protocol !== 'https:') location.protocol = 'https:';
+      // Lang related operations.
+      var currentLang = window.navigator.language.toLowerCase();
+      if (currentLang.indexOf('tr') === -1) {
+        // Redirect once
+        if (!localStorage.getItem('dpntr_is_redirect_once')) {
+          localStorage.setItem('dpntr_is_redirect_once', 'true');
+          window.location = 'https://deepintr.org/?hl=en';
+        }
+      }
     </script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -11,7 +20,7 @@
     <title>Deepin Turkey | Linux Deepin Türkiye Topluluğu</title>
     <meta
       name="description"
-      content="Deepin Turkey | Linux Deepin Türkiye Topluluğu. Bu topluluk, Türkiye'deki Linux Deepin kullanıcıları için oluşturulmuştur. "
+      content="Deepin Turkey | Linux Deepin Türkiye Topluluğu. Bu topluluk, Türkiye'deki Linux Deepin kullanıcıları için oluşturulmuştur."
     />
     <meta
       name="keywords"
@@ -47,7 +56,7 @@
     <meta itemprop="description" content="Türkiye'nin Tek Linux Deepin Kullanıcı Topluluğu" />
     <meta itemprop="image" content="https://deepintr.org/icons/deepintr-logo-192.png" />
     <!-- Twitter Card data -->
-    <meta name="twitter:site" content="@Deepin Turkey | Linux Deepin Türkiye Topluluğu" />
+    <meta name="twitter:site" content="Deepin Turkey | Linux Deepin Türkiye Topluluğu" />
     <meta name="twitter:description" content="Türkiye'nin Tek Linux Deepin Kullanıcı Topluluğu" />
     <meta name="twitter:image:src" content="https://deepintr.org/icons/deepintr-logo-192.png" />
     <!-- Open Graph data -->
@@ -65,12 +74,6 @@
     <meta name="google-site-verification" content="p4oebLP_Bux5VSf6bVWvSxNFeZvaDK0FLjESKw8XxLk" />
     <link rel="canonical" href="https://deepintr.org" />
     <meta http-equiv="expires" content="1" />
-    <!--
-      <script>
-        // Check if user clicked lang buttons
-        var userPref = localStorage.getItem('deepintr_lang_pref');
-      </script>
-    -->
   </head>
   <body>
     <header class="panel-cover">
@@ -82,7 +85,9 @@
               <div class="panel-cover__title panel-title"></div>
             </a>
             <hr class="panel-cover__divider" />
-            <div class="panel-cover__description"><h1>Türkiye'nin Tek Linux Deepin Kullanıcı Topluluğu</h1></div>
+            <div class="panel-cover__description">
+              <h1 class="main-header">Türkiye'nin Tek Linux Deepin Kullanıcı Topluluğu</h1>
+            </div>
             <hr class="panel-cover__divider panel-cover__divider--secondary" />
 
             <!-- ------------- new nav ----------------- -->
@@ -92,18 +97,18 @@
                 <ul class="navigation">
                   <li class="navigation__item">
                     <a
-                      class="home"
+                      class="about"
                       href="#"
                       title="Biz Kimiz? Nasıl Kurulduk? Neler Yapıyoruz?"
                       class="blog-button"
                       data-featherlight="about.html .about-popup"
                     >
-                      <i class="fas fa-users"></i> Hakkımızda
+                      <i class="fas fa-users"></i> <span class="title-about">Hakkımızda</span>
                     </a>
                   </li>
                   <li class="navigation__item">
-                    <a href="https://spectrum.chat/deepintr" title="Spectrum" class="blog-button" target="_blank">
-                      <i class="fas fa-comments"></i> Forum
+                    <a href="https://spectrum.chat/deepintr" title="Spectrum.chat" class="blog-button" target="_blank">
+                      <i class="fas fa-comments"></i> <span class="title-spectrum">Spectrum.chat</span>
                     </a>
                   </li>
                   <li class="navigation__item">
@@ -113,7 +118,7 @@
                       class="blog-button"
                       target="_blank"
                     >
-                      <i class="fab fa-linux"></i> DistroWatch
+                      <i class="fab fa-linux"></i> <span id="title-distrowatch">DistroWatch</span>
                     </a>
                   </li>
                 </ul>
@@ -125,7 +130,7 @@
                 <ul class="navigation">
                   <li class="navigation__item">
                     <a id="email-btn" href="" title="İletişim" target="_self">
-                      <i class="far fa-envelope"></i> <span class="label">E-posta</span>
+                      <i class="far fa-envelope"></i> <span class="label">E-mail</span>
                     </a>
                   </li>
                   <li class="navigation__item">
@@ -149,26 +154,6 @@
       </div>
     </header>
 
-    <script>
-      // Mail button click handler.
-      var emailBtn = document.getElementById('email-btn');
-      emailBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-
-        var email_user = 'deepintr';
-        var email_at = '@';
-        var email_host = 'gmail.com';
-
-        var subject = 'deepintr.org';
-        var body_message = 'Merhaba!\n';
-
-        emailwin = window.open(
-          'mailto:' + email_user + email_at + email_host + '?subject=' + subject + '&body=' + body_message,
-          'emailWindow'
-        );
-        if (emailwin && emailwin.open && !emailwin.closed) emailwin.close();
-      });
-    </script>
     <script src="//code.jquery.com/jquery-latest.js"></script>
     <script type="text/javascript" src="js/js.min.js"></script>
     <script type="text/javascript" src="featherlight/featherlight.min.js" charset="utf-8"></script>
