@@ -13,7 +13,9 @@ h1 {
 }
 .panel-cover__description h1 {
   margin: 0 10px;
-  font-size: 1.1em;
+  font-size: 1.0em;
+  font-weight: 600;
+  letter-spacing: 0;
 }
 .panel-inverted {
   color: #333;
