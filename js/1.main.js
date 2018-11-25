@@ -23,11 +23,12 @@ $(document).ready(function() {
 
   if (langQuery && langQuery === 'en') {
     document.title = 'Deepin Turkey | Linux Deepin Turkey Community';
-		document.querySelector('.main-header').innerText = "The Only Linux Deepin User Community in Turkey";
-		document.querySelector('.home').setAttribute('title', document.title);
+    document.querySelector('.main-header').innerText = 'The Only Linux Deepin User Community in Turkey';
+    document.querySelector('.home').setAttribute('title', document.title);
+    document.querySelector('.home').setAttribute('href', window.location);
     document.querySelector('.title-about').innerText = 'About Us';
-		document.querySelector('.about').setAttribute('title', 'Who we are? What we do?');
-		document.querySelector('#email-btn').setAttribute('title', 'Contact Us');
+    document.querySelector('.about').setAttribute('title', 'Who we are? What we do?');
+    document.querySelector('#email-btn').setAttribute('title', 'Contact Us');
   }
   /*
   $('.home').click(function (e) {
