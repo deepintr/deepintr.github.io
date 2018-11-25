@@ -1,0 +1,56 @@
+/* Customization for deepintr */
+h1 {
+  color: #333;
+  text-align: center;
+}
+.panel-title {
+  color: #ff3333;
+  font-weight: 500;
+  background: url('../images/deepintr-typo-logo-small.png') no-repeat center;
+  background-size: contain;
+  min-height: 35px;
+  margin-top: 10px;
+}
+.panel-cover__description h1 {
+  margin: 0 10px;
+  font-size: 1.1em;
+}
+.panel-inverted {
+  color: #333;
+}
+.navigation-wrapper a {
+  border-color: #333;
+  color: #333;
+}
+.navigation-wrapper a:hover {
+  border-color: #ff3333;
+  color: #ff3333;
+}
+.user-image {
+  border-radius: 50%;
+  box-shadow: 0 0 10px gray;
+}
+.about-popup {
+  padding: 0 30px 30px 30px;
+  max-width: 600px;
+}
+.about-popup h2,
+.about-popup h3,
+.about-popup h4,
+.about-popup p {
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+}
+.about-popup h2,
+.about-popup h3,
+.about-popup h4, {
+  font-weight: 600;
+}
+.about-popup ul {
+  list-style: none;
+}
+.about-popup a {
+  color: #333;
+  text-decoration: none;
+  border-bottom: dashed 1px #ff3333;
+}
