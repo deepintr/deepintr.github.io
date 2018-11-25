@@ -13,7 +13,7 @@ h1 {
 }
 .panel-cover__description h1 {
   margin: 0 10px;
-  font-size: 1.0em;
+  font-size: 1em;
   font-weight: 600;
   letter-spacing: 0;
 }
@@ -43,9 +43,12 @@ h1 {
   font-family: 'Open Sans', sans-serif;
   color: #333;
 }
+.about-popup p {
+  text-align: start;
+}
 .about-popup h2,
 .about-popup h3,
-.about-popup h4, {
+.about-popup h4 {
   font-weight: 600;
 }
 .about-popup ul {
