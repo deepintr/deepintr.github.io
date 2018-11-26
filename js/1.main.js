@@ -43,10 +43,12 @@ $(document).ready(function() {
 
   // Language button click-handlers.
   langBtnTR.addEventListener('click', function(e) {
+    if (langPref === 'tr') return;
     localStorage.setItem('dpntr_lang_pref', 'tr');
     location.reload(true);
   });
   langBtnEN.addEventListener('click', function(e) {
+    if (langPref === 'en') return;
     localStorage.setItem('dpntr_lang_pref', 'en');
     location.reload(true);
   });
