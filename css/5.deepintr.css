@@ -68,4 +68,5 @@ h1 {
 }
 .lang-select #lang-img {
   cursor: pointer;
+  border-radius: 5px;
 }
