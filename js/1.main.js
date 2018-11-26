@@ -19,34 +19,35 @@ $(document).ready(function() {
   });
 
   // Language specific functions.
-  var langImg = document.querySelector('#lang-img');
+  var langBtnTR = document.querySelector('.lang-select-tr');
+  var langBtnEN = document.querySelector('.lang-select-en');
   var langPref = localStorage.getItem('dpntr_lang_pref');
-  if (langPref) {
-    // Set country flag.
-    var flagName;
-    if (langPref === 'tr') flagName = 'tr.svg';
-    else flagName = 'gb.svg';
-    langImg.setAttribute('src', 'https://deepintr.org/images/flags/' + flagName);
+
+  switch (langPref) {
+    case 'tr':
+      langBtnEN.classList.add('lang-filter');
+      break;
+
+    case 'en':
+      langBtnTR.classList.add('lang-filter');
+      document.title = 'Deepin Turkey | Linux Deepin Turkey Community';
+      document.querySelector('.main-header').innerText = 'The Only Linux Deepin User Community in Turkey';
+      document.querySelector('.home').setAttribute('title', document.title);
+      document.querySelector('.home').setAttribute('href', window.location);
+      document.querySelector('.title-about').innerText = 'About Us';
+      document.querySelector('.about').setAttribute('title', 'Who we are? What we do?');
+      document.querySelector('.about').setAttribute('data-featherlight', 'about.en.html .about-popup');
+      document.querySelector('#email-btn').setAttribute('title', 'Contact Us');
+      break;
   }
 
-  if (langPref && langPref === 'en') {
-    document.title = 'Deepin Turkey | Linux Deepin Turkey Community';
-    document.querySelector('.main-header').innerText = 'The Only Linux Deepin User Community in Turkey';
-    document.querySelector('.home').setAttribute('title', document.title);
-    document.querySelector('.home').setAttribute('href', window.location);
-    document.querySelector('.title-about').innerText = 'About Us';
-    document.querySelector('.about').setAttribute('title', 'Who we are? What we do?');
-    document.querySelector('.about').setAttribute('data-featherlight', 'about.en.html .about-popup');
-    document.querySelector('#email-btn').setAttribute('title', 'Contact Us');
-  }
-
-  // Language button click-handler.
-  langImg.addEventListener('click', function(e) {
-    if (langPref === 'tr') {
-      localStorage.setItem('dpntr_lang_pref', 'en');
-    } else {
-      localStorage.setItem('dpntr_lang_pref', 'tr');
-    }
+  // Language button click-handlers.
+  langBtnTR.addEventListener('click', function(e) {
+    localStorage.setItem('dpntr_lang_pref', 'tr');
+    location.reload(true);
+  });
+  langBtnEN.addEventListener('click', function(e) {
+    localStorage.setItem('dpntr_lang_pref', 'en');
     location.reload(true);
   });
 

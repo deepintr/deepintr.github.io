@@ -66,10 +66,16 @@ h1 {
   z-index: 999;
   padding: 20px;
 }
-.lang-select #lang-img {
+.lang-select .lang-img {
   cursor: pointer;
   border-radius: 5px;
+  width: 32px;
+  height: 20px;
+  object-fit: cover;
 }
-.lang-select #lang-img:hover {
+.lang-select .lang-img:hover {
   opacity: 0.75;
+}
+.lang-filter {
+  opacity: 0.5;
 }
