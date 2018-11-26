@@ -1,6 +1,6 @@
 $(document).ready(function() {
   // Mail button click handler.
-  var emailBtn = document.getElementById('email-btn');
+  var emailBtn = document.querySelector('#email-btn');
   emailBtn.addEventListener('click', function(e) {
     e.preventDefault();
 
@@ -18,18 +18,38 @@ $(document).ready(function() {
     if (emailwin && emailwin.open && !emailwin.closed) emailwin.close();
   });
 
-  var langQuery = window.location.search.toLowerCase();
-  langQuery = langQuery.substring(langQuery.indexOf('=') + 1);
+  // Language specific functions.
+  var langImg = document.querySelector('#lang-img');
+  var langPref = localStorage.getItem('dpntr_lang_pref');
+  if (langPref) {
+    // Set country flag. Counter logic!
+    var flagName;
+    if (langPref === 'tr') flagName = 'gb.svg';
+    else flagName = 'tr.svg';
+    langImg.setAttribute('src', 'https://deepintr.org/images/flags/' + flagName);
+  }
 
-  if (langQuery && langQuery === 'en') {
+  if (langPref && langPref === 'en') {
     document.title = 'Deepin Turkey | Linux Deepin Turkey Community';
     document.querySelector('.main-header').innerText = 'The Only Linux Deepin User Community in Turkey';
     document.querySelector('.home').setAttribute('title', document.title);
     document.querySelector('.home').setAttribute('href', window.location);
     document.querySelector('.title-about').innerText = 'About Us';
     document.querySelector('.about').setAttribute('title', 'Who we are? What we do?');
+    document.querySelector('.about').setAttribute('data-featherlight', 'about.en.html .about-popup');
     document.querySelector('#email-btn').setAttribute('title', 'Contact Us');
   }
+
+  // Language button click-handler.
+  langImg.addEventListener('click', function(e) {
+    if (langPref === 'tr') {
+      localStorage.setItem('dpntr_lang_pref', 'en');
+    } else {
+      localStorage.setItem('dpntr_lang_pref', 'tr');
+    }
+    location.reload(true);
+  });
+
   /*
   $('.home').click(function (e) {
 			$('#nav-home').css({'color':'rgb(0,0,0)','font-weight': '400'})

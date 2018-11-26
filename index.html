@@ -4,14 +4,16 @@
     <script>
       // Redirect if connection is not secure.
       if (location.protocol !== 'https:') location.protocol = 'https:';
-      // Lang related operations.
-      var currentLang = window.navigator.language.toLowerCase();
-      if (currentLang.indexOf('tr') === -1) {
-        // Redirect once
-        if (!localStorage.getItem('dpntr_is_redirect_once')) {
-          localStorage.setItem('dpntr_is_redirect_once', 'true');
-          window.location = 'https://deepintr.org/?hl=en';
+
+      // Auto set language pref once.
+      if (!localStorage.getItem('dpntr_is_set_once')) {
+        var currentLang = window.navigator.language.toLowerCase();
+        if (currentLang.indexOf('tr') > -1) {
+          localStorage.setItem('dpntr_lang_pref', 'tr');
+        } else {
+          localStorage.setItem('dpntr_lang_pref', 'en');
         }
+        localStorage.setItem('dpntr_is_set_once', 'true');
       }
     </script>
     <meta charset="UTF-8" />
@@ -101,7 +103,7 @@
                       href="#"
                       title="Biz Kimiz? Nasıl Kurulduk? Neler Yapıyoruz?"
                       class="blog-button"
-                      data-featherlight="about.html .about-popup"
+                      data-featherlight="about.tr.html .about-popup"
                     >
                       <i class="fas fa-users"></i> <span class="title-about">Hakkımızda</span>
                     </a>
@@ -154,9 +156,14 @@
       </div>
     </header>
 
+    <section class="lang-select">
+      <img id="lang-img" src="/images/flags/tr.svg" width="32px" alt="Country Flag" />
+    </section>
+
     <script src="//code.jquery.com/jquery-latest.js"></script>
     <script type="text/javascript" src="js/js.min.js"></script>
     <script type="text/javascript" src="featherlight/featherlight.min.js" charset="utf-8"></script>
+    <!-- <script src="js/1.main.js"></script> -->
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5bf9c9936fa7c2c3"></script>
   </body>

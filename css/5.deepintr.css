@@ -59,3 +59,13 @@ h1 {
   text-decoration: none;
   border-bottom: dashed 1px #ff3333;
 }
+.lang-select {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  padding: 20px;
+}
+.lang-select #lang-img {
+  cursor: pointer;
+}
