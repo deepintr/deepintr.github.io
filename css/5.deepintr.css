@@ -70,3 +70,6 @@ h1 {
   cursor: pointer;
   border-radius: 5px;
 }
+.lang-select #lang-img:hover {
+  opacity: 0.75;
+}

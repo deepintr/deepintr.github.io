@@ -22,10 +22,10 @@ $(document).ready(function() {
   var langImg = document.querySelector('#lang-img');
   var langPref = localStorage.getItem('dpntr_lang_pref');
   if (langPref) {
-    // Set country flag. Counter logic!
+    // Set country flag.
     var flagName;
-    if (langPref === 'tr') flagName = 'gb.svg';
-    else flagName = 'tr.svg';
+    if (langPref === 'tr') flagName = 'tr.svg';
+    else flagName = 'gb.svg';
     langImg.setAttribute('src', 'https://deepintr.org/images/flags/' + flagName);
   }
 
