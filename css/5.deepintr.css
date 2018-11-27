@@ -79,3 +79,6 @@ h1 {
 .lang-filter {
   opacity: 0.5;
 }
+.navigation--social .navigation__item {
+  font-size: 1.25em;
+}
