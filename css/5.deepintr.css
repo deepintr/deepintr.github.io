@@ -82,3 +82,8 @@ h1 {
 .navigation--social .navigation__item {
   font-size: 1.25em;
 }
+@media all and (max-width: 980px) {
+  .download-option {
+    display: none;
+  }
+}
