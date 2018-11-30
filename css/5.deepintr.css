@@ -82,8 +82,34 @@ h1 {
 .navigation--social .navigation__item {
   font-size: 1.25em;
 }
+#latest-threads h2 {
+  color: #333;
+  font-size: 1.15em;
+  font-weight: 600;
+}
+#latest-threads a {
+  color: #333;
+  display: block;
+  padding: 8px 0;
+}
+#latest-threads a::before {
+  content: "#";
+  margin-right: 2px;
+}
+#latest-threads a:last-child {
+  font-style: italic;
+}
+#latest-threads a:last-child::before {
+  content: "»";
+}
+#latest-threads a:hover {
+  color: #ff3333;
+}
 @media all and (max-width: 980px) {
   .download-option {
+    display: none;
+  }
+  #latest-threads {
     display: none;
   }
 }
