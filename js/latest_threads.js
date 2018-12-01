@@ -31,7 +31,7 @@ $(document).ready(function() {
   };
 
   var latestThreads = document.querySelector('#latest-threads__content');
-  var langPref = localStorage.getItem('dpntr_lang_pref');
+  var langPref = localStorage.getItem('deepintr_lang_pref');
 
   links[langPref].forEach(element => {
     var a = document.createElement('a');

@@ -6,12 +6,12 @@
       if (location.protocol !== 'https:') location.protocol = 'https:';
 
       // Auto set language pref once.
-      if (!localStorage.getItem('dpntr_lang_pref')) {
+      if (!localStorage.getItem('deepintr_lang_pref')) {
         var currentLang = window.navigator.language.toLowerCase();
         if (currentLang.indexOf('tr') > -1) {
-          localStorage.setItem('dpntr_lang_pref', 'tr');
+          localStorage.setItem('deepintr_lang_pref', 'tr');
         } else {
-          localStorage.setItem('dpntr_lang_pref', 'en');
+          localStorage.setItem('deepintr_lang_pref', 'en');
         }
       }
     </script>
