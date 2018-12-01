@@ -96,14 +96,11 @@ h1 {
   content: "#";
   margin-right: 2px;
 }
-#latest-threads a:last-child {
-  font-style: italic;
-}
-#latest-threads a:last-child::before {
-  content: "»";
-}
 #latest-threads a:hover {
   color: #ff3333;
+}
+.panel-cover__divider--secondary {
+  display: none;
 }
 @media all and (max-width: 980px) {
   .download-option {
@@ -111,5 +108,8 @@ h1 {
   }
   #latest-threads {
     display: none;
+  }
+  .panel-cover__divider--secondary {
+    display: block;
   }
 }

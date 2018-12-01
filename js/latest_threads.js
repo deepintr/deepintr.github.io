@@ -10,8 +10,7 @@ $(document).ready(function() {
       [
         'Linux Deepin Nasıl Kurulur? Resimli anlatım.',
         'https://spectrum.chat/deepintr?thread=9cbd6db3-1080-45bb-9122-a05c07bb9621'
-      ],
-      ['Daha fazlası için tıklayın...', 'https://spectrum.chat/deepintr']
+      ]
     ],
     en: [
       [
@@ -25,8 +24,7 @@ $(document).ready(function() {
       [
         '【OFFICIAL STATEMENT】LINUX DEEPIN IS NOT SPYWARE',
         'https://spectrum.chat/deepintr?thread=1715ba89-fe5f-426a-9496-f26f015c214f'
-      ],
-      ['Discover more...', 'https://spectrum.chat/deepintr']
+      ]
     ]
   };
 
