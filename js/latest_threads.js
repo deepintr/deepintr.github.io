@@ -36,6 +36,7 @@ $(document).ready(function() {
   links[langPref].forEach(element => {
     var a = document.createElement('a');
     a.innerHTML = element[0];
+    a.title = element[0];
     a.href = element[1];
     a.target = '_blank';
     latestThreads.appendChild(a);
