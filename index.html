@@ -5,6 +5,28 @@
       // Redirect if connection is not secure.
       if (location.protocol !== 'https:') location.protocol = 'https:';
 
+      // Trivial link redirect :)
+      var queryStr = location.search.substring(location.search.indexOf('?') + 1).toLowerCase();
+      var requestedLink;
+      switch (queryStr) {
+        case 'spectrum':
+          requestedLink = 'https://spectrum.chat/deepintr';
+          break;
+        case 'telegram':
+          requestedLink = 'https://t.me/deepintr';
+          break;
+        case 'github':
+          requestedLink = 'https://github.com/deepintr';
+          break;
+        case 'youtube':
+          requestedLink = 'https://www.youtube.com/channel/UCvd1FPyxqwveRB50tOtbAGQ';
+          break;
+        case 'distrowatch':
+          requestedLink = 'https://distrowatch.com/table.php?distribution=deepin';
+          break;
+      }
+      if (requestedLink) window.location.replace(requestedLink);
+
       // Auto set language pref once.
       if (!localStorage.getItem('deepintr_lang_pref')) {
         var currentLang = window.navigator.language.toLowerCase();
@@ -176,12 +198,12 @@
                     </a>
                   </li>
                   <li class="navigation__item">
-                    <a href="https://spectrum.chat/deepintr" title="Spectrum.chat" class="blog-button" target="_blank">
+                    <a href="https://deepintr.org/?spectrum" title="Spectrum.chat" class="blog-button" target="_blank">
                       <i class="fas fa-comments"></i> <span>Forum</span>
                     </a>
                   </li>
                   <li class="navigation__item">
-                    <a href="https://t.me/deepintr" title="Telegram" class="blog-button" target="_blank">
+                    <a href="https://deepintr.org/?telegram" title="Telegram" class="blog-button" target="_blank">
                       <i class="fab fa-telegram"></i> <span>Telegram</span>
                     </a>
                   </li>
@@ -221,17 +243,17 @@
                     </a>
                   </li>
                   <li class="navigation__item">
-                    <a href="https://www.youtube.com/channel/UCvd1FPyxqwveRB50tOtbAGQ" title="YouTube" target="_blank">
+                    <a href="https://deepintr.org/?youtube" title="YouTube" target="_blank">
                       <i class="fab fa-youtube"></i> <span class="label">YouTube</span>
                     </a>
                   </li>
                   <li class="navigation__item">
-                    <a href="https://github.com/deepintr" title="GitHub" target="_blank">
+                    <a href="https://deepintr.org/?github" title="GitHub" target="_blank">
                       <i class="fab fa-github"></i> <span class="label">GitHub</span>
                     </a>
                   </li>
                   <li class="navigation__item">
-                    <a href="https://distrowatch.com/table.php?distribution=deepin" title="DistroWatch" target="_blank">
+                    <a href="https://deepintr.org/?distrowatch" title="DistroWatch" target="_blank">
                       <i class="fab fa-linux"></i> <span class="label">DistroWatch</span>
                     </a>
                   </li>
