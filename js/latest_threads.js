@@ -49,7 +49,7 @@ $(document).ready(function() {
     if (!latestRecord || latestRecord !== todayStr) {
       // Open distrowatch and save the date.
       localStorage.setItem('deepintr-dw-latest-visit', todayStr);
-      window.open('https://distrowatch.com/table.php?distribution=deepin', 'distrowatch', 'width=800,height=600');
+      window.open('https://deepintr.org/?distrowatch', 'distrowatch', 'width=800,height=600');
     }
     body.removeEventListener('click', this, false);
   });
