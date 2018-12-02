@@ -19,7 +19,7 @@ $(document).ready(function() {
   var latestThreads = document.querySelector('#latest-threads__content');
   var langPref = localStorage.getItem('deepintr_lang_pref');
 
-  links[langPref].forEach(element => {
+  links[langPref].forEach(function(element) {
     var a = document.createElement('a');
     a.innerHTML = element[0];
     a.title = element[0];
