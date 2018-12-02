@@ -8,7 +8,7 @@ $(document).ready(function() {
       ],
       ['Sıkça Sorulan Sorular', 'https://spectrum.chat/deepintr?thread=9b557ba5-57e2-411e-a703-e4c8472a3cb3'],
       [
-        'Linux Deepin Nasıl Kurulur? Resimli anlatım.',
+        'Linux Deepin Kurulumu (Resimli Anlatım)',
         'https://spectrum.chat/deepintr?thread=9cbd6db3-1080-45bb-9122-a05c07bb9621'
       ]
     ],
