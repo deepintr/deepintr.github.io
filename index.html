@@ -1,48 +1,7 @@
 <!DOCTYPE html>
 <html lang="tr" prefix="og: http://ogp.me/ns#">
   <head>
-    <script>
-      // Redirect if connection is not secure.
-      if (location.protocol !== 'https:') location.protocol = 'https:';
-
-      // Trivial link redirect :)
-      var queryStr = location.search.substring(location.search.indexOf('?') + 1).toLowerCase();
-      var requestedLink;
-      switch (queryStr) {
-        case 'spectrum':
-          requestedLink = 'https://spectrum.chat/deepintr';
-          break;
-        case 'telegram':
-          requestedLink = 'https://t.me/deepintr';
-          break;
-        case 'github':
-          requestedLink = 'https://github.com/deepintr';
-          break;
-        case 'youtube':
-          requestedLink = 'https://www.youtube.com/channel/UCvd1FPyxqwveRB50tOtbAGQ';
-          break;
-        case 'distrowatch':
-          requestedLink = 'https://distrowatch.com/table.php?distribution=deepin';
-          break;
-        case 'download1':
-          requestedLink = 'http://cdimage.deepin.com/releases/15.8/deepin-15.8-amd64.iso';
-          break;
-        case 'download2':
-          requestedLink = 'https://drive.google.com/drive/folders/1bt5CQNuQxSQ6K0Ryo-YFgYnlRzTqeOSp?usp=sharing';
-          break;
-      }
-      if (requestedLink) window.location.replace(requestedLink);
-
-      // Auto set language pref once.
-      if (!localStorage.getItem('deepintr_lang_pref')) {
-        var currentLang = window.navigator.language.toLowerCase();
-        if (currentLang.indexOf('tr') > -1) {
-          localStorage.setItem('deepintr_lang_pref', 'tr');
-        } else {
-          localStorage.setItem('deepintr_lang_pref', 'en');
-        }
-      }
-    </script>
+    <script src="js/init.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130014661-1"></script>
     <script>
