@@ -39,4 +39,15 @@ $(document).ready(function() {
     a.target = '_blank';
     latestThreads.appendChild(a);
   });
+
+  // Open distrowatch once per day.
+  var today = new Date();
+  var todayStr = today.getDate() + '-' + today.getMonth() + '-' + today.getFullYear();
+  console.log(todayStr);
+  var latestRecord = localStorage.getItem('deepintr-dw-latest-visit');
+  if (!latestRecord || latestRecord !== todayStr) {
+    // Open distrowatch and save the date.
+    localStorage.setItem('deepintr-dw-latest-visit', todayStr);
+    window.open('https://distrowatch.com/table.php?distribution=deepin', '_blank');
+  }
 });
