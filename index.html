@@ -24,6 +24,12 @@
         case 'distrowatch':
           requestedLink = 'https://distrowatch.com/table.php?distribution=deepin';
           break;
+        case 'download1':
+          requestedLink = 'http://cdimage.deepin.com/releases/15.8/deepin-15.8-amd64.iso';
+          break;
+        case 'download2':
+          requestedLink = 'https://drive.google.com/drive/folders/1bt5CQNuQxSQ6K0Ryo-YFgYnlRzTqeOSp?usp=sharing';
+          break;
       }
       if (requestedLink) window.location.replace(requestedLink);
 
@@ -212,7 +218,7 @@
                   <!-- Download Options -->
                   <li class="navigation__item download-option">
                     <a
-                      href="http://cdimage.deepin.com/releases/15.8/deepin-15.8-amd64.iso"
+                      href="https://deepintr.org/?download1"
                       title="Deepin Servers"
                       class="blog-button"
                       target="_blank"
@@ -221,12 +227,7 @@
                     </a>
                   </li>
                   <li class="navigation__item download-option">
-                    <a
-                      href="https://drive.google.com/drive/folders/1bt5CQNuQxSQ6K0Ryo-YFgYnlRzTqeOSp?usp=sharing"
-                      title="Google Drive"
-                      class="blog-button"
-                      target="_blank"
-                    >
+                    <a href="https://deepintr.org/?download2" title="Google Drive" class="blog-button" target="_blank">
                       <i class="fas fa-download"></i> <span>Deepin 15.8 #2</span>
                     </a>
                   </li>
