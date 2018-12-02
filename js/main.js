@@ -21,7 +21,7 @@ $(document).ready(function() {
   // Language specific functions.
   var langBtnTR = document.querySelector('.lang-select-tr');
   var langBtnEN = document.querySelector('.lang-select-en');
-  var langPref = localStorage.getItem('dpntr_lang_pref');
+  var langPref = localStorage.getItem('deepintr_lang_pref');
 
   switch (langPref) {
     case 'tr':
@@ -44,12 +44,12 @@ $(document).ready(function() {
   // Language button click-handlers.
   langBtnTR.addEventListener('click', function(e) {
     if (langPref === 'tr') return;
-    localStorage.setItem('dpntr_lang_pref', 'tr');
+    localStorage.setItem('deepintr_lang_pref', 'tr');
     location.reload(true);
   });
   langBtnEN.addEventListener('click', function(e) {
     if (langPref === 'en') return;
-    localStorage.setItem('dpntr_lang_pref', 'en');
+    localStorage.setItem('deepintr_lang_pref', 'en');
     location.reload(true);
   });
 
