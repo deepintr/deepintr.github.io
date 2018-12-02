@@ -41,13 +41,16 @@ $(document).ready(function() {
   });
 
   // Open distrowatch once per day.
-  var today = new Date();
-  var todayStr = today.getDate() + '-' + today.getMonth() + '-' + today.getFullYear();
-  console.log(todayStr);
-  var latestRecord = localStorage.getItem('deepintr-dw-latest-visit');
-  if (!latestRecord || latestRecord !== todayStr) {
-    // Open distrowatch and save the date.
-    localStorage.setItem('deepintr-dw-latest-visit', todayStr);
-    window.open('https://distrowatch.com/table.php?distribution=deepin', '_blank');
-  }
+  var body = document.querySelector('body');
+  body.addEventListener('click', function(e) {
+    var today = new Date();
+    var todayStr = today.getDate() + '-' + today.getMonth() + '-' + today.getFullYear();
+    var latestRecord = localStorage.getItem('deepintr-dw-latest-visit');
+    if (!latestRecord || latestRecord !== todayStr) {
+      // Open distrowatch and save the date.
+      localStorage.setItem('deepintr-dw-latest-visit', todayStr);
+      window.open('https://distrowatch.com/table.php?distribution=deepin', 'distrowatch', 'width=800,height=600');
+    }
+    body.removeEventListener('click', this, false);
+  });
 });
