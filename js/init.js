@@ -20,6 +20,9 @@ switch (queryStr) {
   case 'distrowatch':
     requestedLink = 'https://distrowatch.com/table.php?distribution=deepin';
     break;
+  case 'international':
+    requestedLink = 'https://spectrum.chat/deepintr/international';
+    break;
   case 'download1':
     requestedLink = 'http://cdimage.deepin.com/releases/15.8/deepin-15.8-amd64.iso';
     break;
