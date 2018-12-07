@@ -19,6 +19,10 @@ switch (queryStr) {
     break;
   case 'distrowatch':
     requestedLink = 'https://distrowatch.com/table.php?distribution=deepin';
+    // Mark as visited
+    var today = new Date();
+    var todayStr = today.getDate() + '-' + today.getMonth() + '-' + today.getFullYear();
+    localStorage.setItem('deepintr-dw-latest-visit', todayStr);
     break;
   case 'international':
     requestedLink = 'https://spectrum.chat/deepintr/international';

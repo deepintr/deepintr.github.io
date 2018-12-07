@@ -90,10 +90,12 @@ h1 {
 #latest-threads a {
   color: #333;
   display: block;
+  font-weight: 600;
   padding: 8px 0;
+  text-shadow: none;
 }
 #latest-threads a::before {
-  content: "#";
+  content: '#';
   margin-right: 2px;
 }
 #latest-threads a:hover {
