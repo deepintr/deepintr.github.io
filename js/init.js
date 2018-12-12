@@ -14,6 +14,9 @@ switch (queryStr) {
   case 'github':
     requestedLink = 'https://github.com/deepintr';
     break;
+  case 'linkedin':
+    requestedLink = 'https://tr.linkedin.com/company/deepinturkey';
+    break;
   case 'youtube':
     requestedLink = 'https://www.youtube.com/channel/UCvd1FPyxqwveRB50tOtbAGQ';
     break;
