@@ -1,5 +1,5 @@
 // Redirect if connection is not secure.
-if (location.protocol !== 'https:') location.protocol = 'https:';
+// if (location.protocol !== 'https:') location.protocol = 'https:';
 
 // Trivial link redirect :)
 var queryStr = location.search.substring(location.search.indexOf('?') + 1).toLowerCase();

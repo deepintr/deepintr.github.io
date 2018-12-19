@@ -104,11 +104,35 @@ h1 {
 .panel-cover__divider--secondary {
   display: none;
 }
-@media all and (max-width: 980px) {
-  .download-option {
-    display: none;
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
+@keyframes octocat-wave {
+  0%,
+  100% {
+    transform: rotate(0);
   }
-  #latest-threads {
+  20%,
+  60% {
+    transform: rotate(-25deg);
+  }
+  40%,
+  80% {
+    transform: rotate(10deg);
+  }
+}
+@media (max-width: 500px) {
+  .github-corner:hover .octo-arm {
+    animation: none;
+  }
+  .github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
+}
+@media all and (max-width: 980px) {
+  .download-option,
+  #latest-threads,
+  .github-corner {
     display: none;
   }
   .panel-cover__divider--secondary {
