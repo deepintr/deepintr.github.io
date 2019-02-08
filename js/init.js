@@ -31,10 +31,10 @@ switch (queryStr) {
     requestedLink = 'https://spectrum.chat/deepintr/international';
     break;
   case 'download1':
-    requestedLink = 'http://cdimage.deepin.com/releases/15.8/deepin-15.8-amd64.iso';
+    requestedLink = 'http://cdimage.deepin.com/releases/15.9/deepin-15.9-amd64.iso';
     break;
   case 'download2':
-    requestedLink = 'https://drive.google.com/drive/folders/1bt5CQNuQxSQ6K0Ryo-YFgYnlRzTqeOSp?usp=sharing';
+    requestedLink = 'https://drive.google.com/drive/folders/1DogpsC8BlFdtMOscJSkk2gO3iNppgrob?usp=sharing';
     break;
   // Turkish links
   case 'linux-deepin-casus-yazilim-degildir':
