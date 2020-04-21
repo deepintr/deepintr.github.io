@@ -3,12 +3,12 @@ import React from "react";
 import Particles from "react-particles-js";
 import { createUseStyles } from "react-jss";
 import GitHubBadge from "../../components/GitHubBadge";
+import particlesConfig from "../../configs/particlesjs-config";
 import styles from "./styles";
 
 const useStyles = createUseStyles(styles);
 
 const Main: React.FC = ({ children }) => {
-  const particlesConfig = require("../../configs/particlesjs-config.json");
   const classes = useStyles();
 
   return (

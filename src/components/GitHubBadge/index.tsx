@@ -7,6 +7,7 @@ const GitHubBadge: React.FC = () => {
       href={pkg.repository.url}
       className="github-corner"
       aria-label="View source on GitHub"
+      title="View source on GitHub"
       target="_blank"
     >
       <svg
