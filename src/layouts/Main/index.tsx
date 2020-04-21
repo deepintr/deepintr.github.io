@@ -1,4 +1,5 @@
 import "normalize.css";
+import "../../styles/bulma.scss";
 import React from "react";
 import Particles from "react-particles-js";
 import { createUseStyles } from "react-jss";

@@ -1,9 +1,4 @@
 import React from "react";
-import Main from '../layouts/Main';
+import Home from "../views/Home";
 
-
-export default () => (
-  <Main>
-    Hello World!
-  </Main>
-);
+export default () => <Home />;
