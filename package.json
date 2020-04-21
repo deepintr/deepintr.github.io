@@ -1,0 +1,35 @@
+{
+  "name": "deepintr-web",
+  "private": true,
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "dependencies": {
+    "gatsby": "^2.20.25",
+    "gatsby-plugin-typescript": "^2.3.3",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "@types/node": "^13.13.1",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.6",
+    "prettier": "2.0.4",
+    "typescript": "^3.8.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deepintr/www"
+  },
+  "bugs": {
+    "url": "https://github.com/deepintr/www/issues"
+  }
+}
