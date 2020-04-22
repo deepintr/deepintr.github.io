@@ -1,9 +1,8 @@
-import "normalize.css";
-import "../../styles/bulma.scss";
+import "../../init";
 import React from "react";
 import { createUseStyles } from "react-jss";
-import Container from "../../components/Container";
-import Hero from "./components/Hero";
+import Container from "../../components/Bulma/Container";
+import HeroPanel from "./components/HeroPanel";
 import styles from "./styles";
 
 const useStyles = createUseStyles(styles);
@@ -13,7 +12,7 @@ const Main: React.FC = ({ children }) => {
 
   return (
     <div className={classes.root}>
-      <Hero
+      <HeroPanel
         size="large"
         title="Türkiye'nin Tek Linux Deepin Kullanıcı Topluluğu"
       />
