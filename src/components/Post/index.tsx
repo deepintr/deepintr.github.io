@@ -30,12 +30,12 @@ const Post: React.FC<PostProps> = ({
       <h4>{title}</h4>
       <Media
         right={
-          <span className="has-text-grey-light">
+          <span className="has-text-grey">
             <i className="fa fa-comments"></i> {commentCount}
           </span>
         }
       >
-        <p>
+        <p className={classes.paragraph}>
           <a href="#">{author}</a> {date} &nbsp;
           <span className="tag">{tag}</span>
         </p>

@@ -1,4 +1,3 @@
-import "../../init";
 import React from "react";
 import { createUseStyles } from "react-jss";
 import Container from "../../components/Bulma/Container";

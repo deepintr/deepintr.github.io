@@ -10,4 +10,10 @@ export default (): Styles => ({
       borderBottom: "none",
     },
   },
+  paragraph: {
+    fontSize: "14px",
+    lineHeight: "2.3",
+    fontWeight: 700,
+    color: "#8F99A3",
+  },
 });
