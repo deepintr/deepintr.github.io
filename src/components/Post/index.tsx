@@ -1,44 +1,61 @@
 import React from "react";
+import { Link } from "gatsby";
+import clsx from "clsx";
 import { createUseStyles } from "react-jss";
-import { PostTag } from "../../models/PostTag";
 import Media from "../Bulma/Media";
+import { BlogPost } from "../../models";
 import styles from "./styles";
+import Column from "../Bulma/Column";
+import Columns from "../Bulma/Columns";
 
 const useStyles = createUseStyles(styles);
 
 export interface PostProps {
-  title: string;
-  author: string;
-  date: string;
-  content: string;
-  tag: PostTag;
+  details?: boolean;
   commentCount: number;
 }
 
-const Post: React.FC<PostProps> = ({
-  title,
-  author,
-  date,
-  content,
-  tag,
+const Post: React.FC<BlogPost & PostProps> = ({
+  excerpt,
+  html,
+  frontmatter,
+  details = false,
   commentCount,
+  fields,
 }) => {
   const classes = useStyles();
+  const { title, author, date } = frontmatter;
+  const { slug } = fields;
 
   return (
     <article className={classes.post}>
-      <h4>{title}</h4>
+      <Link to={slug}>
+        <h4 className={classes.title}>{title}</h4>
+      </Link>
+
       <Media
         right={
-          <span className="has-text-grey">
-            <i className="fa fa-comments"></i> {commentCount}
-          </span>
+          !details && (
+            <span className="has-text-grey">
+              <i className="fa fa-comments"></i> {commentCount}
+            </span>
+          )
         }
       >
-        <p className={classes.paragraph}>
-          <a href="#">{author}</a> {date} &nbsp;
-          <span className="tag">{tag}</span>
+        <p className={clsx(classes.paragraph, { [classes.divider]: details })}>
+          {author && <a href="#">@{author}&nbsp;</a>}
+          <span>{date}&nbsp;</span>
         </p>
+
+        <Columns>
+          <Column>
+            {details ? (
+              <div dangerouslySetInnerHTML={{ __html: html }}></div>
+            ) : (
+              <p>{excerpt}</p>
+            )}
+          </Column>
+        </Columns>
       </Media>
     </article>
   );

@@ -1,25 +1,22 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
+import Topbar from "../components/Topbar";
 import Container from "../../components/Bulma/Container";
-import HeroPanel from "./components/HeroPanel";
 import Footer from "../components/Footer";
 import styles from "./styles";
 
 const useStyles = createUseStyles(styles);
 
-const MainLayout: React.FC = ({ children }) => {
+const BlogLayout: React.FC = ({ children }) => {
   const classes = useStyles();
 
   return (
     <>
-      <HeroPanel
-        size="large"
-        title="Türkiye'nin Tek Linux Deepin Kullanıcı Topluluğu"
-      />
+      <Topbar />
       <Container className={classes.root}>{children}</Container>
       <Footer />
     </>
   );
 };
 
-export default MainLayout;
+export default BlogLayout;

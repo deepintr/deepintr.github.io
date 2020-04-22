@@ -1,10 +1,17 @@
 import React from "react";
 import { Link } from "gatsby";
-import TypoLogo from "../../../../icons/TypoLogo";
+import clsx from "clsx";
+import { createUseStyles } from "react-jss";
+import TypoLogo from "../../../icons/TypoLogo";
+import styles from "./styles";
+
+const useStyles = createUseStyles(styles);
 
 const Topbar: React.FC = () => {
+  const classes = useStyles();
+
   return (
-    <nav className="navbar">
+    <nav className={clsx("navbar", classes.root)}>
       <div className="container">
         <div className="navbar-brand">
           <Link to="/" className="navbar-item">
