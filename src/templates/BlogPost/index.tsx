@@ -4,7 +4,7 @@ import Box from "../../components/Bulma/Box";
 import BlogLayout from "../../layouts/Blog";
 import SEO from "../../components/SEO";
 import Post from "../../components/Post";
-import { Data, PostTag, BlogPost } from "../../models";
+import { Data, BlogPost } from "../../models";
 import Container from "../../components/Bulma/Container";
 
 interface PageContext {
@@ -31,7 +31,7 @@ const BlogPostTemplate: React.FC<PageProps<Data, PageContext>> = ({
       />
       <Container>
         <Box content>
-          <Post {...post} details commentCount={5} tag={PostTag.HowTo} />
+          <Post {...post} details commentCount={5} />
 
           <nav>
             <ul

@@ -13,7 +13,7 @@ const BlogLayout: React.FC = ({ children }) => {
   return (
     <>
       <Topbar />
-      <Container className={classes.root}>{children}</Container>
+      <Container className={classes.content}>{children}</Container>
       <Footer />
     </>
   );

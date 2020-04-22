@@ -1,5 +1,6 @@
 import { BlogPost } from "./BlogPost";
 import { SiteMetadata } from "./SiteMetadata";
+import { EdgeNode } from "./EdgeNode";
 
 export interface Data {
   site: {
@@ -7,6 +8,6 @@ export interface Data {
   };
   markdownRemark: BlogPost;
   allMarkdownRemark: {
-    edges: { node: BlogPost }[];
+    edges: EdgeNode<BlogPost>[];
   };
 }
