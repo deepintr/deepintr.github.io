@@ -1,41 +1,41 @@
 {
- "name": "App",
- "icons": [
-  {
-   "src": "\/icons/deepin-logo-32.png",
-   "sizes": "32x32",
-   "type": "image\/png",
-   "density": "0.75"
-  },
-  {
-   "src": "\/icons/deepin-logo-60.png",
-   "sizes": "60x60",
-   "type": "image\/png",
-   "density": "1.0"
-  },
-  {
-   "src": "\/icons/deepin-logo-72.png",
-   "sizes": "72x72",
-   "type": "image\/png",
-   "density": "1.5"
-  },
-  {
-   "src": "\/icons/deepin-logo-96.png",
-   "sizes": "96x96",
-   "type": "image\/png",
-   "density": "2.0"
-  },
-  {
-   "src": "\/icons/deepin-logo-144.png",
-   "sizes": "144x144",
-   "type": "image\/png",
-   "density": "3.0"
-  },
-  {
-   "src": "\/icons/deepin-logo-192.png",
-   "sizes": "192x192",
-   "type": "image\/png",
-   "density": "4.0"
-  }
- ]
+  "name": "App",
+  "icons": [
+    {
+      "src": "/icons/deepin-logo-32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "density": "0.75"
+    },
+    {
+      "src": "/icons/deepin-logo-60.png",
+      "sizes": "60x60",
+      "type": "image/png",
+      "density": "1.0"
+    },
+    {
+      "src": "/icons/deepin-logo-72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "density": "1.5"
+    },
+    {
+      "src": "/icons/deepin-logo-96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "density": "2.0"
+    },
+    {
+      "src": "/icons/deepin-logo-144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "density": "3.0"
+    },
+    {
+      "src": "/icons/deepin-logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "density": "4.0"
+    }
+  ]
 }

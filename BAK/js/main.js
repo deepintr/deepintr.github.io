@@ -1,69 +1,86 @@
-$(document).ready(function() {
+$(document).ready(function () {
   // Open distrowatch once per day.
-  var body = document.querySelector('body');
-  body.addEventListener('click', function(e) {
+  var body = document.querySelector("body");
+  body.addEventListener("click", function (e) {
     var today = new Date();
-    var todayStr = today.getDate() + '-' + today.getMonth() + '-' + today.getFullYear();
-    var latestRecord = localStorage.getItem('deepintr-dw-latest-visit');
+    var todayStr =
+      today.getDate() + "-" + today.getMonth() + "-" + today.getFullYear();
+    var latestRecord = localStorage.getItem("deepintr-dw-latest-visit");
     if (!latestRecord || latestRecord !== todayStr) {
       // Open distrowatch and save the date.
-      localStorage.setItem('deepintr-dw-latest-visit', todayStr);
-      window.open('https://deepintr.org/?distrowatch', 'distrowatch', 'width=800,height=600');
+      localStorage.setItem("deepintr-dw-latest-visit", todayStr);
+      window.open(
+        "https://deepintr.org/?distrowatch",
+        "distrowatch",
+        "width=800,height=600",
+      );
     }
-    body.removeEventListener('click', this, false);
+    body.removeEventListener("click", this, false);
   });
-  
+
   // Mail button click handler.
-  var emailBtn = document.querySelector('#email-btn');
-  emailBtn.addEventListener('click', function(e) {
+  var emailBtn = document.querySelector("#email-btn");
+  emailBtn.addEventListener("click", function (e) {
     e.preventDefault();
 
-    var email_user = 'deepintr';
-    var email_at = '@';
-    var email_host = 'gmail.com';
+    var email_user = "deepintr";
+    var email_at = "@";
+    var email_host = "gmail.com";
 
-    var subject = 'deepintr.org';
-    var body_message = 'Merhaba!\n';
+    var subject = "deepintr.org";
+    var body_message = "Merhaba!\n";
 
     emailwin = window.open(
-      'mailto:' + email_user + email_at + email_host + '?subject=' + subject + '&body=' + body_message,
-      'emailWindow'
+      "mailto:" +
+        email_user +
+        email_at +
+        email_host +
+        "?subject=" +
+        subject +
+        "&body=" +
+        body_message,
+      "emailWindow",
     );
     if (emailwin && emailwin.open && !emailwin.closed) emailwin.close();
   });
 
   // Language specific functions.
-  var langBtnTR = document.querySelector('.lang-select-tr');
-  var langBtnEN = document.querySelector('.lang-select-en');
-  var langPref = localStorage.getItem('deepintr_lang_pref');
+  var langBtnTR = document.querySelector(".lang-select-tr");
+  var langBtnEN = document.querySelector(".lang-select-en");
+  var langPref = localStorage.getItem("deepintr_lang_pref");
 
   switch (langPref) {
-    case 'tr':
-      langBtnEN.classList.add('lang-filter');
+    case "tr":
+      langBtnEN.classList.add("lang-filter");
       break;
 
-    case 'en':
-      langBtnTR.classList.add('lang-filter');
-      document.title = 'Deepin Turkey | Linux Deepin Turkey Community';
-      document.querySelector('.main-header').innerText = 'The Only Linux Deepin User Community in Turkey';
-      document.querySelector('.home').setAttribute('title', document.title);
-      document.querySelector('.home').setAttribute('href', window.location);
-      document.querySelector('.title-about').innerText = 'About Us';
-      document.querySelector('.about').setAttribute('title', 'Who we are? What we do?');
-      document.querySelector('.about').setAttribute('data-featherlight', 'about.en.html .about-popup');
-      document.querySelector('#email-btn').setAttribute('title', 'Contact Us');
+    case "en":
+      langBtnTR.classList.add("lang-filter");
+      document.title = "Deepin Turkey | Linux Deepin Turkey Community";
+      document.querySelector(".main-header").innerText =
+        "The Only Linux Deepin User Community in Turkey";
+      document.querySelector(".home").setAttribute("title", document.title);
+      document.querySelector(".home").setAttribute("href", window.location);
+      document.querySelector(".title-about").innerText = "About Us";
+      document
+        .querySelector(".about")
+        .setAttribute("title", "Who we are? What we do?");
+      document
+        .querySelector(".about")
+        .setAttribute("data-featherlight", "about.en.html .about-popup");
+      document.querySelector("#email-btn").setAttribute("title", "Contact Us");
       break;
   }
 
   // Language button click-handlers.
-  langBtnTR.addEventListener('click', function(e) {
-    if (langPref === 'tr') return;
-    localStorage.setItem('deepintr_lang_pref', 'tr');
+  langBtnTR.addEventListener("click", function (e) {
+    if (langPref === "tr") return;
+    localStorage.setItem("deepintr_lang_pref", "tr");
     location.reload(true);
   });
-  langBtnEN.addEventListener('click', function(e) {
-    if (langPref === 'en') return;
-    localStorage.setItem('deepintr_lang_pref', 'en');
+  langBtnEN.addEventListener("click", function (e) {
+    if (langPref === "en") return;
+    localStorage.setItem("deepintr_lang_pref", "en");
     location.reload(true);
   });
 
