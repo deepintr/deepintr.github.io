@@ -45,7 +45,10 @@ const Topbar: React.FC = () => {
         >
           <div className="navbar-end">
             <Link to="/" className="navbar-item is-active">
-              Anasayfa
+              <span className="icon">
+                <i className="fas fa-home"></i>
+              </span>
+              <span>Anasayfa</span>
             </Link>
 
             <div className="navbar-item has-dropdown is-hoverable">
