@@ -10,6 +10,7 @@ import SEO, { SEOProps } from "../../components/SEO";
 import { BlogPost, ContactInfo } from "../../models";
 import styles from "./styles";
 import { contact } from "../../data";
+import FAIcon from "../../icons/FAIcon";
 
 const useStyles = createUseStyles(styles);
 
@@ -30,7 +31,7 @@ const Home: React.FC<SEOProps & HomeProps> = ({
       const unFeatured = icons.filter((i) => !i.isFeatured);
 
       const renderItems = (items: ContactInfo[]) =>
-        items.map(({ name, iconName, url, isFeatured }) => (
+        items.map(({ name, icon, url, isFeatured }) => (
           <a
             key={`main-icon-${name}`}
             className={clsx("button is-rounded", classes.button)}
@@ -39,9 +40,12 @@ const Home: React.FC<SEOProps & HomeProps> = ({
             title={name}
             aria-label={name}
           >
-            <span className="icon is-medium">
-              <i className={`fab fa-${iconName} fa-lg`}></i>
-            </span>
+            <FAIcon
+              size="medium"
+              iconName={icon.name}
+              style={icon.style}
+              faSize={icon.size}
+            />
             {isFeatured && <span>{name}</span>}
           </a>
         ));

@@ -4,6 +4,7 @@ import clsx from "clsx";
 import { createUseStyles } from "react-jss";
 import GitHubButton from "react-github-btn";
 import TypoLogo from "../../../../icons/TypoLogo";
+import FAIcon from "../../../../icons/FAIcon";
 import { downloads } from "../../../../data";
 import styles from "./styles";
 import pkg from "../../../../../package.json";
@@ -45,17 +46,13 @@ const Topbar: React.FC = () => {
         >
           <div className="navbar-end">
             <Link to="/" className="navbar-item is-active">
-              <span className="icon">
-                <i className="fas fa-home"></i>
-              </span>
+              <FAIcon iconName="home" style="fas" />
               <span>Anasayfa</span>
             </Link>
 
             <div className="navbar-item has-dropdown is-hoverable">
               <a className="navbar-link">
-                <span className="icon">
-                  <i className="fas fa-download"></i>
-                </span>
+                <FAIcon iconName="download" style="fas" />
                 <span>İndir</span>
               </a>
               <div className="navbar-dropdown is-right is-boxed">
@@ -68,9 +65,7 @@ const Topbar: React.FC = () => {
                       href={url}
                       target="_blank"
                     >
-                      <span className="icon">
-                        <i className="fas fa-compact-disc"></i>
-                      </span>
+                      <FAIcon iconName="compact-disc" style="fas" />
                       <span>{`${fileName} (${sourceName})`}</span>
                     </a>
                   ))}
