@@ -1,9 +1,7 @@
 import React from "react";
 import clsx from "clsx";
 import { createUseStyles } from "react-jss";
-import Particles from "react-particles-js";
 import Container from "../Container";
-import particlesConfig from "../../../configs/particlesjs-config";
 import styles from "./styles";
 
 const useStyles = createUseStyles(styles);
@@ -22,7 +20,6 @@ const Hero: React.FC<HeroProps> = ({
   heroTitle,
   heroSubtitle,
   size,
-  particles = true,
   heroHead,
   heroBody,
   heroFoot,
@@ -39,7 +36,6 @@ const Hero: React.FC<HeroProps> = ({
           {heroSubtitle && <p className="subtitle">{heroSubtitle}</p>}
           {heroBody}
         </Container>
-        {particles && <Particles params={particlesConfig} />}
       </div>
 
       <div className="hero-foot">{heroFoot}</div>

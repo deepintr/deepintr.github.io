@@ -1,8 +1,17 @@
 import { Styles } from "react-jss";
 
 export default (): Styles => ({
+  "@global": {
+    "#tsparticles": {
+      position: "fixed",
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      zIndex: -10,
+    },
+  },
   content: {
-    width: "100vw",
     minHeight: "100vh",
   },
 });

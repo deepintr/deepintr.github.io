@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "gatsby";
 import clsx from "clsx";
 import { createUseStyles } from "react-jss";
@@ -9,6 +9,11 @@ const useStyles = createUseStyles(styles);
 
 const Topbar: React.FC = () => {
   const classes = useStyles();
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleBurgerClick = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   return (
     <nav className={clsx("navbar", classes.root)}>
@@ -17,13 +22,24 @@ const Topbar: React.FC = () => {
           <Link to="/" className="navbar-item">
             <TypoLogo height={24} />
           </Link>
-          <span className="navbar-burger burger" data-target="navbarMenuHeroB">
+          <span
+            onClick={() => handleBurgerClick()}
+            className={clsx("navbar-burger burger", {
+              ["is-active"]: menuOpen,
+            })}
+            data-target="navbarMenuHeroB"
+          >
             <span></span>
             <span></span>
             <span></span>
           </span>
         </div>
-        <div id="navbarMenuHeroB" className="navbar-menu">
+        <div
+          id="navbarMenuHeroB"
+          className={clsx("navbar-menu", {
+            ["is-active"]: menuOpen,
+          })}
+        >
           <div className="navbar-end">
             <a className="navbar-item is-active">Home</a>
             <a className="navbar-item">Examples</a>
