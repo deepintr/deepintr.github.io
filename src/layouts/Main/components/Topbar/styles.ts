@@ -1,7 +1,9 @@
 import { Styles } from "react-jss";
 
-export default (): Styles => ({
+const styles: Styles = {
   root: {
     background: "inherit",
   },
-});
+};
+
+export default styles;

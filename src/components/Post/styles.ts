@@ -1,6 +1,6 @@
 import { Styles } from "react-jss";
 
-export default (): Styles => ({
+const styles: Styles = {
   post: {
     margin: "1rem",
     paddingBottom: "1rem",
@@ -23,4 +23,6 @@ export default (): Styles => ({
     paddingBottom: "0.3rem",
     borderBottom: "1px solid #E6EAEE",
   },
-});
+};
+
+export default styles;

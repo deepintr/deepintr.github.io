@@ -1,3 +1,5 @@
 import { Styles } from "react-jss";
 
-export default (): Styles => ({});
+const styles: Styles = {};
+
+export default styles;

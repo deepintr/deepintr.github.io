@@ -1,6 +1,6 @@
 import { Styles } from "react-jss";
 
-export default (): Styles => ({
+const styles: Styles = {
   "@global": {
     "#tsparticles": {
       position: "fixed",
@@ -14,4 +14,6 @@ export default (): Styles => ({
   content: {
     minHeight: "100vh",
   },
-});
+};
+
+export default styles;

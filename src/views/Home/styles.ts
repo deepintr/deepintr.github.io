@@ -1,6 +1,6 @@
 import { Styles } from "react-jss";
 
-export default (): Styles => ({
+const styles: Styles = {
   button: {
     background: "transparent",
     fontSize: "1.2rem",
@@ -9,4 +9,6 @@ export default (): Styles => ({
   icons: {
     padding: "0.5rem",
   },
-});
+};
+
+export default styles;
