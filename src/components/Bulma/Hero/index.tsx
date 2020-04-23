@@ -39,9 +39,7 @@ const Hero: React.FC<HeroProps> = ({
           {subtitle && <p className="subtitle">{subtitle}</p>}
         </Container>
         {heroBody}
-        {particles && (
-          <Particles className={classes.particles} params={particlesConfig} />
-        )}
+        {particles && <Particles params={particlesConfig} />}
       </div>
 
       <div className="hero-foot">{heroFoot}</div>
