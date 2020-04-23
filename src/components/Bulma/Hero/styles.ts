@@ -1,11 +1,5 @@
 import { Styles } from "react-jss";
 
-const styles: Styles = {
-  hero: {},
-  title: {
-    fontWeight: 400,
-    fontSize: "1.8rem",
-  },
-};
+const styles: Styles = {};
 
 export default styles;

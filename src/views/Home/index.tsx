@@ -1,5 +1,4 @@
 import React, { useCallback } from "react";
-import clsx from "clsx";
 import { createUseStyles } from "react-jss";
 import MainLayout from "../../layouts/Main";
 import Columns from "../../components/Bulma/Columns";
@@ -7,10 +6,11 @@ import Column from "../../components/Bulma/Column";
 import PageContent from "../../components/PageContent";
 import Post from "../../components/Post";
 import SEO, { SEOProps } from "../../components/SEO";
-import { BlogPost, ContactInfo } from "../../models";
-import styles from "./styles";
+import { BlogPost } from "../../models";
 import { contact } from "../../data";
-import FAIcon from "../../icons/FAIcon";
+import styles from "./styles";
+import MainButtons from "./components/MainButtons";
+import Greeter from "./components/Greeter";
 
 const useStyles = createUseStyles(styles);
 
@@ -25,48 +25,15 @@ const Home: React.FC<SEOProps & HomeProps> = ({
 }) => {
   const classes = useStyles();
 
-  const renderIcons = useCallback(
-    (icons: ContactInfo[]) => {
-      const featured = icons.filter((i) => i.isFeatured);
-      const unFeatured = icons.filter((i) => !i.isFeatured);
-
-      const renderItems = (items: ContactInfo[]) =>
-        items.map(({ name, icon, url, isFeatured }) => (
-          <a
-            key={`main-icon-${name}`}
-            className={clsx("button is-rounded", classes.button)}
-            href={url}
-            target="_blank"
-            title={name}
-            aria-label={name}
-          >
-            <FAIcon
-              size="medium"
-              iconName={icon.name}
-              style={icon.style}
-              faSize={icon.size}
-            />
-            {isFeatured && <span>{name}</span>}
-          </a>
-        ));
-
-      return (
-        <div className={classes.icons}>
-          <div>{renderItems(featured)}</div>
-          <div>{renderItems(unFeatured)}</div>
-        </div>
-      );
-    },
-    [contact],
+  const heroBody = (
+    <>
+      <Greeter title={seoProps.title} />
+      <MainButtons contactItems={contact} />
+    </>
   );
 
   return (
-    <MainLayout
-      showHero
-      size="large"
-      heroTitle={seoProps.title}
-      heroBody={renderIcons(contact)}
-    >
+    <MainLayout showHero size="medium" heroBody={heroBody}>
       <SEO {...seoProps} />
       <Columns>
         <Column>

@@ -72,7 +72,7 @@ const Topbar: React.FC = () => {
               </div>
             </div>
 
-            <a className={clsx("navbar-item", classes.ghButton)}>
+            <span className={clsx("navbar-item", classes.ghButton)}>
               <GitHubButton
                 href={pkg.repository.url}
                 data-color-scheme="no-preference: light; light: light; dark: dark;"
@@ -83,7 +83,7 @@ const Topbar: React.FC = () => {
               >
                 Star
               </GitHubButton>
-            </a>
+            </span>
           </div>
         </div>
       </div>

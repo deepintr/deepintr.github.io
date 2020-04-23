@@ -2,13 +2,12 @@ import React from "react";
 import clsx from "clsx";
 import { createUseStyles } from "react-jss";
 import Container from "../Container";
+
 import styles from "./styles";
 
 const useStyles = createUseStyles(styles);
 
 export interface HeroProps {
-  heroTitle?: string;
-  heroSubtitle?: string;
   size?: "medium" | "large" | "fullheight";
   particles?: boolean;
   heroHead?: React.ReactNode;
@@ -16,14 +15,7 @@ export interface HeroProps {
   heroFoot?: React.ReactNode;
 }
 
-const Hero: React.FC<HeroProps> = ({
-  heroTitle,
-  heroSubtitle,
-  size,
-  heroHead,
-  heroBody,
-  heroFoot,
-}) => {
+const Hero: React.FC<HeroProps> = ({ size, heroHead, heroBody, heroFoot }) => {
   const classes = useStyles();
 
   return (
@@ -31,11 +23,7 @@ const Hero: React.FC<HeroProps> = ({
       <div className="hero-head">{heroHead}</div>
 
       <div className="hero-body">
-        <Container className="has-text-centered">
-          <p className={clsx("title", classes.title)}>{heroTitle}</p>
-          {heroSubtitle && <p className="subtitle">{heroSubtitle}</p>}
-          {heroBody}
-        </Container>
+        <Container className="has-text-centered">{heroBody}</Container>
       </div>
 
       <div className="hero-foot">{heroFoot}</div>
