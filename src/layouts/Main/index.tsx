@@ -20,11 +20,11 @@ const MainLayout: React.FC<MainLayoutProps & Partial<HeroProps>> = ({
   const classes = useStyles();
 
   return (
-    <>
+    <div className={classes.content}>
       {showHero ? <Hero {...heroProps} heroHead={<Topbar />} /> : <Topbar />}
-      <Container className={classes.content}>{children}</Container>
+      <Container>{children}</Container>
       <Footer />
-    </>
+    </div>
   );
 };
 
