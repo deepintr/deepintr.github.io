@@ -1,7 +1,7 @@
 import React from "react";
 import clsx from "clsx";
 import { createUseStyles } from "react-jss";
-import Container from "../../../components/Bulma/Container";
+import Container from "../../../../components/Bulma/Container";
 import styles from "./styles";
 
 const useStyles = createUseStyles(styles);

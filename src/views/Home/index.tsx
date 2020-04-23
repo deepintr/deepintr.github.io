@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useCallback } from "react";
+import clsx from "clsx";
 import { createUseStyles } from "react-jss";
 import MainLayout from "../../layouts/Main";
 import Columns from "../../components/Bulma/Columns";
@@ -6,8 +7,9 @@ import Column from "../../components/Bulma/Column";
 import PageContent from "../../components/PageContent";
 import Post from "../../components/Post";
 import SEO, { SEOProps } from "../../components/SEO";
-import { BlogPost } from "../../models";
+import { BlogPost, ContactInfo } from "../../models";
 import styles from "./styles";
+import { contact } from "../../data";
 
 const useStyles = createUseStyles(styles);
 
@@ -22,8 +24,45 @@ const Home: React.FC<SEOProps & HomeProps> = ({
 }) => {
   const classes = useStyles();
 
+  const renderIcons = useCallback(
+    (icons: ContactInfo[]) => {
+      const featured = icons.filter((i) => i.isFeatured);
+      const unFeatured = icons.filter((i) => !i.isFeatured);
+
+      const renderItems = (items: ContactInfo[]) =>
+        items.map(({ name, iconName, url, isFeatured }) => (
+          <a
+            key={`main-icon-${name}`}
+            className={clsx("button is-rounded", classes.button)}
+            href={url}
+            target="_blank"
+            title={name}
+            aria-label={name}
+          >
+            <span className="icon is-medium">
+              <i className={`fab fa-${iconName} fa-lg`}></i>
+            </span>
+            {isFeatured && <span>{name}</span>}
+          </a>
+        ));
+
+      return (
+        <div className={classes.icons}>
+          <div>{renderItems(featured)}</div>
+          <div>{renderItems(unFeatured)}</div>
+        </div>
+      );
+    },
+    [contact],
+  );
+
   return (
-    <MainLayout>
+    <MainLayout
+      showHero
+      size="large"
+      heroTitle="Türkiye'nin Tek Linux Deepin Kullanıcı Topluluğu"
+      heroBody={renderIcons(contact)}
+    >
       <SEO {...seoProps} />
       <Columns>
         <Column>

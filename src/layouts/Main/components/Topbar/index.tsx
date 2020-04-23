@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import clsx from "clsx";
 import { createUseStyles } from "react-jss";
-import TypoLogo from "../../../icons/TypoLogo";
+import TypoLogo from "../../../../icons/TypoLogo";
 import styles from "./styles";
 
 const useStyles = createUseStyles(styles);

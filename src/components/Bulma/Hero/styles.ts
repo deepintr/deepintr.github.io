@@ -8,10 +8,15 @@ export default (): Styles => ({
       left: 0,
       right: 0,
       bottom: 0,
+      zIndex: -10,
     },
   },
   hero: {
     position: "relative",
     overflow: "hidden",
+  },
+  title: {
+    fontWeight: 400,
+    fontSize: "1.8rem",
   },
 });

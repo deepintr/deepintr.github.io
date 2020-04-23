@@ -2,7 +2,7 @@ import React from "react";
 import { Link, graphql, PageProps } from "gatsby";
 import { createUseStyles } from "react-jss";
 import Container from "../../components/Bulma/Container";
-import BlogLayout from "../../layouts/Blog";
+import MainLayout from "../../layouts/Main";
 import PageContent from "../../components/PageContent";
 import SEO from "../../components/SEO";
 import Post from "../../components/Post";
@@ -28,7 +28,7 @@ const BlogPostTemplate: React.FC<PageProps<Data, PageContext>> = ({
   const post = data.markdownRemark;
 
   return (
-    <BlogLayout>
+    <MainLayout>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
@@ -63,7 +63,7 @@ const BlogPostTemplate: React.FC<PageProps<Data, PageContext>> = ({
           </nav>
         </PageContent>
       </Container>
-    </BlogLayout>
+    </MainLayout>
   );
 };
 

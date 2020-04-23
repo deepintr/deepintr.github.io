@@ -1,6 +1,6 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
-import BlogLayout from "../../layouts/Blog";
+import MainLayout from "../../layouts/Main";
 import SEO, { SEOProps } from "../../components/SEO";
 import PageContent from "../../components/PageContent";
 import styles from "./styles";
@@ -19,13 +19,13 @@ const NotFound: React.FC<SEOProps & NotFoundProps> = ({
   const classes = useStyles();
 
   return (
-    <BlogLayout>
+    <MainLayout>
       <SEO {...seoProps} />
       <PageContent>
         <h1 className="title">404 :)</h1>
         <h3>Aradığınız içerik burada değil..</h3>
       </PageContent>
-    </BlogLayout>
+    </MainLayout>
   );
 };
 

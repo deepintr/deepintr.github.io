@@ -9,8 +9,8 @@ import styles from "./styles";
 const useStyles = createUseStyles(styles);
 
 export interface HeroProps {
-  title: string;
-  subtitle?: string;
+  heroTitle?: string;
+  heroSubtitle?: string;
   size?: "medium" | "large" | "fullheight";
   particles?: boolean;
   heroHead?: React.ReactNode;
@@ -19,8 +19,8 @@ export interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({
-  title,
-  subtitle,
+  heroTitle,
+  heroSubtitle,
   size,
   particles = true,
   heroHead,
@@ -35,10 +35,10 @@ const Hero: React.FC<HeroProps> = ({
 
       <div className="hero-body">
         <Container className="has-text-centered">
-          <p className="title">{title}</p>
-          {subtitle && <p className="subtitle">{subtitle}</p>}
+          <p className={clsx("title", classes.title)}>{heroTitle}</p>
+          {heroSubtitle && <p className="subtitle">{heroSubtitle}</p>}
+          {heroBody}
         </Container>
-        {heroBody}
         {particles && <Particles params={particlesConfig} />}
       </div>
 
