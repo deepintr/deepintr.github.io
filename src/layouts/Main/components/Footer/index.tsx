@@ -13,9 +13,12 @@ const Footer: React.FC = ({ children }) => {
     <Container>
       <footer className={clsx("footer", classes.root)}>
         <div className="content has-text-centered">
-          deepintr © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <a href="https://deepintr.org/">deepintr.org</a>
+          <span> © </span>
+          {new Date().getFullYear()}, Built with
+          <span className="icon">
+            <i className="fas fa-coffee"></i>
+          </span>
         </div>
       </footer>
     </Container>

@@ -60,7 +60,7 @@ const Home: React.FC<SEOProps & HomeProps> = ({
     <MainLayout
       showHero
       size="large"
-      heroTitle="Linux Deepin Türkiye Kullanıcı Topluluğu"
+      heroTitle={seoProps.title}
       heroBody={renderIcons(contact)}
     >
       <SEO {...seoProps} />

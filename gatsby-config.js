@@ -7,7 +7,7 @@
 module.exports = {
   siteMetadata: {
     title: "Deepin Türkiye",
-    description: "Deepin Türkiye Kullanıcı Topluluğu",
+    description: "Linux Deepin Türkiye Kullanıcı Topluluğu",
     siteUrl: "https://deepintr.org/",
     author: "",
   },
