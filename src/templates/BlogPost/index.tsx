@@ -38,24 +38,28 @@ const BlogPostTemplate: React.FC<PageProps<Data, PageContext>> = ({
           <Post {...post} details commentCount={5} />
 
           <nav className="pagination" role="navigation" aria-label="pagination">
-            {previous && (
-              <Link
-                to={previous.fields.slug}
-                rel="prev"
-                className="pagination-previous"
-              >
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-            {next && (
-              <Link
-                to={next.fields.slug}
-                rel="next"
-                className="pagination-next"
-              >
-                {next.frontmatter.title} →
-              </Link>
-            )}
+            <span>
+              {previous && (
+                <Link
+                  to={previous.fields.slug}
+                  rel="prev"
+                  className="pagination-previous"
+                >
+                  ← {previous.frontmatter.title}
+                </Link>
+              )}
+            </span>
+            <span>
+              {next && (
+                <Link
+                  to={next.fields.slug}
+                  rel="next"
+                  className="pagination-next"
+                >
+                  {next.frontmatter.title} →
+                </Link>
+              )}
+            </span>
           </nav>
         </PageContent>
       </Container>
