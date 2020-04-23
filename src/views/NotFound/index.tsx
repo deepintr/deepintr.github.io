@@ -1,10 +1,8 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 import BlogLayout from "../../layouts/Blog";
-import Columns from "../../components/Bulma/Columns";
-import Column from "../../components/Bulma/Column";
-import Container from "../../components/Bulma/Container";
 import SEO, { SEOProps } from "../../components/SEO";
+import PageContent from "../../components/PageContent";
 import styles from "./styles";
 
 const useStyles = createUseStyles(styles);
@@ -23,14 +21,10 @@ const NotFound: React.FC<SEOProps & NotFoundProps> = ({
   return (
     <BlogLayout>
       <SEO {...seoProps} />
-      <Columns>
-        <Column>
-          <Container>
-            <h1>404 :)</h1>
-            <h3>Aradığınız içerik burada değil..</h3>
-          </Container>
-        </Column>
-      </Columns>
+      <PageContent>
+        <h1 className="title">404 :)</h1>
+        <h3>Aradığınız içerik burada değil..</h3>
+      </PageContent>
     </BlogLayout>
   );
 };

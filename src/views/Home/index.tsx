@@ -3,7 +3,7 @@ import { createUseStyles } from "react-jss";
 import MainLayout from "../../layouts/Main";
 import Columns from "../../components/Bulma/Columns";
 import Column from "../../components/Bulma/Column";
-import Box from "../../components/Bulma/Box";
+import PageContent from "../../components/PageContent";
 import Post from "../../components/Post";
 import SEO, { SEOProps } from "../../components/SEO";
 import { BlogPost } from "../../models";
@@ -27,11 +27,11 @@ const Home: React.FC<SEOProps & HomeProps> = ({
       <SEO {...seoProps} />
       <Columns>
         <Column>
-          <Box content>
+          <PageContent>
             {posts.map((post, i) => (
-              <Post {...post} commentCount={5} key={i} />
+              <Post {...post} commentCount={5} key={`post-${i}`} />
             ))}
-          </Box>
+          </PageContent>
         </Column>
       </Columns>
     </MainLayout>

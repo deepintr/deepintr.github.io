@@ -1,11 +1,15 @@
 import React from "react";
 import { Link, graphql, PageProps } from "gatsby";
-import Box from "../../components/Bulma/Box";
+import { createUseStyles } from "react-jss";
+import Container from "../../components/Bulma/Container";
 import BlogLayout from "../../layouts/Blog";
+import PageContent from "../../components/PageContent";
 import SEO from "../../components/SEO";
 import Post from "../../components/Post";
 import { Data, BlogPost } from "../../models";
-import Container from "../../components/Bulma/Container";
+import styles from "./styles";
+
+const useStyles = createUseStyles(styles);
 
 interface PageContext {
   slug: string;
@@ -18,7 +22,7 @@ const BlogPostTemplate: React.FC<PageProps<Data, PageContext>> = ({
   pageContext,
   location,
 }) => {
-  const { title, description } = data.site.siteMetadata;
+  const classes = useStyles();
   const { previous, next } = pageContext;
 
   const post = data.markdownRemark;
@@ -30,36 +34,30 @@ const BlogPostTemplate: React.FC<PageProps<Data, PageContext>> = ({
         description={post.frontmatter.description || post.excerpt}
       />
       <Container>
-        <Box content>
+        <PageContent>
           <Post {...post} details commentCount={5} />
 
-          <nav>
-            <ul
-              style={{
-                display: `flex`,
-                flexWrap: `wrap`,
-                justifyContent: `space-between`,
-                listStyle: `none`,
-                padding: 0,
-              }}
-            >
-              <li>
-                {previous && (
-                  <Link to={previous.fields.slug} rel="prev">
-                    ← {previous.frontmatter.title}
-                  </Link>
-                )}
-              </li>
-              <li>
-                {next && (
-                  <Link to={next.fields.slug} rel="next">
-                    {next.frontmatter.title} →
-                  </Link>
-                )}
-              </li>
-            </ul>
+          <nav className="pagination" role="navigation" aria-label="pagination">
+            {previous && (
+              <Link
+                to={previous.fields.slug}
+                rel="prev"
+                className="pagination-previous"
+              >
+                ← {previous.frontmatter.title}
+              </Link>
+            )}
+            {next && (
+              <Link
+                to={next.fields.slug}
+                rel="next"
+                className="pagination-next"
+              >
+                {next.frontmatter.title} →
+              </Link>
+            )}
           </nav>
-        </Box>
+        </PageContent>
       </Container>
     </BlogLayout>
   );
@@ -69,12 +67,6 @@ export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
-    site {
-      siteMetadata {
-        title
-        description
-      }
-    }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       excerpt(pruneLength: 160)
