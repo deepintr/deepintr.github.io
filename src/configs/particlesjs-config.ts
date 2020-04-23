@@ -19,10 +19,10 @@ export default {
         color: "#555",
       },
       polygon: {
-        nb_sides: 6,
+        nb_sides: 5,
       },
       image: {
-        src: "img/github.svg",
+        src: "",
         width: 100,
         height: 100,
       },
@@ -49,21 +49,21 @@ export default {
     },
     line_linked: {
       enable: true,
-      distance: 200,
+      distance: 100,
       color: "#555",
       opacity: 0.3,
       width: 0.75,
     },
     move: {
       enable: true,
-      speed: 3,
+      speed: 2,
       direction: "none",
       random: false,
       straight: false,
       out_mode: "out",
       attract: {
         enable: true,
-        rotateX: 600,
+        rotateX: 1200,
         rotateY: 1200,
       },
     },
@@ -76,7 +76,7 @@ export default {
         mode: "repulse",
       },
       onclick: {
-        enable: true,
+        enable: false,
         mode: "repulse",
       },
       resize: true,
