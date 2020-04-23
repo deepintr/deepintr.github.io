@@ -16,7 +16,7 @@ const MainLayout: React.FC = ({ children }) => {
         size="large"
         title="Türkiye'nin Tek Linux Deepin Kullanıcı Topluluğu"
       />
-      <Container className={classes.content}>{children}</Container>
+      <Container>{children}</Container>
       <Footer />
     </>
   );
