@@ -19,6 +19,11 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run format"
+    }
+  },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
     "bulma": "^0.8.2",
@@ -49,6 +54,7 @@
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.6",
     "@types/react-helmet": "^5.0.15",
+    "husky": "^4.2.5",
     "prettier": "2.0.4",
     "typescript": "^3.8.3"
   }
