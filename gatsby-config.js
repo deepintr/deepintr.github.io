@@ -14,6 +14,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-typescript`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-jss`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
