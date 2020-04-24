@@ -1,3 +1,4 @@
+export * from "./Author";
 export * from "./BlogPost";
 export * from "./ContactInfo";
 export * from "./Data";

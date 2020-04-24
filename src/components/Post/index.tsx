@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import clsx from "clsx";
 import { createUseStyles } from "react-jss";
 import Media from "../Bulma/Media";
-import { BlogPost } from "../../models";
+import { BlogPost, Author, IAuthor } from "../../models";
 import styles from "./styles";
 import Column from "../Bulma/Column";
 import Columns from "../Bulma/Columns";
@@ -27,6 +27,17 @@ const Post: React.FC<BlogPost & PostProps> = ({
   const { title, author, date } = frontmatter;
   const { slug } = fields;
 
+  const authorObj = author ? new Author(author) : null;
+
+  const renderAuthor = (author: IAuthor) => {
+    const { username, url } = author;
+    return (
+      <a href={url} target="_blank">
+        @{username}&nbsp;
+      </a>
+    );
+  };
+
   return (
     <article className={classes.post}>
       <Link to={slug}>
@@ -43,11 +54,7 @@ const Post: React.FC<BlogPost & PostProps> = ({
         }
       >
         <p className={clsx(classes.paragraph, { [classes.divider]: details })}>
-          {author && (
-            <a href={`https://github.com/${author}`} target="_blank">
-              @{author}&nbsp;
-            </a>
-          )}
+          {authorObj && renderAuthor(authorObj.getCredentials())}
           <span>{date}&nbsp;</span>
         </p>
 
