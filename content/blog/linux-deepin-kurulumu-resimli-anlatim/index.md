@@ -1,7 +1,7 @@
 ---
 title: "Linux Deepin Kurulumu (Resimli Anlatım)"
 date: "2018-11-27"
-author: "caglarturali"
+author: "caglarturali@github"
 description: "Linux Deepin Kurulumu"
 ---
 

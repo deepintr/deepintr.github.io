@@ -1,7 +1,7 @@
 ---
 title: "Blog Title"
 date: "YYYY-MM-DD"
-author: "githubusername"
+author: "username@platform"
 description: "short description (optional)"
 ---
 

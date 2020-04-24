@@ -1,7 +1,7 @@
 ---
 title: "Sıkça Sorulan Sorular"
 date: "2018-11-25"
-author: "gokhanyildirimlar"
+author: "gokhanyildirimlar@telegram"
 description: "Sıkça Sorulan Sorular"
 ---
 
