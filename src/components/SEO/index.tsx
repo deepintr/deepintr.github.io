@@ -44,6 +44,22 @@ const SEO: React.FC<SEOProps> = ({
           content: metaDescription,
         },
         {
+          name: `keywords`,
+          content: `deepin,linux,linux deepin,deepin linux,deepin os,manjaro deepin,distrowatch,deepintr,deepin tr,deepin download,deepin indir,deepin kurulum,deepin teknoloji,teknoloji topluluğu,deepin teknoloji topluluğu,deepin Türkiye topluluğu,masaüstü ortamı,dde,distribution,distro,pardus,yeni sürüm,deepin Turkey community`,
+        },
+        {
+          name: `google-site-verification`,
+          content: `p4oebLP_Bux5VSf6bVWvSxNFeZvaDK0FLjESKw8XxLk`,
+        },
+        {
+          name: `yandex-verification`,
+          content: `661e90c8e2f6bd27`,
+        },
+        {
+          name: `msvalidate.01`,
+          content: `7B040667DB99A361E8E28707F2D3BFBE`,
+        },
+        {
           property: `og:title`,
           content: title,
         },
