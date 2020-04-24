@@ -8,6 +8,8 @@ export interface FAIconProps {
   style: FAIconStyle;
   iconName: string;
   faSize?: FAIconSize;
+  before?: React.ReactNode;
+  after?: React.ReactNode;
 }
 
 const FAIcon: React.FC<FAIconProps> = ({
@@ -16,8 +18,11 @@ const FAIcon: React.FC<FAIconProps> = ({
   style,
   iconName,
   faSize,
+  before,
+  after,
+  children,
 }) => {
-  return (
+  const icon = (
     <span
       className={clsx(
         "icon",
@@ -30,7 +35,16 @@ const FAIcon: React.FC<FAIconProps> = ({
           [`fa-${faSize}`]: !!faSize,
         })}
       ></i>
+      {children && <span>{children}</span>}
     </span>
+  );
+
+  return (
+    <>
+      {before && <span>{before}</span>}
+      {icon}
+      {after && <span>{after}</span>}
+    </>
   );
 };
 

@@ -38,8 +38,8 @@ const Home: React.FC<SEOProps & HomeProps> = ({
       <Columns>
         <Column>
           <PageContent>
-            {posts.map((post, i) => (
-              <Post {...post} commentCount={5} key={`post-${i}`} />
+            {posts.map((post) => (
+              <Post {...post} key={post.fields.slug} />
             ))}
           </PageContent>
         </Column>

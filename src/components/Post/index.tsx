@@ -2,17 +2,20 @@ import React from "react";
 import { Link } from "gatsby";
 import clsx from "clsx";
 import { createUseStyles } from "react-jss";
+import { CommentCount } from "disqus-react";
 import Media from "../Bulma/Media";
 import { BlogPost, Author, IAuthor } from "../../models";
-import styles from "./styles";
 import Column from "../Bulma/Column";
 import Columns from "../Bulma/Columns";
+import FAIcon from "../../icons/FAIcon";
+import disqusConfig from "../../configs/disqus";
+import { removeSlashes } from "../../utils";
+import styles from "./styles";
 
 const useStyles = createUseStyles(styles);
 
 export interface PostProps {
   details?: boolean;
-  commentCount: number;
 }
 
 const Post: React.FC<BlogPost & PostProps> = ({
@@ -20,7 +23,6 @@ const Post: React.FC<BlogPost & PostProps> = ({
   html,
   frontmatter,
   details = false,
-  commentCount,
   fields,
 }) => {
   const classes = useStyles();
@@ -38,6 +40,17 @@ const Post: React.FC<BlogPost & PostProps> = ({
     );
   };
 
+  const commentCount = (
+    <CommentCount
+      shortname={disqusConfig.shortname}
+      config={{
+        url: "",
+        identifier: removeSlashes(slug),
+        title: title,
+      }}
+    />
+  );
+
   return (
     <article className={classes.post}>
       <Link to={slug}>
@@ -47,9 +60,7 @@ const Post: React.FC<BlogPost & PostProps> = ({
       <Media
         right={
           !details && (
-            <span className="has-text-grey">
-              <i className="fa fa-comments"></i> {commentCount}
-            </span>
+            <FAIcon iconName="comments" style="fas" after={commentCount} />
           )
         }
       >
