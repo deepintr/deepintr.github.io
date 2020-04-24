@@ -1,0 +1,64 @@
+{
+  "name": "deepintr-www",
+  "private": true,
+  "version": "0.1.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deepintr/www"
+  },
+  "bugs": {
+    "url": "https://github.com/deepintr/www/issues"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run format"
+    }
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "bulma": "^0.8.2",
+    "clsx": "^1.1.0",
+    "gatsby": "^2.20.25",
+    "gatsby-plugin-google-analytics": "^2.2.4",
+    "gatsby-plugin-jss": "^2.2.3",
+    "gatsby-plugin-manifest": "^2.3.6",
+    "gatsby-plugin-react-helmet": "^3.2.4",
+    "gatsby-plugin-sass": "^2.2.3",
+    "gatsby-plugin-sharp": "^2.5.6",
+    "gatsby-plugin-typescript": "^2.3.3",
+    "gatsby-remark-copy-linked-files": "^2.2.3",
+    "gatsby-remark-images": "^3.2.5",
+    "gatsby-remark-responsive-iframe": "^2.3.3",
+    "gatsby-source-filesystem": "^2.2.4",
+    "gatsby-transformer-remark": "^2.7.4",
+    "gatsby-transformer-sharp": "^2.4.6",
+    "node-sass": "^4.13.1",
+    "normalize.css": "^8.0.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-github-btn": "^1.1.1",
+    "react-helmet": "^6.0.0",
+    "react-jss": "^10.1.1",
+    "react-particles-js": "^3.1.0",
+    "react-share": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^13.13.1",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.6",
+    "@types/react-helmet": "^5.0.15",
+    "husky": "^4.2.5",
+    "prettier": "2.0.4",
+    "typescript": "^3.8.3"
+  }
+}
