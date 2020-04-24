@@ -8,7 +8,7 @@ Bu site [Gatsbyjs](https://www.gatsbyjs.org/) ile geliştirilmiş bir statik blo
 
 - Bilgisayarınızda [git](https://git-scm.com/) ve [nodejs](https://nodejs.org/)'in kurulu olduğundan emin olun.
 
-- Repoyu klonlayın.
+- Depoyu klonlayın.
 
   ```bash
   git clone https://github.com/deepintr/www.git deepintr-www

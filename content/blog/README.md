@@ -2,6 +2,8 @@
 
 ### Nasıl İçerik Eklerim?
 
+- GitHub hesabınıza depo çatalı oluşturun. (Sağ üst köşedeki `Fork` butonu ile)
+
 - [Yerel geliştirme ortamında çalıştırma](https://github.com/deepintr/www#yerel-geli%C5%9Ftirme-ortam%C4%B1nda-%C3%A7al%C4%B1%C5%9Ft%C4%B1rma) adımlarını izlediğinizden emin olun.
 
 - [\_template](./_template) dizininin bir kopyasını oluşturun.
