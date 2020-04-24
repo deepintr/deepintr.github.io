@@ -3,7 +3,7 @@ import globalStyles from "../../../styles/global";
 
 const styles: Styles = {
   boxCustom: {
-    ...globalStyles.glass,
+    // ...globalStyles.glass,
   },
 };
 

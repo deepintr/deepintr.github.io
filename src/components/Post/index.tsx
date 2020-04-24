@@ -43,7 +43,11 @@ const Post: React.FC<BlogPost & PostProps> = ({
         }
       >
         <p className={clsx(classes.paragraph, { [classes.divider]: details })}>
-          {author && <a href="#">@{author}&nbsp;</a>}
+          {author && (
+            <a href={`https://github.com/${author}`} target="_blank">
+              @{author}&nbsp;
+            </a>
+          )}
           <span>{date}&nbsp;</span>
         </p>
 

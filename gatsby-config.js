@@ -20,6 +20,7 @@ module.exports = {
       options: {
         path: `${__dirname}/content/blog`,
         name: `blog`,
+        ignore: [`**/_template*`],
       },
     },
     {
