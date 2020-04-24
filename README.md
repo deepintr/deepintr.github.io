@@ -1,6 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/828937f7-bcde-458f-9cb9-c6424a61c36f/deploy-status)](https://app.netlify.com/sites/deepintr/deploys)
 
-## Deepin Türkiye Kullanıcı Topluluğu Web Sitesi
+## Linux Deepin Türkiye Kullanıcı Topluluğu Web Sitesi
 
 Bu site [Gatsbyjs](https://www.gatsbyjs.org/) ile geliştirilmiş bir statik blog sitesidir. Sitenin kaynak kodlarına [/src](./src) dizini altından, blog içeriklerine [/content/blog](/content/blog) dizininden ulaşılabilir.
 
@@ -28,3 +28,7 @@ Bu site [Gatsbyjs](https://www.gatsbyjs.org/) ile geliştirilmiş bir statik blo
   ```
 
 - Varsayılan olarak [http://localhost:8000/](http://localhost:8000/) adresinden sunulan siteyi önizleyin.
+
+### Blog mu yazmak istiyorsun?
+
+İçerik eklemek için [Nasıl İçerik Eklerim?](./content/blog/) dökümanını inceleyin.
