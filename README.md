@@ -31,4 +31,4 @@ Bu site [Gatsbyjs](https://www.gatsbyjs.org/) ile geliştirilmiş bir statik blo
 
 ### Blog mu yazmak istiyorsun?
 
-İçerik eklemek için [Nasıl İçerik Eklerim?](./content/blog/) dökümanını inceleyin.
+İçerik eklemek için [Nasıl İçerik Eklerim?](./content/blog#README) dökümanını inceleyin.

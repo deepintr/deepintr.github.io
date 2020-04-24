@@ -2,7 +2,7 @@
 
 ### Nasıl İçerik Eklerim?
 
-- [Yerel geliştirme ortamında çalıştırma](../../#yerel-geliştirme-ortamında-çalıştırma) adımlarını izlediğinizden emin olun.
+- [Yerel geliştirme ortamında çalıştırma](https://github.com/deepintr/www#yerel-geli%C5%9Ftirme-ortam%C4%B1nda-%C3%A7al%C4%B1%C5%9Ft%C4%B1rma) adımlarını izlediğinizden emin olun.
 
 - [\_template](./_template) dizininin bir kopyasını oluşturun.
 
