@@ -18,11 +18,13 @@ const styles: Styles = {
   },
   seperator: {
     position: "absolute",
-    top: "4.5rem",
     zIndex: -5,
     display: "flex",
     justifyContent: "center",
     width: "100%",
+  },
+  content: {
+    paddingTop: "1rem",
   },
 };
 

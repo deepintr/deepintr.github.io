@@ -26,10 +26,10 @@ const Home: React.FC<SEOProps & HomeProps> = ({
   const classes = useStyles();
 
   const heroBody = (
-    <>
-      <Greeter title={seoProps.title} />
-      <MainButtons contactItems={contact} />
-    </>
+    <Greeter
+      title={seoProps.title}
+      content={<MainButtons contactItems={contact} />}
+    />
   );
 
   return (
