@@ -27,6 +27,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
     "bulma": "^0.8.2",
+    "bulmaswatch": "^0.8.0",
     "clsx": "^1.1.0",
     "disqus-react": "^1.0.8",
     "gatsby": "^2.20.25",
