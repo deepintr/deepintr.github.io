@@ -43,6 +43,7 @@ const Topbar: React.FC = () => {
 
       return (
         <div
+          key={`menu-section-${name}`}
           className={clsx("navbar-item", {
             ["has-dropdown is-hoverable"]: !!items,
           })}
