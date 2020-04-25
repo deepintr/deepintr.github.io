@@ -8,26 +8,26 @@ import { BlogPost, Author, IAuthor } from "../../models";
 import Column from "../Bulma/Column";
 import Columns from "../Bulma/Columns";
 import FAIcon from "../../icons/FAIcon";
-import disqusConfig from "../../configs/disqus";
-import { removeSlashes } from "../../utils";
+import { getDisqusConfig } from "../../utils";
 import styles from "./styles";
 
 const useStyles = createUseStyles(styles);
 
 export interface PostProps {
+  post: BlogPost;
   details?: boolean;
 }
 
-const Post: React.FC<BlogPost & PostProps> = ({
-  excerpt,
-  html,
-  frontmatter,
-  details = false,
-  fields,
-}) => {
+const Post: React.FC<PostProps> = ({ post, details = false }) => {
   const classes = useStyles();
+
+  const {
+    frontmatter,
+    excerpt,
+    fields: { slug },
+    html,
+  } = post;
   const { title, author, date } = frontmatter;
-  const { slug } = fields;
 
   const authorObj = author ? new Author(author) : null;
 
@@ -40,16 +40,7 @@ const Post: React.FC<BlogPost & PostProps> = ({
     );
   };
 
-  const commentCount = (
-    <CommentCount
-      shortname={disqusConfig.shortname}
-      config={{
-        url: "",
-        identifier: removeSlashes(slug),
-        title: title,
-      }}
-    />
-  );
+  const commentCount = <CommentCount {...getDisqusConfig(post)} />;
 
   return (
     <article className={classes.post}>

@@ -8,8 +8,7 @@ import PageContent from "../../components/PageContent";
 import SEO from "../../components/SEO";
 import Post from "../../components/Post";
 import { Data, BlogPost } from "../../models";
-import disqusConfig from "../../configs/disqus";
-import { removeSlashes, summarize } from "../../utils";
+import { getDisqusConfig, summarize } from "../../utils";
 import styles from "./styles";
 
 const useStyles = createUseStyles(styles);
@@ -38,7 +37,7 @@ const BlogPostTemplate: React.FC<PageProps<Data, PageContext>> = ({
       />
       <Container>
         <PageContent>
-          <Post {...post} details />
+          <Post post={post} details />
 
           <nav className="pagination" role="navigation" aria-label="pagination">
             <span>
@@ -68,14 +67,7 @@ const BlogPostTemplate: React.FC<PageProps<Data, PageContext>> = ({
           </nav>
         </PageContent>
         <PageContent>
-          <DiscussionEmbed
-            shortname={disqusConfig.shortname}
-            config={{
-              url: location.href,
-              identifier: removeSlashes(post.fields.slug),
-              title: post.frontmatter.title,
-            }}
-          />
+          <DiscussionEmbed {...getDisqusConfig(post)} />
         </PageContent>
       </Container>
     </MainLayout>

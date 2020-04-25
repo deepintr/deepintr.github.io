@@ -39,7 +39,7 @@ const Home: React.FC<SEOProps & HomeProps> = ({
         <Column>
           <PageContent>
             {posts.map((post) => (
-              <Post {...post} key={post.fields.slug} />
+              <Post post={post} key={post.fields.slug} />
             ))}
           </PageContent>
         </Column>
