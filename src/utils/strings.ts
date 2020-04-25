@@ -1,12 +1,4 @@
 /**
- * Removes forward flash characters from given string.
- * @param str Raw string
- */
-export const removeSlashes = (str: string) => {
-  return str.replace(/\//g, "");
-};
-
-/**
  * Compresses the string into given length.
  * @param str Source string
  * @param maxLength Max length
