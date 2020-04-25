@@ -21,7 +21,7 @@
     ---
     ```
 
-  - Dosyanın geri kalanını içeriğinizi oluşturmak için dilediğiniz gibi kullanabilirsiniz. Markdown ile nasıl çalışacağınızı bilmiyorsanız [şuraya](https://deepintr.org/markdown-hizli-baslangic-rehberi/) göz atın.
+  - Dosyanın geri kalanını içeriğinizi oluşturmak için dilediğiniz gibi kullanabilirsiniz. Markdown ile nasıl çalışacağınızı bilmiyorsanız [şuraya](https://deepintr.org/blog/markdown-hizli-baslangic-rehberi/) göz atın.
 
 - İçeriğinizi hazırladıktan sonra değişiklikleri `commit` edin.
 
