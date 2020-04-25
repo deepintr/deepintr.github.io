@@ -41,9 +41,8 @@ const BlogPostTemplate: React.FC<PageProps<Data, PageContext>> = ({
           <Post post={post} details />
 
           <Pagination
-            prev={{
-              show: !!previous,
-              button: (
+            prev={
+              previous && (
                 <Link
                   to={previous.fields.slug}
                   rel="prev"
@@ -52,11 +51,10 @@ const BlogPostTemplate: React.FC<PageProps<Data, PageContext>> = ({
                 >
                   ← {summarize(previous.frontmatter.title)}
                 </Link>
-              ),
-            }}
-            next={{
-              show: !!next,
-              button: (
+              )
+            }
+            next={
+              next && (
                 <Link
                   to={next.fields.slug}
                   rel="next"
@@ -65,8 +63,8 @@ const BlogPostTemplate: React.FC<PageProps<Data, PageContext>> = ({
                 >
                   {summarize(next.frontmatter.title)} →
                 </Link>
-              ),
-            }}
+              )
+            }
           />
         </PageContent>
         <PageContent>

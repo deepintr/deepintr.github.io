@@ -12,6 +12,7 @@ import { contact } from "../../data";
 import MainButtons from "./components/MainButtons";
 import Greeter from "./components/Greeter";
 import styles from "./styles";
+import { useLocalStorageState } from "../../hooks";
 
 const useStyles = createUseStyles(styles);
 
@@ -27,7 +28,10 @@ const Home: React.FC<SEOProps & HomeProps> = ({
   ...seoProps
 }) => {
   const classes = useStyles();
-  const [currentPage, setCurrentPage] = useState(0);
+  const [currentPage, setCurrentPage] = useLocalStorageState<number>(
+    "currentPage",
+    0,
+  );
 
   const heroBody = (
     <Greeter
@@ -56,32 +60,30 @@ const Home: React.FC<SEOProps & HomeProps> = ({
             ))}
 
             <Pagination
-              prev={{
-                show: !!pages[currentPage - 1],
-                button: (
+              prev={
+                pages[currentPage - 1] && (
                   <a
                     onClick={() => setCurrentPage(currentPage - 1)}
                     rel="prev"
                     className="pagination-previous"
                     title="Daha yeni içerikler"
                   >
-                    ← Sonraki
+                    ← Daha yeni
                   </a>
-                ),
-              }}
-              next={{
-                show: !!pages[currentPage + 1],
-                button: (
+                )
+              }
+              next={
+                pages[currentPage + 1] && (
                   <a
                     onClick={() => setCurrentPage(currentPage + 1)}
                     rel="next"
                     className="pagination-next"
                     title="Daha eski içerikler"
                   >
-                    Önceki →
+                    Daha eski →
                   </a>
-                ),
-              }}
+                )
+              }
             />
           </PageContent>
         </Column>
