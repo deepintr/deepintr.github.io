@@ -7,6 +7,7 @@ import MainLayout from "../../layouts/Main";
 import PageContent from "../../components/PageContent";
 import SEO from "../../components/SEO";
 import Post from "../../components/Post";
+import Pagination from "../../components/Pagination";
 import { Data, BlogPost } from "../../models";
 import { getDisqusConfig, summarize } from "../../utils";
 import styles from "./styles";
@@ -39,9 +40,10 @@ const BlogPostTemplate: React.FC<PageProps<Data, PageContext>> = ({
         <PageContent>
           <Post post={post} details />
 
-          <nav className="pagination" role="navigation" aria-label="pagination">
-            <span>
-              {previous && (
+          <Pagination
+            prev={{
+              show: !!previous,
+              button: (
                 <Link
                   to={previous.fields.slug}
                   rel="prev"
@@ -50,10 +52,11 @@ const BlogPostTemplate: React.FC<PageProps<Data, PageContext>> = ({
                 >
                   ← {summarize(previous.frontmatter.title)}
                 </Link>
-              )}
-            </span>
-            <span>
-              {next && (
+              ),
+            }}
+            next={{
+              show: !!next,
+              button: (
                 <Link
                   to={next.fields.slug}
                   rel="next"
@@ -62,9 +65,9 @@ const BlogPostTemplate: React.FC<PageProps<Data, PageContext>> = ({
                 >
                   {summarize(next.frontmatter.title)} →
                 </Link>
-              )}
-            </span>
-          </nav>
+              ),
+            }}
+          />
         </PageContent>
         <PageContent>
           <DiscussionEmbed {...getDisqusConfig(post)} />
