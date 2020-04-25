@@ -5,9 +5,10 @@ import { createUseStyles } from "react-jss";
 import GitHubButton from "react-github-btn";
 import TypoLogo from "../../../../icons/TypoLogo";
 import FAIcon from "../../../../icons/FAIcon";
-import { downloads } from "../../../../data";
-import styles from "./styles";
+import { MenuItemType, MenuItemRegular } from "../../../../models";
+import { mainMenu } from "../../../../data/mainMenu";
 import pkg from "../../../../../package.json";
+import styles from "./styles";
 
 const useStyles = createUseStyles(styles);
 
@@ -17,6 +18,47 @@ const Topbar: React.FC = () => {
 
   const handleBurgerClick = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const renderMenuItem = (item: MenuItemRegular, blank: boolean = true) => {
+    const { name, icon, url } = item;
+    return (
+      <a
+        key={`menu-item-${name}`}
+        className="navbar-item"
+        href={url}
+        target={blank ? "_blank" : "_self"}
+      >
+        <FAIcon icon={icon} />
+        <span>{name}</span>
+      </a>
+    );
+  };
+
+  const renderMenu = (menu: MenuItemType[]) => {
+    return menu.map(({ name, icon, url, items }) => {
+      if (url) {
+        return renderMenuItem({ name, icon, url }, url !== "/");
+      }
+
+      return (
+        <div
+          className={clsx("navbar-item", {
+            ["has-dropdown is-hoverable"]: !!items,
+          })}
+        >
+          <a className="navbar-link">
+            <FAIcon icon={icon} />
+            <span>{name}</span>
+          </a>
+          {items && (
+            <div className="navbar-dropdown is-right is-boxed">
+              {(items as MenuItemRegular[]).map((item) => renderMenuItem(item))}
+            </div>
+          )}
+        </div>
+      );
+    });
   };
 
   return (
@@ -45,32 +87,7 @@ const Topbar: React.FC = () => {
           })}
         >
           <div className="navbar-end">
-            <Link to="/" className="navbar-item is-active">
-              <FAIcon iconName="home" style="fas" />
-              <span>Anasayfa</span>
-            </Link>
-
-            <div className="navbar-item has-dropdown is-hoverable">
-              <a className="navbar-link">
-                <FAIcon iconName="download" style="fas" />
-                <span>İndir</span>
-              </a>
-              <div className="navbar-dropdown is-right is-boxed">
-                {downloads
-                  .filter((d) => d.url !== "")
-                  .map(({ fileName, sourceName, url }, i) => (
-                    <a
-                      key={`download-option-${i}`}
-                      className="navbar-item"
-                      href={url}
-                      target="_blank"
-                    >
-                      <FAIcon iconName="compact-disc" style="fas" />
-                      <span>{`${fileName} (${sourceName})`}</span>
-                    </a>
-                  ))}
-              </div>
-            </div>
+            {renderMenu(mainMenu)}
 
             <span className={clsx("navbar-item", classes.ghButton)}>
               <GitHubButton

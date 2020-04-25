@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo } from "react";
 import { createUseStyles } from "react-jss";
 import MainLayout from "../../layouts/Main";
 import Columns from "../../components/Bulma/Columns";
@@ -11,8 +11,8 @@ import { BlogPost } from "../../models";
 import { contact } from "../../data";
 import MainButtons from "./components/MainButtons";
 import Greeter from "./components/Greeter";
-import styles from "./styles";
 import { useLocalStorageState } from "../../hooks";
+import styles from "./styles";
 
 const useStyles = createUseStyles(styles);
 

@@ -17,7 +17,7 @@ const Footer: React.FC = ({ children }) => {
           <a href="https://deepintr.org/">deepintr.org</a>
           <span> © </span>
           {new Date().getFullYear()}, Built with
-          <FAIcon iconName="coffee" style="fas" />.
+          <FAIcon icon={{ name: "coffee", style: "fas" }} />.
         </div>
       </footer>
     </Container>

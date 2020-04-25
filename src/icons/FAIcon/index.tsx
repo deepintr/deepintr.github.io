@@ -1,28 +1,24 @@
 import React from "react";
 import clsx from "clsx";
-import { Severity, Size, FAIconStyle, FAIconSize } from "../../models";
+import { Icon, Severity, Size } from "../../models";
 
 export interface FAIconProps {
+  icon: Icon;
   severity?: Severity;
   size?: Size;
-  style: FAIconStyle;
-  iconName: string;
-  faSize?: FAIconSize;
   before?: React.ReactNode;
   after?: React.ReactNode;
 }
 
 const FAIcon: React.FC<FAIconProps> = ({
+  icon,
   severity,
   size,
-  style,
-  iconName,
-  faSize,
   before,
   after,
   children,
 }) => {
-  const icon = (
+  const faIcon = (
     <span
       className={clsx(
         "icon",
@@ -31,8 +27,8 @@ const FAIcon: React.FC<FAIconProps> = ({
       )}
     >
       <i
-        className={clsx(style, `fa-${iconName}`, {
-          [`fa-${faSize}`]: !!faSize,
+        className={clsx(icon.style, `fa-${icon.name}`, {
+          [`fa-${icon.size}`]: !!icon.size,
         })}
       ></i>
       {children && <span>{children}</span>}
@@ -42,7 +38,7 @@ const FAIcon: React.FC<FAIconProps> = ({
   return (
     <>
       {before && <span>{before}</span>}
-      {icon}
+      {faIcon}
       {after && <span>{after}</span>}
     </>
   );

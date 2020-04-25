@@ -27,12 +27,7 @@ const MainButtons: React.FC<MainButtonsProps> = ({ contactItems }) => {
         title={name}
         aria-label={name}
       >
-        <FAIcon
-          size="medium"
-          iconName={icon.name}
-          style={icon.style}
-          faSize={icon.size}
-        />
+        <FAIcon icon={icon} size="medium" />
         {isFeatured && <span>{name}</span>}
       </a>
     ));

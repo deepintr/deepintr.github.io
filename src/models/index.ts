@@ -6,6 +6,7 @@ export * from "./DownloadLink";
 export * from "./EdgeNode";
 export * from "./FAIconTypes";
 export * from "./Frontmatter";
+export * from "./MenuItem";
 export * from "./PostTag";
 export * from "./Severity";
 export * from "./SiteMetadata";

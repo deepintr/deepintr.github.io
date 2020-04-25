@@ -51,7 +51,10 @@ const Post: React.FC<PostProps> = ({ post, details = false }) => {
       <Media
         right={
           !details && (
-            <FAIcon iconName="comments" style="fas" after={commentCount} />
+            <FAIcon
+              icon={{ name: "comments", style: "fas" }}
+              after={commentCount}
+            />
           )
         }
       >

@@ -1,12 +1,8 @@
-import { FAIconStyle, FAIconSize } from "./FAIconTypes";
+import { Icon } from "./FAIconTypes";
 
 export interface ContactInfo {
   name: string;
   url: string;
-  icon: {
-    name: string;
-    style: FAIconStyle;
-    size?: FAIconSize;
-  };
+  icon: Icon;
   isFeatured: boolean;
 }
