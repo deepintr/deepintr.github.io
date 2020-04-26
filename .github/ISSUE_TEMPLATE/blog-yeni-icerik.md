@@ -4,7 +4,6 @@ about: Bloga içerik eklemek için bu şablonu kullanabilirsiniz.
 title: ''
 labels: blog
 assignees: ''
-
 ---
 
 ---
