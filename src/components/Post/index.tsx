@@ -7,9 +7,11 @@ import Media from "../Bulma/Media";
 import { BlogPost, Author, IAuthor } from "../../models";
 import Column from "../Bulma/Column";
 import Columns from "../Bulma/Columns";
+import Button from "../Bulma/Button";
 import FAIcon from "../../icons/FAIcon";
 import { getDisqusConfig } from "../../utils";
 import styles from "./styles";
+import pkg from "../../../package.json";
 
 const useStyles = createUseStyles(styles);
 
@@ -50,7 +52,19 @@ const Post: React.FC<PostProps> = ({ post, details = false }) => {
 
       <Media
         right={
-          !details && (
+          details ? (
+            <Button
+              element="a"
+              title="GitHub'da düzenle"
+              anchor={{
+                href: `${pkg.repository.url}/edit/master/content${post.fields.slug}index.md`,
+                target: "_blank",
+              }}
+              noBorder
+            >
+              <FAIcon icon={{ name: "edit", style: "fas" }} />
+            </Button>
+          ) : (
             <FAIcon
               icon={{ name: "comments", style: "fas" }}
               after={commentCount}

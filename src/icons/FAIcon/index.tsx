@@ -1,18 +1,18 @@
 import React from "react";
 import clsx from "clsx";
-import { Icon, Severity, Size } from "../../models";
+import { Icon, BulmaColor, BulmaSize } from "../../models";
 
 export interface FAIconProps {
   icon: Icon;
-  severity?: Severity;
-  size?: Size;
+  color?: BulmaColor;
+  size?: BulmaSize;
   before?: React.ReactNode;
   after?: React.ReactNode;
 }
 
 const FAIcon: React.FC<FAIconProps> = ({
   icon,
-  severity,
+  color,
   size,
   before,
   after,
@@ -23,7 +23,7 @@ const FAIcon: React.FC<FAIconProps> = ({
       className={clsx(
         "icon",
         { [`is-${size}`]: !!size },
-        { [`has-text-${severity}`]: !!severity },
+        { [`has-text-${color}`]: !!color },
       )}
     >
       <i
