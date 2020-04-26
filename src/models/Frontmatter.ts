@@ -3,4 +3,5 @@ export interface Frontmatter {
   date: string;
   description: string;
   author: string;
+  pinned?: boolean;
 }

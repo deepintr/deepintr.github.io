@@ -41,10 +41,12 @@ const Home: React.FC<SEOProps & HomeProps> = ({
   );
 
   const pages = useMemo(() => {
+    const sorted = posts
+      .filter((p) => !!p.frontmatter.pinned)
+      .concat(posts.filter((p) => !p.frontmatter.pinned));
     const items: BlogPost[][] = [];
-    const postsCopy = posts.slice();
-    while (postsCopy.length) {
-      items.push(postsCopy.splice(0, ITEMS_PER_PAGE));
+    while (sorted.length) {
+      items.push(sorted.splice(0, ITEMS_PER_PAGE));
     }
     return items;
   }, [posts]);

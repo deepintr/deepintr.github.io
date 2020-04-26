@@ -3,6 +3,7 @@ title: "[RESMİ AÇIKLAMA] LINUX DEEPIN CASUS YAZILIM DEĞİLDİR"
 date: "2018-11-16"
 author: "gokhanyildirimlar@telegram"
 description: "LINUX DEEPIN CASUS YAZILIM DEĞİLDİR"
+pinned: true
 ---
 
 _Son zamanlarda Linux Deepin’in casus yazılım olduğu konusunda söylentiler dolaşıyor. Bu söylentinin altında yatan sebep Deepin’in web sitesinde ve uygulama mağazasında [cnzz.com](https://cnzz.com/) bağlantıları olması, cnzz’nin tarayıcıdaki bazı müşteri verilerini topluyor olmasıdır. Kimse, Facebook olayında olduğu gibi, kişisel bilgilerinin sızdırılmasını istemeyeceği için bu gerçekten ciddi bir sorun teşkil etmekte._

@@ -9,6 +9,7 @@ import { BlogPost, Author, IAuthor } from "../../models";
 import Column from "../Bulma/Column";
 import Columns from "../Bulma/Columns";
 import Button from "../Bulma/Button";
+import Tag from "../Bulma/Tag";
 import FAIcon from "../../icons/FAIcon";
 import { getDisqusConfig } from "../../utils";
 import styles from "./styles";
@@ -30,7 +31,7 @@ const Post: React.FC<PostProps> = ({ post, details = false }) => {
     fields: { slug },
     html,
   } = post;
-  const { title, author, date } = frontmatter;
+  const { title, author, date, pinned } = frontmatter;
 
   const authorObj = author ? new Author(author) : null;
 
@@ -76,6 +77,7 @@ const Post: React.FC<PostProps> = ({ post, details = false }) => {
         <p className={clsx(classes.paragraph, { [classes.divider]: details })}>
           {authorObj && renderAuthor(authorObj.getCredentials())}
           <span>{moment(date).format(`DD MMMM YYYY`)}&nbsp;</span>
+          {pinned && <Tag color="warning">Sabitlenmiş</Tag>}
         </p>
 
         <Columns>

@@ -31,6 +31,7 @@ export const pageQuery = graphql`
             date
             title
             author
+            pinned
           }
         }
       }
