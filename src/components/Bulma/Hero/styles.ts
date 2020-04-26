@@ -1,7 +1,7 @@
 import { Styles } from "react-jss";
 
-const styles: Styles = {
-  background: "transparent",
-};
-
-export default styles;
+export default {
+  hero: {
+    background: "transparent",
+  },
+} as Styles;
