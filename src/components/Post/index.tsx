@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 import clsx from "clsx";
 import { createUseStyles } from "react-jss";
 import { CommentCount } from "disqus-react";
+import moment from "moment";
 import Media from "../Bulma/Media";
 import { BlogPost, Author, IAuthor } from "../../models";
 import Column from "../Bulma/Column";
@@ -74,7 +75,7 @@ const Post: React.FC<PostProps> = ({ post, details = false }) => {
       >
         <p className={clsx(classes.paragraph, { [classes.divider]: details })}>
           {authorObj && renderAuthor(authorObj.getCredentials())}
-          <span>{date}&nbsp;</span>
+          <span>{moment(date).format(`DD MMMM YYYY`)}&nbsp;</span>
         </p>
 
         <Columns>
