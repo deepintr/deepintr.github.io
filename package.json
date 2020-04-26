@@ -51,8 +51,7 @@
     "react-github-btn": "^1.1.1",
     "react-helmet": "^6.0.0",
     "react-jss": "^10.1.1",
-    "react-particles-js": "^3.1.0",
-    "react-share": "^4.1.0"
+    "react-particles-js": "^3.1.0"
   },
   "devDependencies": {
     "@types/node": "^13.13.1",
