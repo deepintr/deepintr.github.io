@@ -1,16 +1,18 @@
 ---
-name: 'Blog: Yeni İçerik'
+name: "Blog: Yeni İçerik"
 about: Bloga içerik eklemek için bu şablonu kullanabilirsiniz.
-title: ''
+title: ""
 labels: blog
-assignees: ''
+assignees: ""
 ---
 
 ---
+
 title: "İçerik Başlığı"
 date: "YYYY-AA-GG"
 author: "kullanıcıadı@platform"
 description: "Kısa açıklama"
+
 ---
 
 BLOG İÇERİĞİ BURAYA GELECEK
