@@ -6,13 +6,9 @@ labels: blog
 assignees: ""
 ---
 
----
-
-title: "İçerik Başlığı"
-date: "YYYY-AA-GG"
-author: "kullanıcıadı@platform"
-description: "Kısa açıklama"
-
----
+- title: "İçerik Başlığı"
+- date: "YYYY-AA-GG"
+- author: "kullanıcıadı@platform"
+- description: "Kısa açıklama"
 
 BLOG İÇERİĞİ BURAYA GELECEK
