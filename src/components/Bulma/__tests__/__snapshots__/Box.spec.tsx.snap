@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Box /> should render correctly 1`] = `
+<div
+  className="box boxCustom-0-2-1 content"
+>
+  This is a Box!
+</div>
+`;
