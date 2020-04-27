@@ -6,10 +6,10 @@
 
 module.exports = {
   siteMetadata: {
-    title: "Deepin Türkiye",
-    description: "Linux Deepin Türkiye Kullanıcı Topluluğu",
-    siteUrl: "https://deepintr.org/",
-    author: "",
+    title: 'Deepin Türkiye',
+    description: 'Linux Deepin Türkiye Kullanıcı Topluluğu',
+    siteUrl: 'https://deepintr.org/',
+    author: '',
   },
   plugins: [
     `gatsby-plugin-typescript`,
