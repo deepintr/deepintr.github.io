@@ -1,18 +1,18 @@
-import React, { useMemo } from "react";
-import { createUseStyles } from "react-jss";
-import MainLayout from "../../layouts/Main";
-import Columns from "../../components/Bulma/Columns";
-import Column from "../../components/Bulma/Column";
-import PageContent from "../../components/PageContent";
-import Post from "../../components/Post";
-import Pagination from "../../components/Pagination";
-import SEO, { SEOProps } from "../../components/SEO";
-import { BlogPost } from "../../models";
-import { contact } from "../../data";
-import MainButtons from "./components/MainButtons";
-import Greeter from "./components/Greeter";
-import { useLocalStorageState } from "../../hooks";
-import styles from "./styles";
+import React, { useMemo } from 'react';
+import { createUseStyles } from 'react-jss';
+import MainLayout from '../../layouts/Main';
+import Columns from '../../components/Bulma/Columns';
+import Column from '../../components/Bulma/Column';
+import PageContent from '../../components/PageContent';
+import Post from '../../components/Post';
+import Pagination from '../../components/Pagination';
+import SEO, { SEOProps } from '../../components/SEO';
+import { BlogPost } from '../../models';
+import { contact } from '../../data';
+import MainButtons from './components/MainButtons';
+import Greeter from './components/Greeter';
+import { useLocalStorageState } from '../../hooks';
+import styles from './styles';
 
 const useStyles = createUseStyles(styles);
 
@@ -29,7 +29,7 @@ const Home: React.FC<SEOProps & HomeProps> = ({
 }) => {
   const classes = useStyles();
   const [currentPage, setCurrentPage] = useLocalStorageState<number>(
-    "currentPage",
+    'currentPage',
     0,
   );
 

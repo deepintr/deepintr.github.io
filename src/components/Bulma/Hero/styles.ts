@@ -1,7 +1,7 @@
-import { Styles } from "react-jss";
+import { Styles } from 'react-jss';
 
 export default {
   hero: {
-    background: "transparent",
+    background: 'transparent',
   },
 } as Styles;

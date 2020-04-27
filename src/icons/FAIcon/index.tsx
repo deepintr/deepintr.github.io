@@ -1,6 +1,6 @@
-import React from "react";
-import clsx from "clsx";
-import { Icon, BulmaColor, BulmaSize } from "../../models";
+import React from 'react';
+import clsx from 'clsx';
+import { Icon, BulmaColor, BulmaSize } from '../../models';
 
 export interface FAIconProps {
   icon: Icon;
@@ -12,7 +12,7 @@ const FAIcon: React.FC<FAIconProps> = ({ icon, color, size, children }) => {
   return (
     <span
       className={clsx(
-        "icon",
+        'icon',
         { [`is-${size}`]: !!size },
         { [`has-text-${color}`]: !!color },
       )}

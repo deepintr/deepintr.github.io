@@ -1,4 +1,4 @@
-import { Icon } from "./FAIconTypes";
+import { Icon } from './FAIconTypes';
 
 export interface IMenuItem {
   [key: string]: any;

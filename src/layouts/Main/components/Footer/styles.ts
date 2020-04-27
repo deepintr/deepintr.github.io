@@ -1,8 +1,8 @@
-import { Styles } from "react-jss";
+import { Styles } from 'react-jss';
 
 const styles: Styles = {
   root: {
-    background: "inherit",
+    background: 'inherit',
   },
 };
 

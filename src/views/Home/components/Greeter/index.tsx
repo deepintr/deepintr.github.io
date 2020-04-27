@@ -1,9 +1,9 @@
-import React from "react";
-import clsx from "clsx";
-import { createUseStyles } from "react-jss";
-import logoImg from "../../../../images/icon-256x256.png";
-import seperatorImg from "../../../../images/seperator.png";
-import styles from "./styles";
+import React from 'react';
+import clsx from 'clsx';
+import { createUseStyles } from 'react-jss';
+import logoImg from '../../../../images/icon-256x256.png';
+import seperatorImg from '../../../../images/seperator.png';
+import styles from './styles';
 
 const useStyles = createUseStyles(styles);
 
@@ -20,7 +20,7 @@ const Greeter: React.FC<GreeterProps> = ({ title, subtitle, content }) => {
     <div className={classes.root}>
       <img className={classes.logo} src={logoImg} />
       <div>
-        <p className={clsx("title", classes.title)}>{title}</p>
+        <p className={clsx('title', classes.title)}>{title}</p>
         {subtitle && <p className="subtitle">{subtitle}</p>}
         <div className={classes.seperator}>
           <img src={seperatorImg} />

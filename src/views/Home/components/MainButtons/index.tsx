@@ -1,9 +1,9 @@
-import React from "react";
-import clsx from "clsx";
-import { createUseStyles } from "react-jss";
-import { ContactInfo } from "../../../../models";
-import FAIcon from "../../../../icons/FAIcon";
-import styles from "./styles";
+import React from 'react';
+import clsx from 'clsx';
+import { createUseStyles } from 'react-jss';
+import { ContactInfo } from '../../../../models';
+import FAIcon from '../../../../icons/FAIcon';
+import styles from './styles';
 
 const useStyles = createUseStyles(styles);
 
@@ -21,9 +21,10 @@ const MainButtons: React.FC<MainButtonsProps> = ({ contactItems }) => {
     return icons.map(({ name, icon, url, isFeatured }) => (
       <a
         key={`main-icon-${name}`}
-        className={clsx("button is-rounded", classes.button)}
+        className={clsx('button is-rounded', classes.button)}
         href={url}
         target="_blank"
+        rel="noopener noreferrer"
         title={name}
         aria-label={name}
       >

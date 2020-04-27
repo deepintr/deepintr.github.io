@@ -1,6 +1,6 @@
-import React from "react";
-import { Helmet } from "react-helmet";
-import { useStaticQuery, graphql } from "gatsby";
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import { useStaticQuery, graphql } from 'gatsby';
 
 export interface SEOProps {
   title: string;
@@ -11,8 +11,8 @@ export interface SEOProps {
 
 const SEO: React.FC<SEOProps> = ({
   title,
-  description = "",
-  lang = "tr",
+  description = '',
+  lang = 'tr',
   meta = [],
 }) => {
   const { site } = useStaticQuery(

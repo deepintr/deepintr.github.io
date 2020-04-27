@@ -1,9 +1,9 @@
-import { Styles } from "react-jss";
+import { Styles } from 'react-jss';
 
 const styles: Styles = {
-  "@global": {
-    "#tsparticles": {
-      position: "fixed",
+  '@global': {
+    '#tsparticles': {
+      position: 'fixed',
       top: 0,
       left: 0,
       right: 0,
@@ -12,7 +12,7 @@ const styles: Styles = {
     },
   },
   content: {
-    minHeight: "100vh",
+    minHeight: '100vh',
   },
 };
 

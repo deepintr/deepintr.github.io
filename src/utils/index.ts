@@ -1,2 +1,2 @@
-export * from "./disqus";
-export * from "./strings";
+export * from './disqus';
+export * from './strings';

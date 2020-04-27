@@ -1,6 +1,6 @@
 const platformMap: { [key: string]: string } = {
-  github: "https://github.com",
-  telegram: "https://t.me",
+  github: 'https://github.com',
+  telegram: 'https://t.me',
 };
 
 export interface IAuthor {
@@ -14,7 +14,7 @@ export class Author {
 
   constructor(authorText: string) {
     [this.username, this.platform] = authorText
-      .split("@")
+      .split('@')
       .map((s) => s.toLowerCase());
   }
 
@@ -33,7 +33,7 @@ export class Author {
 
     return {
       username,
-      url: "#",
+      url: '#',
     };
   }
 }

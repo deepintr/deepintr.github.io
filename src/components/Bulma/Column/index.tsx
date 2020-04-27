@@ -1,5 +1,5 @@
-import React from "react";
-import clsx from "clsx";
+import React from 'react';
+import clsx from 'clsx';
 
 export interface ColumnProps {
   size?: number;
@@ -7,7 +7,7 @@ export interface ColumnProps {
 
 const Column: React.FC<ColumnProps> = ({ size, children }) => {
   return (
-    <div className={clsx("column", { [`is-${size}`]: size })}>{children}</div>
+    <div className={clsx('column', { [`is-${size}`]: size })}>{children}</div>
   );
 };
 

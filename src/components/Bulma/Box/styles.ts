@@ -1,5 +1,5 @@
-import { Styles } from "react-jss";
-import globalStyles from "../../../styles/global";
+import { Styles } from 'react-jss';
+import globalStyles from '../../../styles/global';
 
 const styles: Styles = {
   boxCustom: {

@@ -1,4 +1,4 @@
-import { IParticlesParams } from "react-particles-js";
+import { IParticlesParams } from 'react-particles-js';
 
 export default {
   particles: {
@@ -10,19 +10,19 @@ export default {
       },
     },
     color: {
-      value: "#333",
+      value: '#333',
     },
     shape: {
-      type: "circle",
+      type: 'circle',
       stroke: {
         width: 0.2,
-        color: "#555",
+        color: '#555',
       },
       polygon: {
         nb_sides: 5,
       },
       image: {
-        src: "",
+        src: '',
         width: 100,
         height: 100,
       },
@@ -50,17 +50,17 @@ export default {
     line_linked: {
       enable: true,
       distance: 100,
-      color: "#555",
+      color: '#555',
       opacity: 0.3,
       width: 0.75,
     },
     move: {
       enable: true,
       speed: 2,
-      direction: "none",
+      direction: 'none',
       random: false,
       straight: false,
-      out_mode: "out",
+      out_mode: 'out',
       attract: {
         enable: true,
         rotateX: 1200,
@@ -69,15 +69,15 @@ export default {
     },
   },
   interactivity: {
-    detect_on: "canvas",
+    detect_on: 'canvas',
     events: {
       onhover: {
         enable: false,
-        mode: "repulse",
+        mode: 'repulse',
       },
       onclick: {
         enable: false,
-        mode: "repulse",
+        mode: 'repulse',
       },
       resize: true,
     },

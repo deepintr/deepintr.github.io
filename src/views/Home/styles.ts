@@ -1,4 +1,4 @@
-import { Styles } from "react-jss";
+import { Styles } from 'react-jss';
 
 const styles: Styles = {};
 

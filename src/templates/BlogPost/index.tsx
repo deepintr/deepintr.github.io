@@ -1,16 +1,16 @@
-import React from "react";
-import { Link, graphql, PageProps } from "gatsby";
-import { createUseStyles } from "react-jss";
-import { DiscussionEmbed } from "disqus-react";
-import Container from "../../components/Bulma/Container";
-import MainLayout from "../../layouts/Main";
-import PageContent from "../../components/PageContent";
-import SEO from "../../components/SEO";
-import Post from "../../components/Post";
-import Pagination from "../../components/Pagination";
-import { Data, BlogPost } from "../../models";
-import { getDisqusConfig, summarize } from "../../utils";
-import styles from "./styles";
+import React from 'react';
+import { Link, graphql, PageProps } from 'gatsby';
+import { createUseStyles } from 'react-jss';
+import { DiscussionEmbed } from 'disqus-react';
+import Container from '../../components/Bulma/Container';
+import MainLayout from '../../layouts/Main';
+import PageContent from '../../components/PageContent';
+import SEO from '../../components/SEO';
+import Post from '../../components/Post';
+import Pagination from '../../components/Pagination';
+import { Data, BlogPost } from '../../models';
+import { getDisqusConfig, summarize } from '../../utils';
+import styles from './styles';
 
 const useStyles = createUseStyles(styles);
 

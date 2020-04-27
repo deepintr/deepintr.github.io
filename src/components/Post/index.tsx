@@ -1,16 +1,16 @@
-import React from "react";
-import { createUseStyles } from "react-jss";
-import { CommentCount } from "disqus-react";
-import Media from "../Bulma/Media";
-import { BlogPost } from "../../models";
-import Column from "../Bulma/Column";
-import Columns from "../Bulma/Columns";
-import Button from "../Bulma/Button";
-import FAIcon from "../../icons/FAIcon";
-import FrontmatterLine from "./FrontmatterLine";
-import { getDisqusConfig } from "../../utils";
-import styles from "./styles";
-import pkg from "../../../package.json";
+import React from 'react';
+import { createUseStyles } from 'react-jss';
+import { CommentCount } from 'disqus-react';
+import Media from '../Bulma/Media';
+import { BlogPost } from '../../models';
+import Column from '../Bulma/Column';
+import Columns from '../Bulma/Columns';
+import Button from '../Bulma/Button';
+import FAIcon from '../../icons/FAIcon';
+import FrontmatterLine from './FrontmatterLine';
+import { getDisqusConfig } from '../../utils';
+import styles from './styles';
+import pkg from '../../../package.json';
 
 const useStyles = createUseStyles(styles);
 
@@ -35,15 +35,15 @@ const Post: React.FC<PostProps> = ({ post, details = false }) => {
       title="GitHub'da düzenle"
       anchor={{
         href: `${pkg.repository.url}/edit/master/content${slug}index.md`,
-        target: "_blank",
+        target: '_blank',
       }}
       noBorder
     >
-      <FAIcon icon={{ name: "edit", style: "fas" }} />
+      <FAIcon icon={{ name: 'edit', style: 'fas' }} />
     </Button>
   ) : (
     <>
-      <FAIcon icon={{ name: "comments", style: "fas" }} />
+      <FAIcon icon={{ name: 'comments', style: 'fas' }} />
       <CommentCount {...getDisqusConfig(post)} />
     </>
   );

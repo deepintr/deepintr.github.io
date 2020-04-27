@@ -1,16 +1,16 @@
-import React from "react";
-import clsx from "clsx";
-import { createUseStyles } from "react-jss";
-import { BulmaSize, BulmaColor } from "../../../models";
-import styles from "./styles";
+import React from 'react';
+import clsx from 'clsx';
+import { createUseStyles } from 'react-jss';
+import { BulmaSize, BulmaColor } from '../../../models';
+import styles from './styles';
 
 const useStyles = createUseStyles(styles);
 
 export interface ButtonProps {
-  element: "button" | "a";
+  element: 'button' | 'a';
   anchor?: {
     href?: string;
-    target?: "_blank" | "_self";
+    target?: '_blank' | '_self';
   };
   size?: BulmaSize;
   color?: BulmaColor;
@@ -34,7 +34,7 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   const classes = useStyles();
 
-  const anchorProps = Element === "a" ? { ...anchor, "aria-label": title } : {};
+  const anchorProps = Element === 'a' ? { ...anchor, 'aria-label': title } : {};
   const styleRest = Object.keys(rest).map((key) => ({ [`is-${key}`]: !!key }));
 
   return (
@@ -42,7 +42,7 @@ const Button: React.FC<ButtonProps> = ({
       {...anchorProps}
       {...handlers}
       className={clsx(
-        "button",
+        'button',
         { [classes.noBorder]: noBorder },
         { [`is-${color}`]: !!color },
         ...styleRest,

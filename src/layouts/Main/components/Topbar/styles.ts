@@ -1,13 +1,13 @@
-import { Styles } from "react-jss";
+import { Styles } from 'react-jss';
 
 const styles: Styles = {
   root: {
-    background: "inherit",
+    background: 'inherit',
   },
   ghButton: {
-    marginBottom: "-0.2rem",
-    "&:hover": {
-      background: "none !important",
+    marginBottom: '-0.2rem',
+    '&:hover': {
+      background: 'none !important',
     },
   },
 };

@@ -1,12 +1,12 @@
-import React from "react";
-import { Link } from "gatsby";
-import { createUseStyles } from "react-jss";
-import clsx from "clsx";
-import moment from "moment";
-import Tag from "../../Bulma/Tag";
-import { Frontmatter, Author } from "../../../models";
-import FAIcon from "../../../icons/FAIcon";
-import styles from "./styles";
+import React from 'react';
+import { Link } from 'gatsby';
+import { createUseStyles } from 'react-jss';
+import clsx from 'clsx';
+import moment from 'moment';
+import Tag from '../../Bulma/Tag';
+import { Frontmatter, Author } from '../../../models';
+import FAIcon from '../../../icons/FAIcon';
+import styles from './styles';
 
 const useStyles = createUseStyles(styles);
 
@@ -31,7 +31,7 @@ const FrontmatterLine: React.FC<FrontmatterLineProps> = ({
       const authorObj = new Author(authorStr);
       const { username, url } = authorObj.getCredentials();
       return (
-        <a href={url} target="_blank">
+        <a href={url} target="_blank" rel="noopener noreferrer">
           @{username}
         </a>
       );
@@ -55,7 +55,7 @@ const FrontmatterLine: React.FC<FrontmatterLineProps> = ({
           {renderDate(date)}
           {pinned && (
             <Tag color="warning">
-              <FAIcon icon={{ name: "thumbtack", style: "fas" }} />
+              <FAIcon icon={{ name: 'thumbtack', style: 'fas' }} />
               <span>Sabitlenmiş</span>
             </Tag>
           )}

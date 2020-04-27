@@ -1,6 +1,6 @@
-import React from "react";
-import clsx from "clsx";
-import { BulmaColor, BulmaSize } from "../../../models";
+import React from 'react';
+import clsx from 'clsx';
+import { BulmaColor, BulmaSize } from '../../../models';
 
 export interface TagProps {
   color?: BulmaColor;
@@ -11,7 +11,7 @@ const Tag: React.FC<TagProps> = ({ color, size, children }) => {
   return (
     <span
       className={clsx(
-        "tag",
+        'tag',
         { [`is-${color}`]: !!color },
         { [`is-${size}`]: !!size },
       )}

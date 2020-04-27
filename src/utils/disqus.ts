@@ -1,5 +1,5 @@
-import { BlogPost } from "../models";
-import disqusConfig from "../configs/disqus";
+import { BlogPost } from '../models';
+import disqusConfig from '../configs/disqus';
 
 /**
  * Returns Disqus config for given post.
@@ -37,8 +37,8 @@ export const getDisqusConfig = (
  * @param slug Slug string
  * @param replaceWith String to be used in place of forward slash chars.
  */
-export const getPostId = (slug: string, replaceWith: string = "-") => {
-  if (slug.startsWith("/")) slug = slug.slice(1);
-  if (slug.endsWith("/")) slug = slug.slice(0, slug.length - 1);
+export const getPostId = (slug: string, replaceWith: string = '-') => {
+  if (slug.startsWith('/')) slug = slug.slice(1);
+  if (slug.endsWith('/')) slug = slug.slice(0, slug.length - 1);
   return slug.replace(/\//g, replaceWith);
 };

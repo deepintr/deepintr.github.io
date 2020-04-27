@@ -1,4 +1,4 @@
 export default {
-  shortname: "deepintr",
-  baseUrl: "https://deepintr.org",
+  shortname: 'deepintr',
+  baseUrl: 'https://deepintr.org',
 };

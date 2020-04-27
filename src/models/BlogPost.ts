@@ -1,4 +1,4 @@
-import { Frontmatter } from "./Frontmatter";
+import { Frontmatter } from './Frontmatter';
 
 export interface BlogPost {
   id: string;

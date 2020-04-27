@@ -1,54 +1,54 @@
-import { ContactInfo } from "../models";
+import { ContactInfo } from '../models';
 
 export const contact: ContactInfo[] = [
   {
-    name: "Telegram",
+    name: 'Telegram',
     icon: {
-      name: "telegram",
-      style: "fab",
-      size: "lg",
+      name: 'telegram',
+      style: 'fab',
+      size: 'lg',
     },
-    url: "https://t.me/deepintr",
+    url: 'https://t.me/deepintr',
     isFeatured: true,
   },
   {
-    name: "GitHub",
+    name: 'GitHub',
     icon: {
-      name: "github",
-      style: "fab",
-      size: "lg",
+      name: 'github',
+      style: 'fab',
+      size: 'lg',
     },
-    url: "https://github.com/deepintr",
+    url: 'https://github.com/deepintr',
     isFeatured: true,
   },
   {
-    name: "DistroWatch",
+    name: 'DistroWatch',
     icon: {
-      name: "linux",
-      style: "fab",
-      size: "lg",
+      name: 'linux',
+      style: 'fab',
+      size: 'lg',
     },
-    url: "https://distrowatch.com/table.php?distribution=deepin",
+    url: 'https://distrowatch.com/table.php?distribution=deepin',
     isFeatured: false,
   },
   {
-    name: "LinkedIn",
+    name: 'LinkedIn',
     icon: {
-      name: "linkedin",
-      style: "fab",
-      size: "lg",
+      name: 'linkedin',
+      style: 'fab',
+      size: 'lg',
     },
-    url: "https://tr.linkedin.com/company/deepinturkey",
+    url: 'https://tr.linkedin.com/company/deepinturkey',
     isFeatured: false,
   },
   {
-    name: "YouTube",
+    name: 'YouTube',
     icon: {
-      name: "youtube",
-      style: "fab",
-      size: "lg",
+      name: 'youtube',
+      style: 'fab',
+      size: 'lg',
     },
-    url: "https://www.youtube.com/channel/UCvd1FPyxqwveRB50tOtbAGQ",
+    url: 'https://www.youtube.com/channel/UCvd1FPyxqwveRB50tOtbAGQ',
     isFeatured: false,
   },
 ];

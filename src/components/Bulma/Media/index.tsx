@@ -1,7 +1,7 @@
-import React from "react";
-import clsx from "clsx";
-import { createUseStyles } from "react-jss";
-import styles from "./styles";
+import React from 'react';
+import clsx from 'clsx';
+import { createUseStyles } from 'react-jss';
+import styles from './styles';
 
 const useStyles = createUseStyles(styles);
 
@@ -20,12 +20,12 @@ const Media: React.FC<MediaProps> = ({ left, right, children }) => {
     <article className="media">
       {left && (
         <figure className="media-left">
-          <p className={clsx("image", `is-${left.size}x${left.size}`)}>
+          <p className={clsx('image', `is-${left.size}x${left.size}`)}>
             <img
               className={classes.image}
               src={
                 left.imgUrl ||
-                "https://bulma.io/images/placeholders/128x128.png"
+                'https://bulma.io/images/placeholders/128x128.png'
               }
             />
           </p>
