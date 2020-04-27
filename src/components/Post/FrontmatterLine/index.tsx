@@ -13,12 +13,14 @@ const useStyles = createUseStyles(styles);
 export interface FrontmatterLineProps {
   frontmatter: Frontmatter;
   slug: string;
+  right?: React.ReactNode;
   details?: boolean;
 }
 
 const FrontmatterLine: React.FC<FrontmatterLineProps> = ({
   frontmatter,
   slug,
+  right,
   details,
 }) => {
   const classes = useStyles();
@@ -43,21 +45,24 @@ const FrontmatterLine: React.FC<FrontmatterLineProps> = ({
   };
 
   return (
-    <>
-      <Link to={slug}>
-        <h4 className={classes.title}>{title}</h4>
-      </Link>
-      <p className={clsx(classes.paragraph, { [classes.divider]: details })}>
-        {renderAuthor(author)}
-        {renderDate(date)}
-        {pinned && (
-          <Tag color="warning">
-            <FAIcon icon={{ name: "thumbtack", style: "fas" }} />
-            <span>Sabitlenmiş</span>
-          </Tag>
-        )}
-      </p>
-    </>
+    <div className={clsx(classes.root, { [classes.divider]: details })}>
+      <div>
+        <Link to={slug}>
+          <h4 className={classes.title}>{title}</h4>
+        </Link>
+        <p className={clsx(classes.paragraph)}>
+          {renderAuthor(author)}
+          {renderDate(date)}
+          {pinned && (
+            <Tag color="warning">
+              <FAIcon icon={{ name: "thumbtack", style: "fas" }} />
+              <span>Sabitlenmiş</span>
+            </Tag>
+          )}
+        </p>
+      </div>
+      {right && <span>{right}</span>}
+    </div>
   );
 };
 

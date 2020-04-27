@@ -29,7 +29,7 @@ const Post: React.FC<PostProps> = ({ post, details = false }) => {
     html,
   } = post;
 
-  const mediaRight = details ? (
+  const rightArea = details ? (
     <Button
       element="a"
       title="GitHub'da düzenle"
@@ -50,9 +50,10 @@ const Post: React.FC<PostProps> = ({ post, details = false }) => {
 
   return (
     <article className={classes.post}>
-      <Media right={mediaRight}>
+      <Media>
         <FrontmatterLine
           frontmatter={frontmatter}
+          right={rightArea}
           slug={slug}
           details={details}
         />
