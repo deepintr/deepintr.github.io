@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Media /> should render correctly 1`] = `
+<article
+  className="media"
+>
+  <figure
+    className="media-left"
+  >
+    <p
+      className="image is-64x64"
+    >
+      <img
+        className="image-0-2-1"
+        src="https://bulma.io/images/placeholders/128x128.png"
+      />
+    </p>
+  </figure>
+  <div
+    className="media-content"
+  >
+    <div
+      className="content"
+    >
+      This is a Media element!
+    </div>
+  </div>
+  <div
+    className="media-right"
+  >
+    <span>
+      Hi!
+    </span>
+  </div>
+</article>
+`;

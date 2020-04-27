@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Column /> should render correctly 1`] = `
+<div
+  className="column is-6"
+>
+  This is a column!
+</div>
+`;

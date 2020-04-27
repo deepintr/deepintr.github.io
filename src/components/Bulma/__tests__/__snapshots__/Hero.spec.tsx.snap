@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Hero /> should render correctly 1`] = `
+<section
+  className="hero hero-0-2-1 is-medium"
+>
+  <div
+    className="hero-head"
+  >
+    <h1>
+      Hero Head
+    </h1>
+  </div>
+  <div
+    className="hero-body"
+  >
+    <div
+      className="container has-text-centered"
+    >
+      <div>
+        Hero Body
+      </div>
+    </div>
+  </div>
+  <div
+    className="hero-foot"
+  >
+    <span>
+      Hero Footer
+    </span>
+  </div>
+</section>
+`;
