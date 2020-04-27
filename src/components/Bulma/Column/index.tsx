@@ -1,8 +1,9 @@
 import React from 'react';
 import clsx from 'clsx';
+import { ColumnSize } from '../../../models';
 
 export interface ColumnProps {
-  size?: number;
+  size?: ColumnSize;
 }
 
 const Column: React.FC<ColumnProps> = ({ size, children }) => {
