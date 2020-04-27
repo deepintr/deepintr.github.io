@@ -83,7 +83,10 @@ const Post: React.FC<PostProps> = ({ post, details = false }) => {
         <Columns>
           <Column>
             {details ? (
-              <div dangerouslySetInnerHTML={{ __html: html }}></div>
+              <div
+                className={classes.postContent}
+                dangerouslySetInnerHTML={{ __html: html }}
+              ></div>
             ) : (
               <p>{excerpt}</p>
             )}

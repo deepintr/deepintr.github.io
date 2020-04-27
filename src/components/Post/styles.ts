@@ -19,6 +19,10 @@ const styles: Styles = {
     fontWeight: 700,
     color: "#8F99A3",
   },
+  postContent: {
+    textAlign: "justify",
+    textJustify: "inter-character",
+  },
   divider: {
     paddingBottom: "0.3rem",
     borderBottom: "1px solid #E6EAEE",
