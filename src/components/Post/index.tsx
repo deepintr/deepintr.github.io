@@ -34,7 +34,7 @@ const Post: React.FC<PostProps> = ({ post, details = false }) => {
       element="a"
       title="GitHub'da düzenle"
       anchor={{
-        href: `${pkg.repository.url}/edit/master/content${slug}index.md`,
+        href: `${pkg.repository.url}/blob/master/content${slug}index.md`,
         target: '_blank',
       }}
       noBorder
