@@ -10,22 +10,9 @@ const styles: Styles = {
       borderBottom: "none",
     },
   },
-  title: {
-    marginBottom: "0 !important",
-  },
-  paragraph: {
-    fontSize: "14px",
-    lineHeight: "2.3",
-    fontWeight: 700,
-    color: "#8F99A3",
-  },
   postContent: {
     textAlign: "justify",
     textJustify: "inter-character",
-  },
-  divider: {
-    paddingBottom: "0.3rem",
-    borderBottom: "1px solid #E6EAEE",
   },
 };
 
