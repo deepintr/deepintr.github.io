@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Level /> should render correctly 1`] = `
+<nav
+  className="level"
+>
+  <div
+    className="level-left"
+  >
+    <div
+      className="level-item"
+    >
+      <h1>
+        Hi There!
+      </h1>
+    </div>
+  </div>
+  <div
+    className="level-right"
+  >
+    <div
+      className="level-item has-text-centered"
+    >
+      <span>
+        Hey, again!
+      </span>
+    </div>
+  </div>
+</nav>
+`;
