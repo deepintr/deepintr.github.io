@@ -3,6 +3,7 @@ const platformMap: { [key: string]: string } = {
   telegram: 'https://t.me',
   twitter: 'https://twitter.com',
   instagram: 'https://www.instagram.com',
+  disqus: 'https://disqus.com/by',
 };
 
 export interface IAuthor {
