@@ -30,7 +30,7 @@ const styles: Styles = {
   },
   divider: {
     paddingBottom: '0.3rem',
-    marginBottom: '0.3rem',
+    marginBottom: '0.6rem',
     borderBottom: '1px solid #E6EAEE',
   },
 };

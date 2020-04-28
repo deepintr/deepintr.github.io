@@ -5,8 +5,6 @@ author: "gokhanyildirimlar@telegram"
 description: "Sıkça Sorulan Sorular"
 ---
 
-## Sıkça Sorulan Sorular
-
 ### Wuhan Deepin Technoloji Hakkında
 
 ##### Wuhan Deepin Technology nedir?
