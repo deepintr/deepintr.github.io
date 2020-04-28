@@ -7,4 +7,4 @@ import './src/theme/bulma.scss';
 // Set global locale.
 moment.locale('tr');
 
-// import "./node_modules/bulmaswatch/nuclear/bulmaswatch.scss";
+// import './node_modules/bulmaswatch/nuclear/bulmaswatch.scss';

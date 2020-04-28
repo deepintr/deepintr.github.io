@@ -1,6 +1,8 @@
 const platformMap: { [key: string]: string } = {
   github: 'https://github.com',
   telegram: 'https://t.me',
+  twitter: 'https://twitter.com',
+  instagram: 'https://www.instagram.com',
 };
 
 export interface IAuthor {
@@ -9,13 +11,18 @@ export interface IAuthor {
 }
 
 export class Author {
+  private readonly delimiter = '@';
   private username: string;
   private platform: string;
 
   constructor(authorText: string) {
-    [this.username, this.platform] = authorText
-      .split('@')
-      .map((s) => s.toLowerCase());
+    const str = authorText.trim().toLowerCase();
+    if (str.includes(this.delimiter)) {
+      [this.username, this.platform] = str.split(this.delimiter);
+    } else {
+      this.username = str;
+      this.platform = '';
+    }
   }
 
   /**
