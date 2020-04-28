@@ -9,7 +9,10 @@ export const mainMenu: MenuItemType[] = [
       name: 'home',
       style: 'fas',
     },
-    url: '/',
+    url: {
+      href: '/',
+      isInternal: true,
+    },
   },
   {
     name: 'Blog',
@@ -20,7 +23,9 @@ export const mainMenu: MenuItemType[] = [
     items: [
       {
         name: 'İçerik Ekle',
-        url: `${pkg.repository.url}/tree/master/content/blog`,
+        url: {
+          href: `${pkg.repository.url}/tree/master/content/blog`,
+        },
         icon: {
           name: 'plus',
           style: 'fas',
@@ -28,7 +33,9 @@ export const mainMenu: MenuItemType[] = [
       },
       {
         name: 'Hata Bildir',
-        url: `${pkg.bugs.url}/new`,
+        url: {
+          href: `${pkg.bugs.url}/new`,
+        },
         icon: {
           name: 'bug',
           style: 'fas',
@@ -46,7 +53,9 @@ export const mainMenu: MenuItemType[] = [
       .filter((d) => d.url !== '')
       .map(({ fileName, sourceName, url }) => ({
         name: `${fileName} (${sourceName})`,
-        url,
+        url: {
+          href: url,
+        },
         icon: {
           name: 'compact-disc',
           style: 'fas',

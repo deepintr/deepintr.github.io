@@ -20,17 +20,33 @@ const Topbar: React.FC = () => {
     setMenuOpen(!menuOpen);
   };
 
-  const renderMenuItem = (item: MenuItemRegular, blank: boolean = true) => {
-    const { name, icon, url } = item;
-    return (
-      <a
-        key={`menu-item-${name}`}
-        className="navbar-item"
-        href={url}
-        target={blank ? '_blank' : '_self'}
-      >
+  const renderMenuItem = (item: MenuItemRegular, index?: number) => {
+    const {
+      name,
+      icon,
+      url: { href, isInternal },
+    } = item;
+
+    const itemContent = (
+      <>
         <FAIcon icon={icon} />
         <span>{name}</span>
+      </>
+    );
+
+    const linkProps = {
+      className: 'navbar-item',
+      key: `menu-item-${name}`,
+      'aria-label': name,
+    };
+
+    return isInternal ? (
+      <Link to={href} {...linkProps}>
+        {itemContent}
+      </Link>
+    ) : (
+      <a href={href} {...linkProps} target="_blank" rel="noopener noreferrer">
+        {itemContent}
       </a>
     );
   };
@@ -38,9 +54,11 @@ const Topbar: React.FC = () => {
   const renderMenu = (menu: MenuItemType[]) => {
     return menu.map(({ name, icon, url, items }) => {
       if (url) {
-        return renderMenuItem({ name, icon, url }, url !== '/');
+        // Standalone item, render it.
+        return renderMenuItem({ name, icon, url });
       }
 
+      // Dropdown. Render sub-items.
       return (
         <div
           key={`menu-section-${name}`}
@@ -54,7 +72,7 @@ const Topbar: React.FC = () => {
           </a>
           {items && (
             <div className="navbar-dropdown is-right is-boxed">
-              {(items as MenuItemRegular[]).map((item) => renderMenuItem(item))}
+              {(items as MenuItemRegular[]).map(renderMenuItem)}
             </div>
           )}
         </div>

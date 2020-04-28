@@ -7,7 +7,10 @@ export interface IMenuItem {
 }
 
 export interface MenuItemRegular extends IMenuItem {
-  url: string;
+  url: {
+    href: string;
+    isInternal?: boolean;
+  };
 }
 
 export interface MenuItemDropdown extends IMenuItem {
