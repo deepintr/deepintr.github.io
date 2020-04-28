@@ -3,6 +3,7 @@ title: "Sıkça Sorulan Sorular"
 date: "2018-11-25"
 author: "gokhanyildirimlar@telegram"
 description: "Sıkça Sorulan Sorular"
+pinned: true
 ---
 
 ## Sıkça Sorulan Sorular
