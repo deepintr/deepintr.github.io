@@ -15,6 +15,17 @@ export const mainMenu: MenuItemType[] = [
     },
   },
   {
+    name: 'S.S.S.',
+    icon: {
+      name: 'question-circle',
+      style: 'fas',
+    },
+    url: {
+      href: '/blog/sikca-sorulan-sorular/',
+      isInternal: true,
+    },
+  },
+  {
     name: 'Blog',
     icon: {
       name: 'blog',
