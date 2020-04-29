@@ -1,11 +1,11 @@
 import React from 'react';
 import clsx from 'clsx';
-import { Icon, BulmaColor, BulmaSize } from '../../models';
+import { Bulma, FAIcon as FAIconType } from '../../models';
 
 export interface FAIconProps {
-  icon: Icon;
-  color?: BulmaColor;
-  size?: BulmaSize;
+  icon: FAIconType.Icon;
+  color?: Bulma.Color;
+  size?: Bulma.Size;
 }
 
 const FAIcon: React.FC<FAIconProps> = ({ icon, color, size, children }) => {

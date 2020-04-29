@@ -5,7 +5,7 @@ export * from './ContactInfo';
 export * from './Data';
 export * from './DownloadLink';
 export * from './EdgeNode';
-export * from './FAIconTypes';
+export * from './FAIcon';
 export * from './Frontmatter';
 export * from './MenuItem';
 export * from './PostTag';

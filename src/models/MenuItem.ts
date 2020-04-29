@@ -1,9 +1,9 @@
-import { Icon } from './FAIconTypes';
+import { FAIcon } from './FAIcon';
 
 export interface IMenuItem {
   [key: string]: any;
   name: string;
-  icon: Icon;
+  icon: FAIcon.Icon;
 }
 
 export interface MenuItemRegular extends IMenuItem {

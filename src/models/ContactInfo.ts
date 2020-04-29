@@ -1,8 +1,8 @@
-import { Icon } from './FAIconTypes';
+import { FAIcon } from './FAIcon';
 
 export interface ContactInfo {
   name: string;
   url: string;
-  icon: Icon;
+  icon: FAIcon.Icon;
   isFeatured: boolean;
 }
