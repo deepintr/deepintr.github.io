@@ -1,5 +1,5 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/828937f7-bcde-458f-9cb9-c6424a61c36f/deploy-status)](https://app.netlify.com/sites/deepintr/deploys) [![Build Status](https://travis-ci.com/deepintr/www.svg?branch=master)](https://travis-ci.com/deepintr/www) <a href="https://bulma.io">
-<img src="https://bulma.io/images/made-with-bulma.png" alt="Made with Bulma" width="120" height="20">
+<img src="https://bulma.io/images/made-with-bulma.png" alt="Made with Bulma" width="106" height="20">
 </a>
 
 ## Linux Deepin Türkiye Kullanıcı Topluluğu Web Sitesi
