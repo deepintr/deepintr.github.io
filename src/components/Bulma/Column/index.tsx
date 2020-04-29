@@ -1,9 +1,9 @@
 import React from 'react';
 import clsx from 'clsx';
-import { ColumnSize } from '../../../models';
+import { Bulma } from '../../../models';
 
 export interface ColumnProps {
-  size?: ColumnSize;
+  size?: Bulma.ColumnSize;
 }
 
 const Column: React.FC<ColumnProps> = ({ size, children }) => {

@@ -2,13 +2,13 @@ import React from 'react';
 import clsx from 'clsx';
 import { createUseStyles } from 'react-jss';
 import Container from '../Container';
-
+import { Bulma } from '../../../models';
 import styles from './styles';
 
 const useStyles = createUseStyles(styles);
 
 export interface HeroProps {
-  size?: 'medium' | 'large' | 'fullheight';
+  size?: Bulma.HeroSize;
   particles?: boolean;
   heroHead?: React.ReactNode;
   heroBody?: React.ReactNode;

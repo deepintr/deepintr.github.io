@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import { createUseStyles } from 'react-jss';
-import { BulmaSize, BulmaColor } from '../../../models';
+import { Bulma } from '../../../models';
 import styles from './styles';
 
 const useStyles = createUseStyles(styles);
@@ -12,8 +12,8 @@ export interface ButtonProps {
     href?: string;
     target?: '_blank' | '_self';
   };
-  size?: BulmaSize;
-  color?: BulmaColor;
+  size?: Bulma.Size;
+  color?: Bulma.Color;
   title?: string;
   noBorder?: boolean;
   outlined?: boolean;
