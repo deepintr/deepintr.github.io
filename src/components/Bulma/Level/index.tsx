@@ -14,12 +14,13 @@ export interface LevelProps {
 }
 
 const Level: React.FC<LevelProps> = ({ left, center, right, isMobile }) => {
-  const renderLevelItem = (centered?: boolean) => (
+  const renderLevelItem = (prefix: string, centered?: boolean) => (
     item: React.ReactNode,
     index: number,
   ) => {
     return (
       <div
+        key={`level-item-${prefix}-${index}`}
         className={clsx('level-item', {
           ['has-text-centered']: !!centered,
         })}
@@ -33,15 +34,16 @@ const Level: React.FC<LevelProps> = ({ left, center, right, isMobile }) => {
     <nav className={clsx('level', { ['is-mobile']: isMobile })}>
       {left && (
         <div className="level-left">
-          {left.items.map(renderLevelItem(left.textCentered))}
+          {left.items.map(renderLevelItem('left', left.textCentered))}
         </div>
       )}
 
-      {center && center.items.map(renderLevelItem(center.textCentered))}
+      {center &&
+        center.items.map(renderLevelItem('center', center.textCentered))}
 
       {right && (
         <div className="level-right">
-          {right.items.map(renderLevelItem(right.textCentered))}
+          {right.items.map(renderLevelItem('right', right.textCentered))}
         </div>
       )}
     </nav>
