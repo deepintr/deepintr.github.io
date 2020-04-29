@@ -1,14 +1,14 @@
 import React from 'react';
 import clsx from 'clsx';
 import { createUseStyles } from 'react-jss';
-import { ContactInfo } from '../../../../models';
+import { Menu } from '../../../../models';
 import FAIcon from '../../../../icons/FAIcon';
 import styles from './styles';
 
 const useStyles = createUseStyles(styles);
 
 export interface MainButtonsProps {
-  contactItems: ContactInfo[];
+  contactItems: Menu.ContactItem[];
 }
 
 const MainButtons: React.FC<MainButtonsProps> = ({ contactItems }) => {
@@ -17,7 +17,7 @@ const MainButtons: React.FC<MainButtonsProps> = ({ contactItems }) => {
   const featured = contactItems.filter((i) => i.isFeatured);
   const unFeatured = contactItems.filter((i) => !i.isFeatured);
 
-  const renderIcons = (icons: ContactInfo[]) => {
+  const renderIcons = (icons: Menu.ContactItem[]) => {
     return icons.map(({ name, icon, url, isFeatured }) => (
       <a
         key={`main-icon-${name}`}

@@ -1,6 +1,6 @@
-import { ContactInfo } from '../models';
+import { Menu } from '../models';
 
-export const contact: ContactInfo[] = [
+export const contact: Menu.ContactItem[] = [
   {
     name: 'Telegram',
     icon: {

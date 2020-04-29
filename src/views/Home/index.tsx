@@ -7,7 +7,7 @@ import PageContent from '../../components/PageContent';
 import Post from '../../components/Post';
 import Pagination from '../../components/Pagination';
 import SEO, { SEOProps } from '../../components/SEO';
-import { BlogPost } from '../../models';
+import { Data } from '../../models';
 import { contact } from '../../data';
 import MainButtons from './components/MainButtons';
 import Greeter from './components/Greeter';
@@ -17,7 +17,7 @@ import styles from './styles';
 const useStyles = createUseStyles(styles);
 
 export interface HomeProps {
-  posts: BlogPost[];
+  posts: Data.BlogPost[];
 }
 
 const ITEMS_PER_PAGE = 5;
@@ -44,7 +44,7 @@ const Home: React.FC<SEOProps & HomeProps> = ({
     const sorted = posts
       .filter((p) => !!p.frontmatter.pinned)
       .concat(posts.filter((p) => !p.frontmatter.pinned));
-    const items: BlogPost[][] = [];
+    const items: Data.BlogPost[][] = [];
     while (sorted.length) {
       items.push(sorted.splice(0, ITEMS_PER_PAGE));
     }
