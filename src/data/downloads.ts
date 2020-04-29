@@ -1,6 +1,6 @@
-import { DownloadLink } from '../models';
+import { Menu } from '../models';
 
-export const downloads: DownloadLink[] = [
+export const downloads: Menu.DownloadLink[] = [
   {
     fileName: 'Deepin 20 Beta',
     sourceName: 'Deepin Sunucuları',

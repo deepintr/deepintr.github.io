@@ -19,4 +19,10 @@ export declare namespace Menu {
   }
 
   export type ItemType = ItemRegular | ItemDropdown;
+
+  export interface DownloadLink {
+    fileName: string;
+    sourceName: string;
+    url: string;
+  }
 }
