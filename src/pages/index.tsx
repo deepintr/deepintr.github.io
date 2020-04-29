@@ -3,7 +3,7 @@ import { graphql, PageProps } from 'gatsby';
 import Home from '../views/Home';
 import { Data } from '../models';
 
-const IndexPage: React.FC<PageProps<Data>> = ({ data, location }) => {
+const IndexPage: React.FC<PageProps<Data.Data>> = ({ data, location }) => {
   const siteDesc = data.site.siteMetadata.description;
   const posts = data.allMarkdownRemark.edges;
 

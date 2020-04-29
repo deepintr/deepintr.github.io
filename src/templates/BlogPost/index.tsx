@@ -8,7 +8,7 @@ import PageContent from '../../components/PageContent';
 import SEO from '../../components/SEO';
 import Post from '../../components/Post';
 import Pagination from '../../components/Pagination';
-import { Data, BlogPost } from '../../models';
+import { Data } from '../../models';
 import { getDisqusConfig, summarize } from '../../utils';
 import styles from './styles';
 
@@ -16,11 +16,11 @@ const useStyles = createUseStyles(styles);
 
 interface PageContext {
   slug: string;
-  previous: BlogPost;
-  next: BlogPost;
+  previous: Data.BlogPost;
+  next: Data.BlogPost;
 }
 
-const BlogPostTemplate: React.FC<PageProps<Data, PageContext>> = ({
+const BlogPostTemplate: React.FC<PageProps<Data.Data, PageContext>> = ({
   data,
   pageContext,
   location,
