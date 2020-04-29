@@ -5,7 +5,7 @@ import { createUseStyles } from 'react-jss';
 import GitHubButton from 'react-github-btn';
 import TypoLogo from '../../../../icons/TypoLogo';
 import FAIcon from '../../../../icons/FAIcon';
-import { MenuItemType, MenuItemRegular } from '../../../../models';
+import { Menu } from '../../../../models';
 import { mainMenu } from '../../../../data/mainMenu';
 import pkg from '../../../../../package.json';
 import styles from './styles';
@@ -20,7 +20,7 @@ const Topbar: React.FC = () => {
     setMenuOpen(!menuOpen);
   };
 
-  const renderMenuItem = (item: MenuItemRegular, index?: number) => {
+  const renderMenuItem = (item: Menu.ItemRegular, index?: number) => {
     const {
       name,
       icon,
@@ -51,7 +51,7 @@ const Topbar: React.FC = () => {
     );
   };
 
-  const renderMenu = (menu: MenuItemType[]) => {
+  const renderMenu = (menu: Menu.ItemType[]) => {
     return menu.map(({ name, icon, url, items }) => {
       if (url) {
         // Standalone item, render it.
@@ -72,7 +72,7 @@ const Topbar: React.FC = () => {
           </a>
           {items && (
             <div className="navbar-dropdown is-right is-boxed">
-              {(items as MenuItemRegular[]).map(renderMenuItem)}
+              {(items as Menu.ItemRegular[]).map(renderMenuItem)}
             </div>
           )}
         </div>

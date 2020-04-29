@@ -7,6 +7,6 @@ export * from './DownloadLink';
 export * from './EdgeNode';
 export * from './FAIcon';
 export * from './Frontmatter';
-export * from './MenuItem';
+export * from './Menu';
 export * from './PostTag';
 export * from './SiteMetadata';

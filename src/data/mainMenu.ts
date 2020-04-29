@@ -1,8 +1,8 @@
-import { MenuItemType } from '../models/MenuItem';
+import { Menu } from '../models/Menu';
 import { downloads } from './downloads';
 import pkg from '../../package.json';
 
-export const mainMenu: MenuItemType[] = [
+export const mainMenu: Menu.ItemType[] = [
   {
     name: 'Anasayfa',
     icon: {
