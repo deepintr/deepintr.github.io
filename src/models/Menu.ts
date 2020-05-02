@@ -20,10 +20,7 @@ export declare namespace Menu {
 
   export type ItemType = ItemRegular | ItemDropdown;
 
-  export interface ContactItem {
-    name: string;
-    url: string;
-    icon: FAIcon.Icon;
+  export interface ContactItem extends ItemRegular {
     isFeatured: boolean;
   }
 

@@ -18,11 +18,11 @@ const MainButtons: React.FC<MainButtonsProps> = ({ contactItems }) => {
   const unFeatured = contactItems.filter((i) => !i.isFeatured);
 
   const renderIcons = (icons: Menu.ContactItem[]) => {
-    return icons.map(({ name, icon, url, isFeatured }) => (
+    return icons.map(({ name, icon, url: { href }, isFeatured }) => (
       <a
         key={`main-icon-${name}`}
         className={clsx('button is-rounded', classes.button)}
-        href={url}
+        href={href}
         target="_blank"
         rel="noopener noreferrer"
         title={name}

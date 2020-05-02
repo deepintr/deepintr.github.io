@@ -8,7 +8,9 @@ export const contact: Menu.ContactItem[] = [
       style: 'fab',
       size: 'lg',
     },
-    url: 'https://t.me/deepintr',
+    url: {
+      href: 'https://t.me/deepintr',
+    },
     isFeatured: true,
   },
   {
@@ -18,7 +20,9 @@ export const contact: Menu.ContactItem[] = [
       style: 'fab',
       size: 'lg',
     },
-    url: 'https://github.com/deepintr',
+    url: {
+      href: 'https://github.com/deepintr',
+    },
     isFeatured: true,
   },
   {
@@ -28,7 +32,9 @@ export const contact: Menu.ContactItem[] = [
       style: 'fab',
       size: 'lg',
     },
-    url: 'https://distrowatch.com/table.php?distribution=deepin',
+    url: {
+      href: 'https://distrowatch.com/table.php?distribution=deepin',
+    },
     isFeatured: false,
   },
   {
@@ -38,7 +44,9 @@ export const contact: Menu.ContactItem[] = [
       style: 'fab',
       size: 'lg',
     },
-    url: 'https://tr.linkedin.com/company/deepinturkey',
+    url: {
+      href: 'https://tr.linkedin.com/company/deepinturkey',
+    },
     isFeatured: false,
   },
   {
@@ -48,7 +56,9 @@ export const contact: Menu.ContactItem[] = [
       style: 'fab',
       size: 'lg',
     },
-    url: 'https://www.youtube.com/channel/UCvd1FPyxqwveRB50tOtbAGQ',
+    url: {
+      href: 'https://www.youtube.com/channel/UCvd1FPyxqwveRB50tOtbAGQ',
+    },
     isFeatured: false,
   },
 ];
