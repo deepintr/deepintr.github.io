@@ -2,7 +2,7 @@
   "name": "deepintr-www",
   "private": true,
   "version": "0.1.0",
-  "license": "MIT",
+  "license": "GNU GPLv3",
   "homepage": "https://deepintr.org",
   "repository": {
     "type": "git",
