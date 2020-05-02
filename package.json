@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "license": "MIT",
+  "homepage": "https://deepintr.org",
   "repository": {
     "type": "git",
     "url": "https://github.com/deepintr/www"
@@ -20,7 +21,9 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "jest",
-    "test:watch": "npm test -- --watch"
+    "test:watch": "npm test -- --watch",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d public -r https://$GH_TOKEN@github.com/deepintr/www.git"
   },
   "husky": {
     "hooks": {
@@ -80,6 +83,7 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.1",
     "gatsby-plugin-eslint": "^2.0.8",
+    "gh-pages": "^2.2.0",
     "husky": "^4.2.5",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^25.4.0",
