@@ -6,7 +6,7 @@ import GitHubButton from 'react-github-btn';
 import TypoLogo from '../../../../icons/TypoLogo';
 import FAIcon from '../../../../icons/FAIcon';
 import { Menu } from '../../../../models';
-import { mainMenu } from '../../../../data/mainMenu';
+import { mainMenu } from '../../../../data';
 import pkg from '../../../../../package.json';
 import styles from './styles';
 
