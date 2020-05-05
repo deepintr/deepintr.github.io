@@ -39,7 +39,6 @@ const BlogPostTemplate: React.FC<PageProps<Data.Data, PageContext>> = ({
     name: 'Blog',
     url: {
       href: `/${blogPart}`,
-      isInternal: true,
     },
   });
   breadcrumbItems.push({

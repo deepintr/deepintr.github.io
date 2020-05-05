@@ -13,7 +13,6 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
       name: 'Anasayfa',
       url: {
         href: '/',
-        isInternal: true,
       },
     },
     ...items,
@@ -27,6 +26,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
             key={`breadcrumb-item-${i}`}
             className={clsx({ 'is-active': i === parts.length - 1 })}
           >
+            {/* Treat the all links as internal. */}
             <Link to={url.href}>{name}</Link>
           </li>
         ))}
