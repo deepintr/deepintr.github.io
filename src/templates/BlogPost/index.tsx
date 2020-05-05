@@ -3,13 +3,15 @@ import { Link, graphql, PageProps } from 'gatsby';
 import { createUseStyles } from 'react-jss';
 import { DiscussionEmbed } from 'disqus-react';
 import Container from '../../components/Bulma/Container';
+import Breadcrumb from '../../components/Bulma/Breadcrumb';
+import Box from '../../components/Bulma/Box';
 import MainLayout from '../../layouts/Main';
 import PageContent from '../../components/PageContent';
 import SEO from '../../components/SEO';
 import Post from '../../components/Post';
 import Pagination from '../../components/Pagination';
-import { Data } from '../../models';
-import { getDisqusConfig, summarize } from '../../utils';
+import { Data, Menu } from '../../models';
+import { getDisqusConfig, summarize, getUrlParts } from '../../utils';
 import styles from './styles';
 
 const useStyles = createUseStyles(styles);
@@ -30,12 +32,32 @@ const BlogPostTemplate: React.FC<PageProps<Data.Data, PageContext>> = ({
   const { previous, next } = pageContext;
   const post = data.markdownRemark;
 
+  // Calculate breadcrumb items.
+  const breadcrumbItems: Menu.NavLink[] = [];
+  const [blogPart, postPart] = getUrlParts(post.fields.slug);
+  breadcrumbItems.push({
+    name: 'Blog',
+    url: {
+      href: `/${blogPart}`,
+      isInternal: true,
+    },
+  });
+  breadcrumbItems.push({
+    name: post.frontmatter.title,
+    url: {
+      href: `/${postPart}`,
+    },
+  });
+
   return (
     <MainLayout>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
+      <Box>
+        <Breadcrumb items={breadcrumbItems} />
+      </Box>
       <Container>
         <PageContent>
           <Post post={post} details />

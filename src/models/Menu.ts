@@ -1,4 +1,5 @@
 import { FAIcon } from './FAIcon';
+import { Linkable } from './Linkable';
 
 export declare namespace Menu {
   export interface IMenuItem {
@@ -8,10 +9,7 @@ export declare namespace Menu {
   }
 
   export interface ItemRegular extends IMenuItem {
-    url: {
-      href: string;
-      isInternal?: boolean;
-    };
+    url: Linkable;
   }
 
   export interface ItemDropdown extends IMenuItem {
@@ -22,6 +20,11 @@ export declare namespace Menu {
 
   export interface ContactItem extends ItemRegular {
     isFeatured?: boolean;
+  }
+
+  export interface NavLink {
+    name: string;
+    url: Linkable;
   }
 
   export interface DownloadLink {

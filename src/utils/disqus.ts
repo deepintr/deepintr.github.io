@@ -1,4 +1,5 @@
-import { BlogPost } from '../models';
+import { Data } from '../models';
+import { getUrlParts } from './strings';
 import disqusConfig from '../configs/disqus';
 
 /**
@@ -6,7 +7,7 @@ import disqusConfig from '../configs/disqus';
  * @param post Blog post object
  */
 export const getDisqusConfig = (
-  post: BlogPost,
+  post: Data.BlogPost,
 ): {
   shortname: string;
   config: {
@@ -38,7 +39,5 @@ export const getDisqusConfig = (
  * @param replaceWith String to be used in place of forward slash chars.
  */
 export const getPostId = (slug: string, replaceWith: string = '-') => {
-  if (slug.startsWith('/')) slug = slug.slice(1);
-  if (slug.endsWith('/')) slug = slug.slice(0, slug.length - 1);
-  return slug.replace(/\//g, replaceWith);
+  return getUrlParts(slug).join(replaceWith);
 };

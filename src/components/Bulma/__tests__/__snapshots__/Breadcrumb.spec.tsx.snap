@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Breadcrumb /> should render correctly 1`] = `
+<nav
+  aria-label="breadcrumbs"
+  className="breadcrumb has-arrow-separator"
+>
+  <ul>
+    <li
+      className=""
+    >
+      <a
+        href="/"
+      >
+        Anasayfa
+      </a>
+    </li>
+    <li
+      className="is-active"
+    >
+      <a
+        href="/test"
+      >
+        Test
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
