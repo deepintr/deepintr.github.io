@@ -1,18 +1,19 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import { createUseStyles } from 'react-jss';
+import { Link } from 'gatsby';
 import MainLayout from '../../layouts/Main';
 import Columns from '../../components/Bulma/Columns';
 import Column from '../../components/Bulma/Column';
 import PageContent from '../../components/PageContent';
 import Post from '../../components/Post';
-import Pagination from '../../components/Pagination';
 import SEO, { SEOProps } from '../../components/SEO';
 import { Data } from '../../models';
 import { contact } from '../../data';
 import MainButtons from './components/MainButtons';
 import Greeter from './components/Greeter';
-import { useLocalStorageState } from '../../hooks';
 import styles from './styles';
+import Container from '../../components/Bulma/Container';
+import FAIcon from '../../icons/FAIcon';
 
 const useStyles = createUseStyles(styles);
 
@@ -20,18 +21,12 @@ export interface HomeProps {
   posts: Data.BlogPost[];
 }
 
-const ITEMS_PER_PAGE = 5;
-
 const Home: React.FC<SEOProps & HomeProps> = ({
   children,
   posts,
   ...seoProps
 }) => {
   const classes = useStyles();
-  const [currentPage, setCurrentPage] = useLocalStorageState<number>(
-    'currentPage',
-    0,
-  );
 
   const heroBody = (
     <Greeter
@@ -40,53 +35,22 @@ const Home: React.FC<SEOProps & HomeProps> = ({
     />
   );
 
-  const pages = useMemo(() => {
-    const sorted = posts
-      .filter((p) => !!p.frontmatter.pinned)
-      .concat(posts.filter((p) => !p.frontmatter.pinned));
-    const items: Data.BlogPost[][] = [];
-    while (sorted.length) {
-      items.push(sorted.splice(0, ITEMS_PER_PAGE));
-    }
-    return items;
-  }, [posts]);
-
   return (
     <MainLayout showHero size="medium" heroBody={heroBody}>
       <SEO {...seoProps} />
       <Columns>
         <Column>
           <PageContent>
-            {pages[currentPage].map((post) => (
+            {posts.map((post) => (
               <Post post={post} key={post.fields.slug} />
             ))}
 
-            <Pagination
-              prev={
-                pages[currentPage - 1] && (
-                  <a
-                    onClick={() => setCurrentPage(currentPage - 1)}
-                    rel="prev"
-                    className="pagination-previous"
-                    title="Daha yeni içerikler"
-                  >
-                    ← Daha yeni
-                  </a>
-                )
-              }
-              next={
-                pages[currentPage + 1] && (
-                  <a
-                    onClick={() => setCurrentPage(currentPage + 1)}
-                    rel="next"
-                    className="pagination-next"
-                    title="Daha eski içerikler"
-                  >
-                    Daha eski →
-                  </a>
-                )
-              }
-            />
+            <Container className="has-text-centered">
+              <Link to="/blog" className="button">
+                <FAIcon icon={{ name: 'blog', style: 'fas' }} />
+                <span>Tüm yazılar</span>
+              </Link>
+            </Container>
           </PageContent>
         </Column>
       </Columns>

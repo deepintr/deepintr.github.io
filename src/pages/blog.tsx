@@ -1,13 +1,13 @@
 import React from 'react';
 import { graphql, PageProps } from 'gatsby';
-import Home from '../views/Home';
+import Blog from '../views/Blog';
 import { Data } from '../models';
 
 const IndexPage: React.FC<PageProps<Data.Data>> = ({ data, location }) => {
   const siteDesc = data.site.siteMetadata.description;
   const posts = data.allMarkdownRemark.edges;
 
-  return <Home title={siteDesc} posts={posts.map((p) => p.node)} />;
+  return <Blog title={siteDesc} posts={posts.map((p) => p.node)} />;
 };
 
 export default IndexPage;
@@ -19,13 +19,11 @@ export const pageQuery = graphql`
         description
       }
     }
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      limit: 5
-    ) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           excerpt
+          html
           fields {
             slug
           }
