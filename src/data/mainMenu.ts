@@ -33,6 +33,17 @@ export const mainMenu: Menu.ItemType[] = [
     },
     items: [
       {
+        name: 'Blog Anasayfa',
+        url: {
+          href: `/blog`,
+          isInternal: true,
+        },
+        icon: {
+          name: 'home',
+          style: 'fas',
+        },
+      },
+      {
         name: 'İçerik Ekle',
         url: {
           href: `${pkg.repository.url}/tree/master/content/blog`,
