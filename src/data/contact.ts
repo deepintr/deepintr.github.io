@@ -23,6 +23,7 @@ export const contact: Menu.ContactItem[] = [
     url: {
       href: 'https://github.com/deepintr',
     },
+    isFeatured: true,
   },
   {
     name: 'DistroWatch',
