@@ -23,7 +23,6 @@ export const contact: Menu.ContactItem[] = [
     url: {
       href: 'https://github.com/deepintr',
     },
-    isFeatured: true,
   },
   {
     name: 'DistroWatch',
@@ -35,7 +34,6 @@ export const contact: Menu.ContactItem[] = [
     url: {
       href: 'https://distrowatch.com/table.php?distribution=deepin',
     },
-    isFeatured: false,
   },
   {
     name: 'LinkedIn',
@@ -47,7 +45,6 @@ export const contact: Menu.ContactItem[] = [
     url: {
       href: 'https://tr.linkedin.com/company/deepinturkey',
     },
-    isFeatured: false,
   },
   {
     name: 'YouTube',
@@ -59,6 +56,5 @@ export const contact: Menu.ContactItem[] = [
     url: {
       href: 'https://www.youtube.com/channel/UCvd1FPyxqwveRB50tOtbAGQ',
     },
-    isFeatured: false,
   },
 ];

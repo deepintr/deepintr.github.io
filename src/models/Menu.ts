@@ -21,7 +21,7 @@ export declare namespace Menu {
   export type ItemType = ItemRegular | ItemDropdown;
 
   export interface ContactItem extends ItemRegular {
-    isFeatured: boolean;
+    isFeatured?: boolean;
   }
 
   export interface DownloadLink {

@@ -14,7 +14,7 @@ export interface MainButtonsProps {
 const MainButtons: React.FC<MainButtonsProps> = ({ contactItems }) => {
   const classes = useStyles();
 
-  const featured = contactItems.filter((i) => i.isFeatured);
+  const featured = contactItems.filter((i) => !!i.isFeatured);
   const unFeatured = contactItems.filter((i) => !i.isFeatured);
 
   const renderIcons = (icons: Menu.ContactItem[]) => {
