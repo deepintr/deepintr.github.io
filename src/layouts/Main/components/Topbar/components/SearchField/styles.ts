@@ -14,6 +14,7 @@ export default {
     maxHeight: '500px',
     overflowY: 'auto',
     overflowX: 'hidden',
+    zIndex: 2,
   },
   suggestion: {
     padding: '8px 12px',

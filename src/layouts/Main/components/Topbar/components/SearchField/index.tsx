@@ -14,20 +14,22 @@ const SearchField: React.FC = () => {
   const [searchResults, setSearchResults] = useState<SearchListing[]>([]);
 
   useEffect(() => {
-    // Get flexsearch data. Needs to be done here!
-    const { index, store } = window.__FLEXSEARCH__.tr;
+    if (window.__FLEXSEARCH__) {
+      // Get flexsearch data. Needs to be done here!
+      const { index, store } = window.__FLEXSEARCH__.tr;
 
-    let results: any[] = [];
-    index.forEach(({ values }) => {
-      results.push(...values.search(query));
-    });
-    results = Array.from(new Set(results));
+      let results: any[] = [];
+      index.forEach(({ values }) => {
+        results.push(...values.search(query));
+      });
+      results = Array.from(new Set(results));
 
-    let nodes = store
-      .filter((node) => (results.includes(node.id) ? node : null))
-      .map((node) => node.node);
+      let nodes = store
+        .filter((node) => (results.includes(node.id) ? node : null))
+        .map((node) => node.node);
 
-    setSearchResults(nodes);
+      setSearchResults(nodes);
+    }
   }, [query]);
 
   const onSuggestionsClearRequested = () => {
