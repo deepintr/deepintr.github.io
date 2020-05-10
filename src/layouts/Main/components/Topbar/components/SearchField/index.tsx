@@ -32,10 +32,8 @@ const SearchField: React.FC = () => {
     }
   }, [query]);
 
-  const onSuggestionsClearRequested = () => {
-    setQuery('');
-    setSearchResults([]);
-  };
+  const onSuggestionsClearRequested = () => {};
+  const onSuggestionsFetchRequested = () => {};
 
   const getSuggestionValue = (suggestion: SearchListing) => {
     return suggestion.title;
@@ -58,7 +56,7 @@ const SearchField: React.FC = () => {
             className: 'input',
           }}
           suggestions={searchResults}
-          onSuggestionsFetchRequested={() => {}}
+          onSuggestionsFetchRequested={onSuggestionsFetchRequested}
           onSuggestionsClearRequested={onSuggestionsClearRequested}
           getSuggestionValue={getSuggestionValue}
           renderSuggestion={renderSuggestion}
