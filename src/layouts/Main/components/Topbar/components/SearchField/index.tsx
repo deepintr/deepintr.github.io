@@ -13,10 +13,10 @@ const SearchField: React.FC = () => {
   const [query, setQuery] = useState('');
   const [searchResults, setSearchResults] = useState<SearchListing[]>([]);
 
-  // Get flexsearch data.
-  const { index, store } = window.__FLEXSEARCH__.tr;
-
   useEffect(() => {
+    // Get flexsearch data. Needs to be done here!
+    const { index, store } = window.__FLEXSEARCH__.tr;
+
     let results: any[] = [];
     index.forEach(({ values }) => {
       results.push(...values.search(query));
@@ -28,7 +28,7 @@ const SearchField: React.FC = () => {
       .map((node) => node.node);
 
     setSearchResults(nodes);
-  }, [index, store, query]);
+  }, [query]);
 
   const onSuggestionsClearRequested = () => {
     setQuery('');
