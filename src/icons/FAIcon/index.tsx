@@ -6,15 +6,23 @@ export interface FAIconProps {
   icon: FAIconType.Icon;
   color?: Bulma.Color;
   size?: Bulma.Size;
+  placement?: Bulma.Placement;
 }
 
-const FAIcon: React.FC<FAIconProps> = ({ icon, color, size, children }) => {
+const FAIcon: React.FC<FAIconProps> = ({
+  icon,
+  color,
+  size,
+  placement,
+  children,
+}) => {
   return (
     <span
       className={clsx(
         'icon',
-        { [`is-${size}`]: !!size },
         { [`has-text-${color}`]: !!color },
+        { [`is-${size}`]: !!size },
+        { [`is-${placement}`]: !!placement },
       )}
     >
       <i
