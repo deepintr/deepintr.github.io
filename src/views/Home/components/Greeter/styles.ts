@@ -1,13 +1,14 @@
 import { Styles } from 'react-jss';
+import global from '../../../../theme/global';
 
 const styles: Styles = {
   root: {
     display: 'relative',
   },
   logo: {
+    ...global.box(),
     width: '6rem',
     height: '6rem',
-    boxShadow: '0 0 6px grey',
     borderRadius: '50%',
     marginBottom: '1rem',
     padding: '4px',
