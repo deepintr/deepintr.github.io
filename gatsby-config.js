@@ -83,5 +83,56 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: 'gatsby-plugin-flexsearch',
+      options: {
+        languages: ['tr'],
+        type: 'MarkdownRemark',
+        fields: [
+          {
+            name: 'title',
+            indexed: true,
+            resolver: 'frontmatter.title',
+            attributes: {
+              encode: 'balance',
+              tokenize: 'strict',
+              threshold: 6,
+              depth: 3,
+            },
+            store: true,
+          },
+          {
+            name: 'body',
+            indexed: true,
+            resolver: 'rawMarkdownBody',
+            attributes: {
+              encode: 'balance',
+              tokenize: 'strict',
+              threshold: 6,
+              depth: 3,
+            },
+            store: false,
+          },
+          {
+            name: 'excerpt',
+            indexed: true,
+            resolver: 'excerpt',
+            attributes: {
+              encode: 'balance',
+              tokenize: 'strict',
+              threshold: 6,
+              depth: 3,
+            },
+            store: false,
+          },
+          {
+            name: 'slug',
+            indexed: false,
+            resolver: 'fields.slug',
+            store: true,
+          },
+        ],
+      },
+    },
   ],
 };

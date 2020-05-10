@@ -4,3 +4,4 @@ export * from './Data';
 export * from './FAIcon';
 export * from './Linkable';
 export * from './Menu';
+export * from './Search';

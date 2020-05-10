@@ -2,12 +2,11 @@ import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import clsx from 'clsx';
 import { createUseStyles } from 'react-jss';
-import GitHubButton from 'react-github-btn';
 import TypoLogo from '../../../../icons/TypoLogo';
 import FAIcon from '../../../../icons/FAIcon';
+import SearchField from './components/SearchField';
 import { Menu } from '../../../../models';
 import { mainMenu } from '../../../../data';
-import pkg from '../../../../../package.json';
 import styles from './styles';
 
 const useStyles = createUseStyles(styles);
@@ -106,20 +105,13 @@ const Topbar: React.FC = () => {
           })}
         >
           <div className="navbar-end">
+            {/* Main menu */}
             {renderMenu(mainMenu)}
 
-            <span className={clsx('navbar-item', classes.ghButton)}>
-              <GitHubButton
-                href={pkg.repository.url}
-                data-color-scheme="no-preference: light; light: light; dark: dark;"
-                data-icon="octicon-star"
-                data-size="large"
-                data-show-count={true}
-                aria-label="Star deepintr/www on GitHub"
-              >
-                Star
-              </GitHubButton>
-            </span>
+            {/* Search field */}
+            <div className="navbar-item">
+              <SearchField />
+            </div>
           </div>
         </div>
       </div>
