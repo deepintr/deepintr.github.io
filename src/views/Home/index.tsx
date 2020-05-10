@@ -45,7 +45,8 @@ const Home: React.FC<SEOProps & HomeProps> = ({
               <Post post={post} key={post.fields.slug} />
             ))}
 
-            <Container className="has-text-centered">
+            <Container className={classes.buttons}>
+              <span />
               <Link to="/blog" className="button">
                 <FAIcon icon={{ name: 'blog', style: 'fas' }} />
                 <span>Tüm yazılar</span>
