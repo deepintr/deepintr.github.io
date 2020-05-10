@@ -15,5 +15,7 @@ export declare namespace Bulma {
     | 'warning'
     | 'danger';
 
+  export type Placement = 'left' | 'right';
+
   export type ColumnSize = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 }
