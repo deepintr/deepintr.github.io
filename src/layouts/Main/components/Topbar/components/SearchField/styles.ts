@@ -4,17 +4,16 @@ import global from '../../../../../../theme/global';
 export default {
   container: {
     position: 'relative',
+    opacity: 1,
   },
   containerOpen: {
-    ...global.box(),
+    ...global.dropdown(),
     ...global.glass(0.7),
     position: 'absolute',
-    borderBottomLeftRadius: '8px',
-    borderBottomRightRadius: '8px',
     maxHeight: '500px',
     overflowY: 'auto',
     overflowX: 'hidden',
-    zIndex: 2,
+    zIndex: 10,
   },
   suggestion: {
     padding: '8px 12px',
