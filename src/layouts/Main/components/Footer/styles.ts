@@ -1,9 +1,11 @@
 import { Styles } from 'react-jss';
 
-const styles: Styles = {
+export default {
   root: {
     background: 'inherit',
   },
-};
-
-export default styles;
+  content: {
+    display: 'flex',
+    justifyContent: 'space-between',
+  },
+} as Styles;
