@@ -1,32 +1,21 @@
-import { Data } from '../models';
+import { Data, Disqus } from '../models';
 import { getUrlParts } from './strings';
-import disqusConfig from '../configs/disqus';
+import pkg from '../../package.json';
 
 /**
  * Returns Disqus config for given post.
  * @param post Blog post object
  */
-export const getDisqusConfig = (
-  post: Data.BlogPost,
-): {
-  shortname: string;
-  config: {
-    url: string;
-    identifier: string;
-    title: string;
-  };
-} => {
+export const getDisqusConfig = (post: Data.BlogPost): Disqus.Config => {
   const {
     fields: { slug },
     frontmatter: { title },
   } = post;
 
-  const { baseUrl, shortname } = disqusConfig;
-
   return {
-    shortname,
+    shortname: process.env.GATSBY_DISQUS_NAME as string,
     config: {
-      url: `${baseUrl}${slug}`,
+      url: `${pkg.homepage}${slug}`,
       identifier: getPostId(slug),
       title: title,
     },
