@@ -13,7 +13,7 @@ export const getDisqusConfig = (post: Data.BlogPost): Disqus.Config => {
   } = post;
 
   return {
-    shortname: process.env.GATSBY_DISQUS_NAME as string,
+    shortname: process.env.GATSBY_DISQUS_NAME || '',
     config: {
       url: `${pkg.homepage}${slug}`,
       identifier: getPostId(slug),
