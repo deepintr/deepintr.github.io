@@ -8,10 +8,23 @@ module.exports = {
   siteMetadata: {
     title: 'Deepin Türkiye',
     description: 'Linux Deepin Türkiye Kullanıcı Topluluğu',
-    siteUrl: 'https://deepintr.org/',
+    siteUrl: 'https://deepintr.org',
     author: '',
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Deepin Türkiye`,
+        short_name: `DeepinTR`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `content/assets/deepintr-icon.png`,
+      },
+    },
     `gatsby-plugin-typescript`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-jss`,
@@ -68,18 +81,6 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: `UA-130014661-1`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Deepin Türkiye`,
-        short_name: `DeepinTR`,
-        start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `content/assets/deepintr-icon.png`,
       },
     },
     `gatsby-plugin-react-helmet`,
