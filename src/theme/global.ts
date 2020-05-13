@@ -1,8 +1,11 @@
 export default {
-  glass: (alpha: number = 0.5, blurRadius: number = 6) => ({
-    backgroundColor: `rgba(255, 255, 255, ${alpha})`,
-    backdropFilter: `blur(${blurRadius}px)`,
-    WebkitBackdropFilter: `blur(${blurRadius}px)`,
+  glass: (blur: number = 6, alpha: number = 0.5) => ({
+    backgroundColor: `rgba(255, 255, 255, ${Math.min(0.9, alpha * 2)})`,
+    [`@supports ((backdrop-filter: blur(${blur}px)) or (-webkit-backdrop-filter: blur(${blur}px)))`]: {
+      backgroundColor: `rgba(255, 255, 255, ${alpha / 2})`,
+      backdropFilter: `blur(${blur}px)`,
+      WebkitBackdropFilter: `blur(${blur}px)`,
+    },
   }),
   box: () => ({
     boxShadow:
