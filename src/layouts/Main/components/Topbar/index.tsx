@@ -80,7 +80,7 @@ const Topbar: React.FC = () => {
   };
 
   return (
-    <nav className={clsx('navbar', 'is-transparent', classes.root)}>
+    <nav className={clsx('navbar', 'is-fixed-top', classes.root)}>
       <div className="container">
         <div className="navbar-brand">
           <Link to="/" className="navbar-item">

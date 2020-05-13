@@ -36,6 +36,9 @@ const SEO: React.FC<SEOProps> = ({
       htmlAttributes={{
         lang,
       }}
+      bodyAttributes={{
+        class: 'has-navbar-fixed-top',
+      }}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[

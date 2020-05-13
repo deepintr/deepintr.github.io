@@ -25,7 +25,8 @@ const MainLayout: React.FC<MainLayoutProps & Partial<HeroProps>> = ({
 
   return (
     <div className={classes.content}>
-      {showHero ? <Hero {...heroProps} heroHead={<Topbar />} /> : <Topbar />}
+      <Topbar />
+      {showHero && <Hero {...heroProps} />}
       <Container>{children}</Container>
       <Footer />
       {particles && <Particles params={particlesConfig} />}
