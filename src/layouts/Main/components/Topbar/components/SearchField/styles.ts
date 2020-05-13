@@ -8,7 +8,7 @@ export default {
   },
   containerOpen: {
     ...global.dropdown(),
-    ...global.glass(0.7),
+    backgroundColor: 'white',
     position: 'absolute',
     maxHeight: '500px',
     overflowY: 'auto',

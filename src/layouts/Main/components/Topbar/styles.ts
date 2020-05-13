@@ -3,8 +3,7 @@ import global from '../../../../theme/global';
 
 export default {
   root: {
-    backgroundColor: `rgba(255, 255, 255, .9)`,
-    ...global.glass(),
+    ...global.glass(10, 0.3),
     ...global.box(),
   },
 } as Styles;
