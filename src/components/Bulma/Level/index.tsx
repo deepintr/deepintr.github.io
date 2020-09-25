@@ -14,6 +14,7 @@ export interface LevelProps {
 }
 
 const Level: React.FC<LevelProps> = ({ left, center, right, isMobile }) => {
+  // eslint-disable-next-line react/display-name
   const renderLevelItem = (prefix: string, centered?: boolean) => (
     item: React.ReactNode,
     index: number,
