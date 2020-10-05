@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.14.0",
-    "bulma": "^0.8.2",
+    "bulma": "^0.9.1",
     "bulmaswatch": "^0.8.1",
     "clsx": "^1.1.1",
     "disqus-react": "^1.0.10",
