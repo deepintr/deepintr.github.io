@@ -13,8 +13,8 @@ Bu site [Gatsbyjs](https://www.gatsbyjs.org/) ile geliştirilmiş bir statik blo
 - Depoyu klonlayın.
 
   ```bash
-  git clone https://github.com/deepintr/www.git deepintr-www
-  cd deepintr-www
+  git clone https://github.com/deepintr/deepintr.github.io.git deepintr
+  cd deepintr
   ```
 
 - Bağımlılıkları kurun.

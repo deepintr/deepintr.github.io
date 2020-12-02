@@ -3,13 +3,13 @@
   "private": true,
   "version": "0.1.0",
   "license": "GNU GPLv3",
-  "homepage": "https://deepintr.org",
+  "homepage": "https://deepintr.github.io",
   "repository": {
     "type": "git",
-    "url": "https://github.com/deepintr/www"
+    "url": "https://github.com/deepintr/deepintr.github.io"
   },
   "bugs": {
-    "url": "https://github.com/deepintr/www/issues"
+    "url": "https://github.com/deepintr/deepintr.github.io/issues"
   },
   "scripts": {
     "build": "gatsby build",
@@ -23,7 +23,7 @@
     "test": "jest",
     "test:watch": "npm test -- --watch",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d public -r https://$GH_TOKEN@github.com/deepintr/www.git"
+    "deploy": "gh-pages -d public -r https://$GH_TOKEN@github.com/deepintr/deepintr.github.io.git"
   },
   "husky": {
     "hooks": {
