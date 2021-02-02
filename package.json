@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "license": "GNU GPLv3",
-  "homepage": "https://deepintr.github.io",
+  "homepage": "https://deepintr.js.org/",
   "repository": {
     "type": "git",
     "url": "https://github.com/deepintr/deepintr.github.io"

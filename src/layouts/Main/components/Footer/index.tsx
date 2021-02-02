@@ -17,7 +17,7 @@ const Footer: React.FC = ({ children }) => {
       <footer className={clsx('footer', classes.root)}>
         <div className={clsx('content', classes.content)}>
           <span>
-            <a href="https://deepintr.org/">deepintr.org</a>
+            <a href={pkg.homepage}>deepintr.js.org</a>
             <span> © </span>
             {new Date().getFullYear()}, Built with
             <FAIcon icon={{ name: 'coffee', style: 'fas' }} />.
