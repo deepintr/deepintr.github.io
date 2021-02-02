@@ -19,12 +19,6 @@ export const downloads: Menu.DownloadLink[] = [
   {
     fileName: 'Deepin 20',
     sourceName: 'Sourceforge',
-    url: 'https://sourceforge.net/projects/deepin/files/20/',
-  },
-  {
-    fileName: 'Deepin 20',
-    sourceName: 'Google Drive',
-    url:
-      'https://drive.google.com/drive/folders/1vM-Ud8m63RI3sUIWiKiO3_7DLKzbIkHh',
+    url: 'https://sourceforge.net/projects/deepin/files/20.1/',
   },
 ];
