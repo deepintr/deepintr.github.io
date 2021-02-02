@@ -26,6 +26,18 @@ export const contact: Menu.ContactItem[] = [
     isFeatured: true,
   },
   {
+    name: 'Twitter',
+    icon: {
+      name: 'twitter',
+      style: 'fab',
+      size: 'lg',
+    },
+    url: {
+      href: 'https://twitter.com/DeepinTr',
+    },
+    isFeatured: true,
+  },
+  {
     name: 'DistroWatch',
     icon: {
       name: 'linux',
