@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/deepintr/www.svg?branch=master)](https://travis-ci.com/deepintr/www) <a href="https://bulma.io">
+[![Build Status](https://travis-ci.com/deepintr/deepintr.github.io.svg?branch=master)](https://travis-ci.com/deepintr/deepintr.github.io) <a href="https://bulma.io">
 <img src="https://bulma.io/images/made-with-bulma.png" alt="Made with Bulma" width="106" height="20">
 </a>
 
