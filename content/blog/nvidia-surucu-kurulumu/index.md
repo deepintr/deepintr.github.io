@@ -42,7 +42,7 @@ xrandr --dpi 96
 Daha sonra dosyayı çalıştırılabilir yapmak için `sudo chmod +x /etc/lightdm/display_setup.sh` komutunu terminalde çalıştırın.
 
 ```
-#! / bin / sh
+#!/bin/sh
 xrandr --setprovideroutputsource modesetting NVIDIA-0
 xrandr --auto
 xrandr --dpi 96
@@ -51,7 +51,7 @@ xrandr --dpi 96
 **6)** _/etc/lightdm/_ dizinindeki **lightdm.conf** dosyasını düzenlemek için `sudo deepin-editor /etc/lightdm/lightdm.conf` 
 komutunu kullanın ve **[Seat: *]** bölümüne aşağıdaki satırı ekleyin.
 
-> display-setup-script = /etc/lightdm/display_setup.sh
+> display-setup-script=/etc/lightdm/display_setup.sh
 
 
 Sistemi yeniden başlattıktan sonra Nvidia grafik birimi kullanılabilir olmalı. Başarılı olmadıysa işlemlerin doğru yapılıp yapılmadığını kontrol edin.
