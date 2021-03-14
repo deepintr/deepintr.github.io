@@ -135,7 +135,7 @@ xrandr --dpi 96
 </code></pre>
 <p><strong>5)</strong> <em>/etc/lightdm/</em> dizininde bir betik oluşturmak için <code>sudo deepin-editor /etc/lightdm/display_setup.sh</code> komutunu çalıştırın ve aşağıdaki gibi doldurun.
 Daha sonra dosyayı çalıştırılabilir yapmak için <code>sudo chmod +x /etc/lightdm/display_setup.sh</code> komutunu terminalde çalıştırın.</p>
-<pre><code>#! / bin / sh
+<pre><code>#!/bin/sh
 xrandr --setprovideroutputsource modesetting NVIDIA-0
 xrandr --auto
 xrandr --dpi 96
@@ -143,7 +143,7 @@ xrandr --dpi 96
 <p><strong>6)</strong> <em>/etc/lightdm/</em> dizinindeki <strong>lightdm.conf</strong> dosyasını düzenlemek için <code>sudo deepin-editor /etc/lightdm/lightdm.conf</code>
 komutunu kullanın ve <strong>[Seat: *]</strong> bölümüne aşağıdaki satırı ekleyin.</p>
 <blockquote>
-<p>display-setup-script = /etc/lightdm/display_setup.sh</p>
+<p>display-setup-script=/etc/lightdm/display_setup.sh</p>
 </blockquote>
 <p>Sistemi yeniden başlattıktan sonra Nvidia grafik birimi kullanılabilir olmalı. Başarılı olmadıysa işlemlerin doğru yapılıp yapılmadığını kontrol edin.</p>
 <p><a href="https://bbs.deepin.org/forum.php?mod=viewthread&#x26;tid=178542">Kaynak</a></p></div></div></div></div></div></article></article><nav class="pagination" role="navigation" aria-label="pagination"><span><a rel="prev" class="pagination-previous" title="Deepin 20 için beta testi süreci başladı" href="/blog/deepin-20-beta-yayimlandi/">← <!-- -->Deepin 20 için beta testi süreci...</a></span><span></span></nav></div><div class="box boxCustom-0-2-6 content"><div shortname="deepintr" config="[object Object]" id="disqus_thread"></div></div></div></div><div class="container"><footer class="footer root-0-2-15"><div class="content content-0-2-16"><span><a href="https://deepintr.js.org/">deepintr.js.org</a><span> © </span>2021<!-- -->, Built with<span class="icon"><i class="fas fa-coffee"></i></span>.</span><span><span><a href="https://github.com/deepintr/deepintr.github.io" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star deepintr/www on GitHub">Star</a></span></span></div></footer></div><div id="tsparticles"><canvas style="width:100%;height:100%"></canvas></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script>
