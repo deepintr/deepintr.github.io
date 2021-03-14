@@ -117,7 +117,8 @@
 <p><strong>3)</strong> <em>/etc/X11/</em> dizinindeki <em>xorg.conf</em> dosyasını düzenlemek için <code>sudo deepin-editor /etc/X11/xorg.conf</code> komutunu kullanın.
 Aşağıdaki gibi düzenledikten sonra <strong>BusID "PCI: X: Y: Z:"</strong> kısmını bir önceki adımda kaydettiğiniz değerle doldurun.
 <em>Örnek: BusID "PCI: 00: 02: 0"</em></p>
-<pre><code class="language-Section" data-meta="&#x22;Module&#x22;">    Load "modesetting"
+<pre><code>Section "Module"
+    Load "modesetting"
 EndSection
 
 Section "Device"
@@ -128,12 +129,14 @@ Section "Device"
 EndSection
 </code></pre>
 <p><strong>4)</strong> Ev dizinindeki <strong>.xinitrc</strong> dosyasını düzenlemek için <code>deepin-editor ~/.xinitrc</code> komutunu kullanın ve aşağıdaki gibi doldurun.</p>
-<pre><code class="language-xrandr" data-meta="--setprovideroutputsource modesetting NVIDIA-0">xrandr --auto
+<pre><code>xrandr --setprovideroutputsource modesetting NVIDIA-0
+xrandr --auto
 xrandr --dpi 96
 </code></pre>
 <p><strong>5)</strong> <em>/etc/lightdm/</em> dizininde bir betik oluşturmak için <code>sudo deepin-editor /etc/lightdm/display_setup.sh</code> komutunu çalıştırın ve aşağıdaki gibi doldurun.
 Daha sonra dosyayı çalıştırılabilir yapmak için <code>sudo chmod +x /etc/lightdm/display_setup.sh</code> komutunu terminalde çalıştırın.</p>
-<pre><code class="language-#!" data-meta="/ bin / sh">xrandr --setprovideroutputsource modesetting NVIDIA-0
+<pre><code>#! / bin / sh
+xrandr --setprovideroutputsource modesetting NVIDIA-0
 xrandr --auto
 xrandr --dpi 96
 </code></pre>
