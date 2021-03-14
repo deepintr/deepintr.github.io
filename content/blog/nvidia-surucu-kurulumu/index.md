@@ -17,7 +17,8 @@ _Örnek: 00:02.0_
 Aşağıdaki gibi düzenledikten sonra **BusID "PCI: X: Y: Z:"** kısmını bir önceki adımda kaydettiğiniz değerle doldurun. 
 _Örnek: BusID "PCI: 00: 02: 0"_
 
-```Section "Module"
+```
+Section "Module"
     Load "modesetting"
 EndSection
 
@@ -31,7 +32,8 @@ EndSection
 
 **4)** Ev dizinindeki **.xinitrc** dosyasını düzenlemek için `deepin-editor ~/.xinitrc` komutunu kullanın ve aşağıdaki gibi doldurun.
 
-```xrandr --setprovideroutputsource modesetting NVIDIA-0
+```
+xrandr --setprovideroutputsource modesetting NVIDIA-0
 xrandr --auto
 xrandr --dpi 96
 ```
@@ -39,7 +41,8 @@ xrandr --dpi 96
 **5)** _/etc/lightdm/_ dizininde bir betik oluşturmak için `sudo deepin-editor /etc/lightdm/display_setup.sh` komutunu çalıştırın ve aşağıdaki gibi doldurun. 
 Daha sonra dosyayı çalıştırılabilir yapmak için `sudo chmod +x /etc/lightdm/display_setup.sh` komutunu terminalde çalıştırın.
 
-```#! / bin / sh
+```
+#! / bin / sh
 xrandr --setprovideroutputsource modesetting NVIDIA-0
 xrandr --auto
 xrandr --dpi 96
